@@ -21,7 +21,7 @@
                     </div>
 
                     <div class="form-group">
-                        <textarea class="form-control" name="body" value="<?php echo $post['body']; ?>" rows="10" cols="10"></textarea>
+                        <textarea class="form-control" name="body" value="<?php echo $post['body']; ?>" rows="10" cols="10"></textarea><!-- id="editor1" -->
                     </div>                 
                                        
                     <button type="submit" class="btn btn-success">Submit</button>

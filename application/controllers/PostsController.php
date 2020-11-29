@@ -40,18 +40,13 @@ class PostsController extends CI_Controller {
 
     }
     public function edit($slug){
-
         
         $data['post'] = $this->post_model->get_posts($slug);
-
-        if(empty($data['post'])){
-            show_404();
-        }
-
-        // $data['title'] = $data['post']['title'];
         $this->load->view('incidents/editPosts', $data);
-
-
+        // if(empty($data['post'])){
+        //     show_404();
+        // }
+        // $data['title'] = $data['post']['title'];
     }
     public function update(){
 
