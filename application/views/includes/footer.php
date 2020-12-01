@@ -6,6 +6,12 @@
 
        
     <script>
+
+            function myFunctionbtn() {
+                alert("Successfully Edited!");
+            }
+            
+            
             function myFunction() {
             let input, filter, table, tr, td, i, txtValue;
             input = document.querySelector("#search-bar");

@@ -12,7 +12,7 @@
 
         <div class="container" id="incidentTab">
         
-                        <button type="button" id="btnadd" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#exampleModal"></i> ADD REPORT</button>
+                        <button type="button" id="btnadd" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-plus"></i> ADD REPORT</button>
                         <input type="text" id="searchbar" onkeyup="myFunc();" placeholder=" Search..">&nbsp;<i class="fas fa-search"></i><br><br>
                     
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -32,14 +32,14 @@
                                         <form method="post" action="<?php echo site_url('PostsController/create')?> ">
                                                
                                                         <div class="form-group">
-                                                                <label for="">&nbsp;INCIDENT TITLE:<input type="text" class="form-control" name="title" placeholder="Report title"> </label><br>
+                                                                <label for="">&nbsp;INCIDENT TITLE:<input type="text" class="form-control" name="title" placeholder="Add Report title.."> </label><br>
                                                         </div>
 
                                                         <div class="form-group">
-                                                                <textarea class="form-control" name="body" rows="10" cols="10"></textarea>
+                                                                <textarea class="form-control" name="body" rows="10" cols="10" placeholder="Add text.."></textarea>
                                                         </div>                 
                                                 
-                                                        <button type="submit" class="btn btn-success">Submit</button>
+                                                        <button type="submit" class="btn btn-success btn-sm">Submit</button>
                                         </form>  
                                 </div><!--end of modal body-->
 
@@ -52,10 +52,10 @@
                                 <table class="table table-lg" id="tbl-post">                           
                                         <?php foreach($posts as $post) : ?>
                                                 <tr>
-                                                        <td class="table-dark" id="post-title"> <h1><?php echo $post['title']; ?></h1> 
+                                                        <td class="table-dark" id="post-title"><h1><?php echo $post['title']; ?></h1> 
                                                         <small id="post-date">Posted: <?php echo $post['created_at']; ?></small><br></td>
-                                                        <td><h6 id="post-body"><?php echo $post['body']; ?></h6>
-                                                        <p><a class="btn btn-info btn-sm" href="<?php echo site_url('PostsController/view/'.$post['slug']); ?>">Read</a></p></td>
+                                                        <td><h6 id="post-body"><?php echo word_limiter($post['body'], 50); ?></h6>
+                                                        <p><a class="btn btn-info btn-sm" href="<?php echo site_url('PostsController/view/'.$post['slug']); ?>">Read More..</a></p></td>
                                                 </tr>
                                         <?php endforeach; ?>  
                                 </table>

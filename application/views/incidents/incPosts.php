@@ -17,7 +17,32 @@
                 </div>
         <br>
         <hr>
-                <p><a class="btn btn-success btn-sm" href="<?php echo site_url('PostsController/edit/'.$post['slug']); ?>">Edit</a>&nbsp;|&nbsp;<a class="btn btn-danger btn-sm" href="<?php echo site_url('PostsController/delete/'.$post['id']); ?>">Delete</a></p>
+                <p><a class="btn btn-info btn-sm" href="<?php echo site_url('PostsController/edit/'.$post['slug']); ?>">Edit</a>&nbsp;|
+                
+                <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal">Delete</button>
+                  
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            Are you sure you want to <strong>Delete</strong> this Report?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+                            <a class="btn btn-danger btn-sm" href="<?php echo site_url('PostsController/delete/'.$post['id']); ?>">Delete</a>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </p>   
             </div>
 
            

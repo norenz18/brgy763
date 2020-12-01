@@ -44,7 +44,7 @@
                         <input type="number" class="form-control" name="age" value="<?php echo $row->age; ?>" required>
                     </div>
 
-                    <div class="form-group col-sm-2" >
+                    <div class="form-group col-sm-2">
                       
                       <label for="">Voter Status</label><br>
                       <input type="radio" id="voterStatus" name="voterStatus" value="Yes" required>
@@ -82,7 +82,7 @@
                     </div>
 
             </div><!--end class form row-->
-            <button type="submit" class="btn btn-primary btn-sm" value="save"><i class="fas fa-save"></i> Save</button>
+            <button type="submit" onclick="myFunctionbtn()" class="btn btn-primary btn-sm" value="save"><i class="fas fa-save"></i> Save</button>
             <a href="<?php echo site_url('CrudController/viewlist')?>"><button type="button" class="btn btn-danger btn-sm">Cancel</button></a>
       </form>
     </div>

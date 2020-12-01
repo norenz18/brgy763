@@ -43,10 +43,16 @@
                                 <h5><small class="modal-title text-danger" id="exampleModalLabel">&nbsp&nbsp;&nbsp;Note: Make sure all the details are correct.</small></h5>
 
                         <div class="modal-body"> <!--opening modal body-->
-                        <form method="post" action="<?php echo site_url('CrudController/create')?> ">
+                        <!-- <form method="post" action="<?php echo site_url('')?> "> -->
+                        <?php echo form_open_multipart('CrudController/create'); ?>
 
                             <div class="form-row">
-                               
+
+                                <!-- <div class="form-group">
+                                    <label for="">Upload Image</label>
+                                    <input type="file" name="userfile" size="20">
+                                </div>
+                                -->
                                 <div class="form-group col-sm-3">
                                     <label for="">First Name</label>
                                     <input type="text" class="form-control" name="firstName" required>
@@ -150,8 +156,38 @@
                                                 <td class="text-center"><?php echo $row->age; ?></td>
                                                 <td class="text-center"><?php echo $row->gender; ?></td>
                                                 <td class="text-center"><?php echo $row->voterStatus; ?></td>
-                                                <td class="text-center"><a class="btn btn-info btn-sm" data-toggle="tooltip" title="Edit details" href="<?php echo site_url('CrudController/edit');?>/<?php echo $row->id;?> "><i class="fas fa-edit"></i> </a> 
-                                                <a class="btn btn-danger btn-sm" data-toggle="tooltip" title="Delete details" href="<?php echo site_url('CrudController/delete');?>/<?php echo $row->id;?> "><i class="fas fa-trash-alt"></i></a></td>
+
+                                                <td class="text-center"> <a class="btn btn-info btn-sm" data-toggle="tooltip" title="Edit details" href="<?php echo site_url('CrudController/edit');?>/<?php echo $row->id;?>"><i class="fas fa-edit"></i></a>
+
+                                                <!-- Button trigger modal -->
+                                                    <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#staticBackdrop">
+                                                    <i class="fas fa-trash-alt"></i>
+                                                    </button>
+
+                                                    <!-- Modal -->
+                                                    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="staticBackdropLabel">Delete Resident</h5>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            This action can cause deleting information of a resident. <br>
+                                                            Are you sure you want to delete?
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+                                                            <a class="btn btn-danger btn-sm" data-toggle="tooltip" id="dltbtn" title="Delete details" href="<?php echo site_url('CrudController/delete');?>/<?php echo $row->id;?> "><i class="fas fa-trash-alt"></i> Delete
+
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                    </div>
+                                                </td>      
                                             </tr>
                                         <?php endforeach; ?>
                                     </tbody>
@@ -165,4 +201,4 @@
 
 <?php $this->load->view('includes/footer') ?>
             
-            
+<!-- <a class="btn btn-danger btn-sm" data-toggle="tooltip" title="Delete details" href="<?php echo site_url('CrudController/delete');?>/<?php echo $row->id;?> "><i class="fas fa-trash-alt"></i></a></td> -->

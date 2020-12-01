@@ -15,7 +15,25 @@ class CrudController extends CI_Controller {
     
     public function create(){ #CREATING DATA TO VIEWLIST
 
-        $this->Crud_model->createData();
+        // $config['upload_path'] = './asset/images';
+        // $config['allowed_types'] = 'gif|jpg|png';
+        // $config['max_size'] = '2048';
+        // $config['max_width'] = '500';
+        // $config['max_height'] = '500';
+
+        // $this->load->library('upload', $config);
+
+        // if(!$this->upload->do_upload()){
+
+        //     $errors = array('error' => $this->upload->display_errors());
+        //     $profImage = 'noimage.jpg';
+        // }else{
+
+        //     $data = array('upload_data' => $this->upload->data());
+        //     $profImage = $_FILES['userfile']['name'];
+        // }
+
+        $this->Crud_model->createData(); #$profImage
         redirect("CrudController/viewlist");
     }
 

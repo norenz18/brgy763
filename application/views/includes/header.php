@@ -230,21 +230,45 @@
 
           height: 250px;
           width: 250px;
-          border: 5px solid grey;
+          border: 1px solid lightgrey;
+          margin-right: 50px;
 
        }
        .main-content #div-content #resProfile{
 
          display: flex;
          flex-direction: column;
-         justify-content: center;
-         align-items: center;
+         justify-content: space-between;
+         align-items: flex-start;
+         margin-left: 50px;
+         border: 1px solid lightgrey;
+         padding: 30px;
 
        }
-       .main-content #div-content #resProfile tr td{
+       .main-content #div-content #resProfile li{
 
-        padding: 0 15px 90px 0;
+        list-style: none;
+        padding: 0 15px 0 0;
+       
+       }
+       .main-content #div-content #resProfile li:nth-child(odd){
 
+        background-color: lightgrey;
+        width: 100%;
+        padding: 0 5px 0;
+
+       }
+       .main-content #div-content #resProfile li strong{
+
+          margin-right: 15px;
+          font-size: 20px;
+          
+       }
+       .main-content #div-content #resProfile li span{
+
+        font-weight: 700;
+        font-size: 20px;
+        color: blue;
        }
        #incidentTab{
 
@@ -253,14 +277,15 @@
        }
        #incidentTab #searchbar{
 
-          border: 2px solid #343A40;
-          border-radius: 5px;
+          background: transparent;
+          border: none;
+          border-bottom: 1px solid #343A40;
           margin-left: 10px;
           outline: none;
        }
        #incidentTab #post-side #post-body{
 
-          border: 1px solid lightgrey;
+          border: 1px solid black;
           padding: 5px;
           margin-right: 5px; 
           border-radius: 5px;
@@ -281,7 +306,7 @@
        }
        #incident_section #postdate, #postbody{
 
-        color: grey;
+        color: black;
 
        }
        #post-side {
@@ -306,27 +331,26 @@
         #post-scroll #tbl-post tr td{
 
           display: flex;
+          flex-direction: column;
           justify-content: space-around;
           align-items: center;
-          margin: 10px 20px;
           width: 100%;
-          padding: 10px 0 10px 10px;
+          padding: 10px;
           overflow: hidden;
 
         }
         #post-scroll #tbl-post tr td h1{
 
-          margin: 0;
+          margin-top: 10px;
         }
         #post-scroll #tbl-post tr td p{
 
-          padding-right: 50px;
+         
         }
         #post-scroll #tbl-post tr #post-body{
 
           width: 100%;
-          padding: 30px;
-          margin-right: 50px;
+          padding: 15px;
         }
     
       
@@ -342,37 +366,5 @@
 
            
 
-        <!-- <nav class="navbar navbar-light" id="opac">
-          <a href="https://www.google.com" data-toggle="tooltip" title="Brgy 763 Zone 83">
-            <img id="brgylogo" alt="brgy. 763 zone 83" src="<?php echo site_url('img/brgylogo.png'); ?>" />
-          </a>
-
-          <a href="<?php echo site_url('CrudController');?>" data-toggle="tooltip" title="DASHBOARD" >
-            <img id="brgy" alt="Dashboard" src="<?php echo site_url('img/dashboard.png'); ?>" />
-          </a>
-
-         
-          <a href="<?php echo site_url('CrudController/viewlist');?>" data-toggle="tooltip" title="RESIDENTS">
-            <img id="brgy" alt="Residents"  src="<?php echo site_url('img/resident.png'); ?>" />
-          </a>
         
-          <a href="" data-toggle="tooltip" title="RECORD BOOK">
-            <img id="brgy" alt="Record Book"  src="<?php echo site_url('img/recordbook.png'); ?>" />
-          </a>
-          
-          <a href="" data-toggle="tooltip" title="PERMIT & CERTIFICATE">
-            <img id="brgy" alt="Permit"  src="<?php echo site_url('img/permit.png'); ?>" />
-          </a>
-          
-          <a href="" data-toggle="tooltip" title="BRGY. OFFICIALS">
-            <img id="brgy" alt="Officials"  src="<?php echo site_url('img/officials.png'); ?>" />
-          </a>
-          
-          <a class="navbar-brand" href="https://www.facebook.com/groups/329543403861128/" data-toggle="tooltip" title="FB GROUP">
-            <img src="<?php echo site_url('img/blogo.png'); ?>" id="brgylogo" alt="brgylogo">
-          </a>   
-
-        </nav>
-        <br> -->
-
       
