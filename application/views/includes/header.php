@@ -15,6 +15,27 @@
    
    
     <style>
+        ::-webkit-scrollbar {
+
+            width: 10px;
+            
+          }
+
+          /* Track */
+          ::-webkit-scrollbar-track {
+
+            background: #F2F2F2;
+          
+           
+          }
+          
+          /* Handle */
+          ::-webkit-scrollbar-thumb {
+
+            background: #123A4A; 
+            
+          }
+
         *{
 
           padding: 0;
@@ -182,17 +203,25 @@
           height: 65.2vh;
           overflow:auto;  
           margin-top: 20px;
-          border: 1px solid lightgrey;
+         
         }
         #thead{
-
-          background-color: #e3f2fd; 
+    
           border: 1px solid grey;
                
         }
         #thead tr th{
 
+          position: sticky;
+          top: 0;
+          background-color: #123a4a;
+          color: #fff;
           width: auto;
+        }
+        #tbody #profileImg{
+
+          height: 100px;
+          width: 100px;
         }
         #tbody tr #fml, #adrs{
 

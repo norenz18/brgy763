@@ -24,8 +24,7 @@
             <div class="container d-flex justify-content-evenly" id="div-content">
                 
                     <div class="resPic">
-                        <img src="<?php echo site_url('img/blogo.png'); ?>" alt=""><br>
-                        <label for="">Profile Image</label>
+                        <img id="profileImg" src="<?php echo site_url('img'); ?>/<?php echo $row->profImage; ?>">
                     </div>
 
                     <ul id="resProfile">
@@ -48,81 +47,3 @@
     <?php }  ?>
 
 <?php $this->load->view('includes/footer'); ?>
-
-
-                    <!-- <div class="form-block" id="fline">
-                        <div class="col-md-12"> 
-                            <p> Last Name: <span><?php echo $row->lastName; ?></span></p>
-                        </div>
-
-                        <div class="col-md-12">
-                            <p> First Name: <span><?php echo $row->firstName; ?></span></p>
-                        </div>
-                        
-                        <div class="col-md-12">
-                            <p> Contact: <span><?php echo $row->contact; ?></span></p>
-                        </div>
-
-                        <div class="col-md-12">
-                            <p> Age: <span><?php echo $row->age; ?></span </p>
-                        </div>
-
-                        <div class="col-md-12">
-                            <p> Voter Status: <span><?php echo $row->voterStatus; ?></span </p>
-                        </div>
-
-                        <div class="col-md-12">
-                            <p> Gender: <span><?php echo $row->gender; ?></span </p>
-                        </div>
-
-                        <div class="col-md-12">
-                            <p> Civil Status: <span> <?php echo $row->civilStatus; ?></span></p>
-                        </div>
-
-                        <div class="col-md-12">
-                            <p> Birthdate: <span><?php echo $row->birthdate; ?></span></p>
-                        </div>
-                        
-                        <div class="col-md-12">
-                            <p> Address: <span><?php echo $row->address; ?></span></p>
-                        </div>
-
-                    </div> -->
-                    
-                           <!-- RIGHT SIDE -->
-                    <!-- <div class="form-block" id="fline">
-                    
-                        <div class="col-md-12"> 
-                            <p> Last Name: <span><?php echo $row->lastName; ?></span></p>
-                        </div>
-
-                        <div class="col-md-12">
-                            <p> First Name: <span><?php echo $row->firstName; ?></span></p>
-                        </div>
-                        
-                        <div class="col-md-12">
-                            <p> Contact: <span><?php echo $row->contact; ?></span></p>
-                        </div>
-
-                        <div class="col-md-12">
-                            <p> Age: <span><?php echo $row->age; ?></span </p>
-                        </div>
-
-                        <div class="col-md-12">
-                            <p> Gender: <span><?php echo $row->gender; ?></span </p>
-                        </div>
-
-                        <div class="col-md-12">
-                            <p> Civil Status: <span> <?php echo $row->civilStatus; ?></span></p>
-                        </div>
-
-                        <div class="col-md-12">
-                            <p> Birthdate: <span><?php echo $row->birthdate; ?></span></p>
-                        </div>
-                        
-                        <div class="col-md-12">
-                            <p> Address: <span><?php echo $row->address; ?></span></p>
-                        </div>
-
-                    </div> -->
-   

@@ -27,7 +27,7 @@
                     <div class="modal-dialog">
                         <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">Delete Report</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                             </button>
@@ -36,7 +36,7 @@
                             Are you sure you want to <strong>Delete</strong> this Report?
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
                             <a class="btn btn-danger btn-sm" href="<?php echo site_url('PostsController/delete/'.$post['id']); ?>">Delete</a>
                         </div>
                         </div>

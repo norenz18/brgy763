@@ -43,16 +43,17 @@
                                 <h5><small class="modal-title text-danger" id="exampleModalLabel">&nbsp&nbsp;&nbsp;Note: Make sure all the details are correct.</small></h5>
 
                         <div class="modal-body"> <!--opening modal body-->
-                        <!-- <form method="post" action="<?php echo site_url('')?> "> -->
-                        <?php echo form_open_multipart('CrudController/create'); ?>
+                        
+                        <form method="post" action="<?php echo site_url('CrudController/create')?>" enctype="multipart/form-data">
+                        <!--  echo form_open_multipart(''); ?> -->
 
                             <div class="form-row">
 
-                                <!-- <div class="form-group">
+                                <div class="form-group">
                                     <label for="">Upload Image</label>
                                     <input type="file" name="userfile" size="20">
                                 </div>
-                                -->
+                               
                                 <div class="form-group col-sm-3">
                                     <label for="">First Name</label>
                                     <input type="text" class="form-control" name="firstName" required>
@@ -134,10 +135,11 @@
 
                         <div class="container-fluid" id="table-wrapper">
                             <div id="table-scroll">
-                                <table id="table-list" class="table table-sm table-hover table-bordered">
+                                <table id="table-list" class="table table-sm table-hover table-striped">
                                     <thead id="thead" class="col-sm-3 text-center">
                                         <tr>
                                             <th scope="col">View</th>
+                                            <!-- <th scope="col">Image</th> -->
                                             <th scope="col">Name <span><small>(Firstname, Mi, Lastname)</small></span></th>
                                             <th scope="col">Address</th>
                                             <th scope="col">Age</th>
@@ -151,6 +153,7 @@
                                             <tr>
                                             
                                                 <td class="text-center"><a class="btn btn-success btn-sm" data-toggle="tooltip"  title="View details" href="<?php echo site_url('CrudController/read');?>/<?php echo $row->id; ?>"> <i class="fas fa-eye"></i></a></td>
+                                                <!-- <td id="profileImg"><img id="profileImg" src="<?php echo site_url('img'); ?>/<?php echo $row->profImage; ?>"></td> -->
                                                 <td class="text-left" id="fml"><?php echo $row->firstName; ?> <?php echo $row->mi; ?> <?php echo $row->lastName; ?></td>
                                                 <td class="text-left" id="adrs"><?php echo $row->address; ?></td>
                                                 <td class="text-center"><?php echo $row->age; ?></td>

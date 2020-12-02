@@ -8,12 +8,12 @@ class Crud_model extends CI_Model {
 
     }
 
-    #$profImage
-    function createData() { #INSERTING DATA TO DATABASE
+   
+    function createData($profImage) { #INSERTING DATA TO DATABASE
 
         $data = array(
             
-            // 'profImage' => $profImage,
+            'profImage' => $profImage,
             'lastName' => $this->input->post('lastName'),
             'firstName' => $this->input->post('firstName'),
             'mi' => $this->input->post('mi'),
