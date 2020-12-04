@@ -22,14 +22,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		font-family: nexa;
 
 	}
-    #pcd{
+    #su, #pcd{
 
         text-decoration: none;
         color: #555;
         padding: 5px;
 	
     }
-	#pcd:hover{
+	#su:hover, #pcd:hover{
 
 		border-bottom: 1px solid grey;
 	
@@ -67,7 +67,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		</h1>
 
 		<div class="container text-center">
-        	<h1><a href="<?php echo site_url('Users'); ?>" id="pcd">Proceed to Log In</a></h1>	
+			<h1><a href="<?php echo site_url('Users/register'); ?>" id="su">Sign Up?</a></h1>
+        	<h1><a href="<?php echo site_url('Users/login'); ?>" id="pcd">Proceed to Log In</a></h1>	
 
 		</div>
 

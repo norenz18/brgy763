@@ -3,13 +3,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Brgy.763 Zone 83 Dist.5, Manila</title>
 
 	<link rel="stylesheet" href="<?php echo site_url('bootstrap/css/bootstrap.min.css') ?> ">
     <link rel="stylesheet" type="text/css" media="screen" href="<?php site_url('bootstrap/css/jquery-ui.css') ?>" />
     <link rel="icon" href="<?php echo site_url('img/brgylogo.png'); ?>" type="gif/image" sizes="16x16">
+	
    
 
 	<style type="text/css">
@@ -45,11 +45,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		border: 1px solid #D0D0D0;
 		box-shadow: 0 0 8px #D0D0D0;
 	}
+	p, #regText{
+
+		font-size: 16px;
+	}
 	
 	</style>
 	
 </head>
 <body>
+
 				<h1 class="container text-center">
 					<img src="<?php echo site_url('img/brgylogo.png'); ?>" id="brgylogo" alt="brgy. 763 logo">
 						Welcome to Brgy. 763 Zone 83 District V, Manila
@@ -74,7 +79,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<div class="form-group col-md-12">							
 							<input type="submit" name="login" value="Login" class="form-control btn btn-dark">					
 						</div>
+						
+						<p>Dont have an account?&nbsp;<a id="regText" href="<?php echo site_url('Users/register'); ?> ">Sign up here!</a></p>
 					</form>
+
+				
+					
+
+					
 
 				</div>
 </body>

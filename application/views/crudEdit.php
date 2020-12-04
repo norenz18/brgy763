@@ -50,11 +50,34 @@
                         <input type="number" class="form-control" name="age" value="<?php echo $row->age; ?>" required>
                     </div>
 
-                    <div class="form-group col-md-4">
+                    <div class="form-group col-sm-2">
+                        <label for="civilStatus">Civil Status</label><br>
+                        <select class="form-control" id="civilStatus" name="civilStatus"  value="<?php echo $row->civilStatus; ?>">
+                            <option><?php echo $row->civilStatus; ?></option>
+                            <option disabled>---</option>
+                            <option value="Single">Single</option>
+                            <option value="Married">Married</option>
+                            <option value="Widowed">Widowed</option>
+                            <option value="Solo Parent">Solo Parent</option>
+                            <option value="Divorced">Divorced</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group col-sm-2">
+                        <label for="">Pers W/ Dis.</label>
+                        <select class="form-control" id="pwd" name="pwd"  value="<?php echo $row->pwd; ?>">
+                            <option><?php echo $row->pwd; ?></option>
+                            <option disabled>---</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group col-sm-3">
                         <label for="">Address</label>
                         <input type="text" class="form-control" name="address" id="address" value="<?php echo $row->address; ?>" required>
                     </div>
-
+      
                     <div class="form-group col-sm-2">
                       
                       <label for="">Voter Status</label><br>
@@ -71,20 +94,6 @@
                         <label for="male">Male</label><br>
                         <input type="radio" id="gender" name="gender" value="Female" required>
                         <label for="female">Female</label><br>
-                    </div>
-
-                    <div class="form-group col-sm-2">
-                        <label for="male">Civil Status</label><br>
-                        <input type="radio" id="civilStatus" name="civilStatus" value="Single" required>
-                        <label for="male">Single</label><br>
-                        <input type="radio" id="civilStatus" name="civilStatus" value="Married" required>
-                        <label for="female">Married</label><br>
-                        <input type="radio" id="civilStatus" name="civilStatus" value="Widowed" required>
-                        <label for="female">Widowed</label><br>
-                        <input type="radio" id="civilStatus" name="civilStatus" value="Solo Parent" required>
-                        <label for="female">Solo Parent</label><br>
-                        <input type="radio" id="civilStatus" name="civilStatus" value="Divorced" required>
-                        <label for="female">Divorced</label><br>
                     </div>
 
             </div><!--end class form row-->

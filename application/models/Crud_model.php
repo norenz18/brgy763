@@ -23,7 +23,8 @@ class Crud_model extends CI_Model {
             'voterStatus' => $this->input->post('voterStatus'),
             'gender' => $this->input->post('gender'),
             'civilStatus' => $this->input->post('civilStatus'),
-            'address' => $this->input->post('address')
+            'address' => $this->input->post('address'),
+            'pwd' => $this->input->post('pwd')
         );
         $this->db->insert('tbl_name', $data);
 
@@ -47,7 +48,6 @@ class Crud_model extends CI_Model {
        
         $data = array(
             
-         
             'lastName' => $this->input->post('lastName'),
             'firstName' => $this->input->post('firstName'),
             'mi' => $this->input->post('mi'),
@@ -57,7 +57,8 @@ class Crud_model extends CI_Model {
             'voterStatus' => $this->input->post('voterStatus'),
             'gender' => $this->input->post('gender'),
             'civilStatus' => $this->input->post('civilStatus'),
-            'address' => $this->input->post('address')
+            'address' => $this->input->post('address'),
+            'pwd' => $this->input->post('pwd')
         );
         $this->db->where('id', $id);
         $this->db->update('tbl_name', $data);

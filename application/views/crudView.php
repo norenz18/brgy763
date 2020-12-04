@@ -50,8 +50,8 @@
                             <div class="form-row">
 
                                 <div class="form-group">
-                                    <label for="">Upload Image</label>
-                                    <input type="file" name="userfile" size="20">
+                                    <label for="">Upload Image</label> <br>
+                                    <input type="file" name="userfile" size="20" required>
                                 </div>
                                
                                 <div class="form-group col-sm-3">
@@ -80,8 +80,29 @@
                                 </div>
 
                                 <div class="form-group col-sm-2">
+                                    <label for="civilStatus">Civil Status</label><br>
+                                    <select class="form-control" id="civilStatus" name="civilStatus" required>
+                                        <option value=""></option>
+                                        <option value="Single">Single</option>
+                                        <option value="Married">Married</option>
+                                        <option value="Widowed">Widowed</option>
+                                        <option value="Solo Parent">Solo Parent</option>
+                                        <option value="Divorced">Divorced</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group col-sm-2">
                                     <label for="">Contact</label>
                                     <input type="number" class="form-control" name="contact" required>
+                                </div>
+
+                                <div class="form-group col-sm-2">
+                                    <label for="">Person w/ Disability</label>
+                                    <select id="" class="form-control" id="pwd" name="pwd" required>
+                                        <option value=""></option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
                                 </div>
 
                                 <div class="form-group col-sm-3">
@@ -109,19 +130,7 @@
                                     
                                 </div>
 
-                                <div class="form-group col-sm-2">
-                                    <label for="">Civil status</label><br>
-                                    <input type="radio" id="civilStatus" name="civilStatus" value="Single" required>
-                                    <label for="male">Single</label><br>
-                                    <input type="radio" id="civilStatus" name="civilStatus" value="Married" required>
-                                    <label for="female">Married</label><br>
-                                    <input type="radio" id="civilStatus" name="civilStatus" value="Widowed" required>
-                                    <label for="female">Widowed</label><br>
-                                    <input type="radio" id="civilStatus" name="civilStatus" value="Solo Parent" required>
-                                    <label for="female">Solo Parent</label><br>
-                                    <input type="radio" id="civilStatus" name="civilStatus" value="Divorced" required>
-                                    <label for="female">Divorced</label><br>
-                                </div>
+                               
 
                             </div>
                             <button type="submit" class="btn btn-success btn-sm"><i class="fas fa-save"></i> Save</button>
@@ -155,7 +164,7 @@
                                                 <td class="text-center"><a class="btn btn-success btn-sm" data-toggle="tooltip"  title="View details" href="<?php echo site_url('CrudController/read');?>/<?php echo $row->id; ?>"> <i class="fas fa-eye"></i></a></td>
                                                 <!-- <td id="profileImg"><img id="profileImg" src="<?php echo site_url('img'); ?>/<?php echo $row->profImage; ?>"></td> -->
                                                 <td class="text-left" id="fml"><?php echo $row->firstName; ?> <?php echo $row->mi; ?> <?php echo $row->lastName; ?></td>
-                                                <td class="text-left" id="adrs"><?php echo $row->address; ?></td>
+                                                <td class="text-left" id="adrs"><?php echo $row->address; ?> Dist. 5 San Andres, Manila</td>
                                                 <td class="text-center"><?php echo $row->age; ?></td>
                                                 <td class="text-center"><?php echo $row->gender; ?></td>
                                                 <td class="text-center"><?php echo $row->voterStatus; ?></td>

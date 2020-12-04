@@ -4,13 +4,14 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="<?php echo site_url('img/brgylogo.png'); ?>" type="gif/image" sizes="16x16">
 
     <!-- Bootstrap CSS -->
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="<?php echo site_url('bootstrap/css/bootstrap.min.css') ?> ">
     <link rel="stylesheet" type="text/css" media="screen" href="<?php site_url('bootstrap/css/jquery-ui.css') ?>" />
     <link rel="stylesheet" href="<?php echo site_url('fontawesome/css/all.css') ?>">
-    <link rel="icon" href="<?php echo site_url('img/brgylogo.png'); ?>" type="gif/image" sizes="16x16">
+  
     <script src="<?php echo site_url('ckeditor/ckeditor.js') ?>"></script>
    
    
@@ -223,9 +224,13 @@
           height: 100px;
           width: 100px;
         }
-        #tbody tr #fml, #adrs{
+        #tbody tr #fml{
+          width: 300px;
+        }
+       
+        #tbody tr #adrs{
 
-          width: 250px;
+          width: 350px;
         }
         .footer{
          
@@ -389,6 +394,12 @@
     <title>Brgy. 763, Zone 83</title>
   </head>
   <body>
+
+  <div class="container">
+        <?php if($this->session->flashdata('user_registered')): ?>
+          <?php echo '<p class="alert alert-success">' .$this->session->flashdata('user_registered').'</p>'; ?>
+        <?php endif; ?>
+  </div>
 
   
 

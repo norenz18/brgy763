@@ -33,12 +33,13 @@
                                 <li><strong>Last Name:</strong> <span><?php echo $row->lastName; ?></li>
                                 <li><strong>Mi:</strong> <span><?php echo $row->mi; ?></li>
                                 <li><strong>Contact:</strong> <span><?php echo $row->contact; ?></li>
-                                <li><strong>Address:</strong> <span><?php echo $row->address; ?></li>
+                                <li><strong>Address:</strong> <span><?php echo $row->address; ?> Dist. 5 San Andres, Manila &nbsp;</li>
                                 <li><strong>Age:</strong> <span><?php echo $row->age; ?></li>
                                 <li><strong>Voter Status:</strong> <span><?php echo $row->voterStatus; ?></li>
                                 <li><strong>Gender:</strong> <span><?php echo $row->gender; ?></li>
                                 <li><strong>Civil Status:</strong> <span><?php echo $row->civilStatus; ?></li>
                                 <li><strong>Birthdate:</strong> <span><?php echo $row->birthdate; ?></li>                                             
+                                <li><strong>Person w/ Disability:</strong> <span><?php echo $row->pwd; ?></li>                                             
                     </ul>
 
             </div>

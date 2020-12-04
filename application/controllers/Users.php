@@ -6,9 +6,36 @@ class Users extends CI_Controller {
 
 	public function index(){
         
-		// $data['title'] = 'Welcome to Brgy. 763 Zone 83 District V, Manila';
-		$this->load->view('users/login');
+		$data['title'] = 'Welcome to Brgy. 763 Zone 83 District V, Manila';
+		$this->load->view('users/register', $data);
 	}
+	public function register(){
+
+		$this->form_validation->set_rules('name', 'Name', 'required');
+		$this->form_validation->set_rules('username', 'Username', 'required');
+		$this->form_validation->set_rules('email', 'Email', 'required');
+		$this->form_validation->set_rules('password', 'Password', 'required');
+		$this->form_validation->set_rules('password2', 'Confirm Password2', 'matches[password]');
+
+		if($this->form_validation->run() === FALSE){
+
+			$this->load->view('includes/header');
+			$this->load->view('users/register');
+			$this->load->view('includes/footer');
+		}else{
+			// encrypting password
+			$enc_password = md5($this->input->post('password'));
+			$this->user_model->register($enc_password);
+		
+			// Setting flash message
+			$this->session->set_flashdata('user_registered', 'You are now Registered and Proceed to Log in');
+			redirect('users/register');
+
+		}
+	}
+
+
+
 	public function login(){
      
 
