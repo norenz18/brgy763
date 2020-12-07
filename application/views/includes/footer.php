@@ -58,6 +58,9 @@
     <script src="<?php echo site_url('bootstrap/js/bootstrap.min.js') ?>"></script>
     <script src="<?php echo site_url('bootstrap/js/jquery.js') ?>"></script>
     <script src="<?php echo site_url('bootstrap/js/jquery-ui.js') ?>"></script>
+
+    <script src="<?php echo site_url('asset/bootstrap-table.min.js') ?>"></script>
+
     <script> CKEDITOR.replace( 'editor1' );</script>
 
  

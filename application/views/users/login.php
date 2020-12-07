@@ -9,8 +9,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<link rel="stylesheet" href="<?php echo site_url('bootstrap/css/bootstrap.min.css') ?> ">
     <link rel="stylesheet" type="text/css" media="screen" href="<?php site_url('bootstrap/css/jquery-ui.css') ?>" />
     <link rel="icon" href="<?php echo site_url('img/brgylogo.png'); ?>" type="gif/image" sizes="16x16">
-	
-   
+
+
 
 	<style type="text/css">
 
@@ -55,6 +55,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 <body>
 
+        <?php if($this->session->flashdata('user_loggedin')): ?>
+          <?php echo '<p class="alert alert-success">' .$this->session->flashdata('user_loggedin').'</p>'; ?>
+        <?php endif; ?>
+  
+        <?php if($this->session->flashdata('login_failed')): ?>
+          <?php echo '<p class="alert alert-danger">' .$this->session->flashdata('login_failed').'</p>'; ?>
+        <?php endif; ?>
+
+
 				<h1 class="container text-center">
 					<img src="<?php echo site_url('img/brgylogo.png'); ?>" id="brgylogo" alt="brgy. 763 logo">
 						Welcome to Brgy. 763 Zone 83 District V, Manila
@@ -89,5 +98,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					
 
 				</div>
+
+
+
+					
+				<script src="<?php echo site_url('bootstrap/js/jquery.slim.min.js') ?>"> </script>
+    <script src="<?php echo site_url('bootstrap/js/bootstrap.min.js') ?>"></script>
+    <script src="<?php echo site_url('bootstrap/js/jquery.js') ?>"></script>
+    <script src="<?php echo site_url('bootstrap/js/jquery-ui.js') ?>"></script>
 </body>
 </html>

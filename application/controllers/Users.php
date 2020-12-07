@@ -56,15 +56,14 @@ class Users extends CI_Controller {
                 //create session
                 $this->session->set_flashdata('user_loggedin', 'You are logged In');
                 redirect('CrudController');
-				// die('SUCCESS');
+				
 			// 	//set message
-			// 
 			
 
 			}else{
 				//set message
 			$this->session->set_flashdata('login_failed', 'Login Invalid');
-			redirect('Users');
+			redirect('Users/login');
 
 			}
 

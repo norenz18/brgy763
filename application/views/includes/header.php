@@ -5,13 +5,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" href="<?php echo site_url('img/brgylogo.png'); ?>" type="gif/image" sizes="16x16">
+    
 
     <!-- Bootstrap CSS -->
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"> -->
+    
     <link rel="stylesheet" href="<?php echo site_url('bootstrap/css/bootstrap.min.css') ?> ">
     <link rel="stylesheet" type="text/css" media="screen" href="<?php site_url('bootstrap/css/jquery-ui.css') ?>" />
     <link rel="stylesheet" href="<?php echo site_url('fontawesome/css/all.css') ?>">
-  
+    <link rel="stylesheet" href="<?php echo site_url('asset/bootstrap-table.min.css') ?> ">
+ 
+
     <script src="<?php echo site_url('ckeditor/ckeditor.js') ?>"></script>
    
    
@@ -27,7 +31,6 @@
 
             background: #F2F2F2;
           
-           
           }
           
           /* Handle */
@@ -89,33 +92,26 @@
            #main-container{
 
           padding: 0;
-          height: 85vh;
+          height: 100vh;
 
           }
 
           /* SIDEBAR NAVIGATION */
           .nav-main{
 
-          height: 85vh;
+          height: auto;
           width: 200px;
           background-color: #e3f2fd;
           box-shadow: 0 0 8px grey;
-          /* transform: translateX(-85%);
-          transition: .3s ease-in-out; */
 
           }
-          /* .nav-main:hover{
-
-            transform: translateX(0%);
-
-          } */
           .nav-main ul{
 
           display: flex;
           flex-direction: column;
           justify-content: space-evenly;
           align-items: flex-start;
-          height: 85vh;
+          height: 100vh;
           position: relative;
 
           }
@@ -181,29 +177,13 @@
         #editContainer{
           height: 81.5vh;
         }
-        #search-bar{
-         
-          margin-left: 5px;
-          border: none;
-          outline: none;
-          background: transparent;
-          border-bottom: 2px solid lightgrey;
-
-        }
         label{
 
             font-weight: 700;
         }
         #table-wrapper {
 
-          position:relative;
-         
-        }
-        #table-scroll {
-
-          height: 65.2vh;
-          overflow:auto;  
-          margin-top: 20px;
+          position: relative; 
          
         }
         #thead{
@@ -397,7 +377,7 @@
 
   <div class="container">
         <?php if($this->session->flashdata('user_registered')): ?>
-          <?php echo '<p class="alert alert-success">' .$this->session->flashdata('user_registered').'</p>'; ?>
+          <?php echo '<p class="alert alert-dark">' .$this->session->flashdata('user_registered').'</p>'; ?>
         <?php endif; ?>
   </div>
 

@@ -27,7 +27,6 @@
                         
                                     <!-- Button trigger modal -->
                             <button type="button" id="btn-add" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-user-plus"></i> ADD RESIDENT</button>
-                            <input type="text" id="search-bar" onkeyup="myFunction();" placeholder="Search.."><i class="fas fa-search"></i>
                         
                         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-xl">
@@ -45,7 +44,7 @@
                         <div class="modal-body"> <!--opening modal body-->
                         
                         <form method="post" action="<?php echo site_url('CrudController/create')?>" enctype="multipart/form-data">
-                        <!--  echo form_open_multipart(''); ?> -->
+                   
 
                             <div class="form-row">
 
@@ -130,8 +129,6 @@
                                     
                                 </div>
 
-                               
-
                             </div>
                             <button type="submit" class="btn btn-success btn-sm"><i class="fas fa-save"></i> Save</button>
 
@@ -143,18 +140,22 @@
                         </div><!-- end of modal -->
 
                         <div class="container-fluid" id="table-wrapper">
-                            <div id="table-scroll">
-                                <table id="table-list" class="table table-sm table-hover table-striped">
+                                <table id="table-list" class="table table-sm table-hover table-striped"  data-toggle="table"
+                                    data-pagination="true"
+                                    data-search="true"
+                                    data-url="">
+
                                     <thead id="thead" class="col-sm-3 text-center">
+
                                         <tr>
-                                            <th scope="col">View</th>
+                                            <th scope="col" >View</th>
                                             <!-- <th scope="col">Image</th> -->
-                                            <th scope="col">Name <span><small>(Firstname, Mi, Lastname)</small></span></th>
-                                            <th scope="col">Address</th>
-                                            <th scope="col">Age</th>
-                                            <th scope="col">Gender</th>
-                                            <th scope="col">Voter</th>
-                                            <th scope="col">Action</th>
+                                            <th scope="col" data-field ="Name" data-sortable="true">Name <span><small>(Firstname, Mi, Lastname)</small></span></th>
+                                            <th scope="col" data-field ="Address" data-sortable="true">Address</th>
+                                            <th scope="col" data-field ="Age" data-sortable="true">Age</th>
+                                            <th scope="col" data-field ="Gender" data-sortable="true">Gender</th>
+                                            <th scope="col" data-field ="Voter" data-sortable="true">Voter</th>
+                                            <th scope="col" data-field ="Action">Action</th>
                                         </tr>
                                     </thead>
                                     <tbody id="tbody">
@@ -168,49 +169,18 @@
                                                 <td class="text-center"><?php echo $row->age; ?></td>
                                                 <td class="text-center"><?php echo $row->gender; ?></td>
                                                 <td class="text-center"><?php echo $row->voterStatus; ?></td>
-
                                                 <td class="text-center"> <a class="btn btn-info btn-sm" data-toggle="tooltip" title="Edit details" href="<?php echo site_url('CrudController/edit');?>/<?php echo $row->id;?>"><i class="fas fa-edit"></i></a>
 
-                                                <!-- Button trigger modal -->
-                                                    <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#staticBackdrop">
-                                                    <i class="fas fa-trash-alt"></i>
-                                                    </button>
-
-                                                    <!-- Modal -->
-                                                    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                                    <div class="modal-dialog">
-                                                        <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title" id="staticBackdropLabel">Delete Resident</h5>
-                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                            <span aria-hidden="true">&times;</span>
-                                                            </button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                            This action can cause deleting information of a resident. <br>
-                                                            Are you sure you want to delete?
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
-                                                            <a class="btn btn-danger btn-sm" data-toggle="tooltip" id="dltbtn" title="Delete details" href="<?php echo site_url('CrudController/delete');?>/<?php echo $row->id;?> "><i class="fas fa-trash-alt"></i> Delete
-
-                                                            </a>
-                                                        </div>
-                                                        </div>
-                                                    </div>
-                                                    </div>
+                                             
                                                 </td>      
                                             </tr>
                                         <?php endforeach; ?>
                                     </tbody>
                                 </table>
-                               
-                            </div><!--end scroll-->
-                        </div><!--end wrapper-->                  
+                        </div><!--end wrapper-->            
                     </div><!--end container -->
             </div>
 
 
 <?php $this->load->view('includes/footer') ?>
             
-<!-- <a class="btn btn-danger btn-sm" data-toggle="tooltip" title="Delete details" href="<?php echo site_url('CrudController/delete');?>/<?php echo $row->id;?> "><i class="fas fa-trash-alt"></i></a></td> -->
