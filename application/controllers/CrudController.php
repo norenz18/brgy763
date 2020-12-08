@@ -16,7 +16,7 @@ class CrudController extends CI_Controller {
     public function create(){ #CREATING DATA TO VIEWLIST
 
         $config['upload_path'] = './img';
-        $config['allowed_types'] = 'gif|jpg|png';
+        $config['allowed_types'] = 'gif|jpg|png|jpeg';
         $config['max_size'] = '2048';
         $config['max_width'] = '3000';
         $config['max_height'] = '3000';

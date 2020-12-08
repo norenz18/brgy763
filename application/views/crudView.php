@@ -18,7 +18,7 @@
                                         <li><a href="<?php echo site_url('PostsController');?>"><i class="fas fa-clipboard-list"></i> Incident Report</a></li>
                                         <li><a href=""><i class="fas fa-book"></i> Blotter</a></li> <!--<i class="fas fa-print"></i>-->
                                         <li><a href=""><i class="fas fa-scroll"></i> Permits</a></li>                                      
-                                        <li><a href=""><i class="fas fa-users-cog"></i> Officials</a></li>          
+                                        <li><a href="<?php echo site_url('Officials');?>"><i class="fas fa-users-cog"></i> Officials</a></li>          
                                     </ul>
 
                             </div>
@@ -26,7 +26,7 @@
                         <div class="container"><br><br>
                         
                                     <!-- Button trigger modal -->
-                            <button type="button" id="btn-add" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-user-plus"></i> ADD RESIDENT</button>
+                        &nbsp&nbsp;&nbsp;&nbsp;<button type="button" id="btn-add" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-user-plus"></i> ADD RESIDENT</button>
                         
                         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-xl">
@@ -143,6 +143,12 @@
                                 <table id="table-list" class="table table-sm table-hover table-striped"  data-toggle="table"
                                     data-pagination="true"
                                     data-search="true"
+                                    data-search-align="left"
+                                    data-show-fullscreen="true"
+                                    data-pagination-pre-text="Prev"
+                                    data-pagination-next-text="Next"
+                                    data-pagination-h-align="left"
+                                    data-pagination-detail-h-align="right"
                                     data-url="">
 
                                     <thead id="thead" class="col-sm-3 text-center">
