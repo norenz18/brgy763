@@ -92,6 +92,7 @@
                     </ul>       
                 </div><br>
 
+                <h1 class="text-center"><?php echo $title; ?></h1>
 
                 <div class="container" id="cap">
                     <img id="blogo" src="<?php echo site_url('img/blogo.png'); ?>" alt="">
@@ -119,12 +120,6 @@
                         <img id="tre" src="<?php echo site_url('img/treasurer.png'); ?>" alt="">
                 </div><br>
 
-         
-
-
-
-
-   
 
 <?php $this->load->view('includes/footer'); ?>
 

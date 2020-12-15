@@ -57,6 +57,19 @@
           position: relative;
                 
         }
+        #textArea{
+
+          resize: none;
+        }
+        .dropdown-toggle{
+          display: none;
+        }
+        .page-list{
+          opacity: 0;
+        }
+        .pagination{
+          background-color: grey;
+        }
            /* NAV FOR HEADER */
           .nav{
 
@@ -92,7 +105,7 @@
            #main-container{
 
           padding: 0;
-          height: 100vh;
+          height: auto;
 
           }
 
@@ -366,7 +379,6 @@
           width: 100%;
           padding: 15px;
         }
-    
       
 
     </style>

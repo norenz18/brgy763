@@ -16,7 +16,7 @@
                                         <li><a href="<?php echo site_url('CrudController');?>"><i class="far fa-chart-bar"></i> Dashboard</a></li>
                                         <li><a href="<?php echo site_url('CrudController/viewlist');?>"><i class="fas fa-users"></i> Residents</a></li>
                                         <li><a href="<?php echo site_url('PostsController');?>"><i class="fas fa-clipboard-list"></i> Incident Report</a></li>
-                                        <li><a href=""><i class="fas fa-book"></i> Blotter</a></li> <!--<i class="fas fa-print"></i>-->
+                                        <li><a href="<?php echo site_url('BlotterController');?>"><i class="fas fa-book"></i> Blotter</a></li> <!--<i class="fas fa-print"></i>-->
                                         <li><a href=""><i class="fas fa-scroll"></i> Permits</a></li>                                      
                                         <li><a href="<?php echo site_url('Officials');?>"><i class="fas fa-users-cog"></i> Officials</a></li>          
                                     </ul>
@@ -140,7 +140,8 @@
                         </div><!-- end of modal -->
 
                         <div class="container-fluid" id="table-wrapper">
-                                <table id="table-list" class="table table-sm table-hover table-striped"  data-toggle="table"
+                                <table id="table-list" class="table table-sm table-hover table-striped"  
+                                    data-toggle="table"
                                     data-pagination="true"
                                     data-search="true"
                                     data-search-align="left"
@@ -149,14 +150,17 @@
                                     data-pagination-next-text="Next"
                                     data-pagination-h-align="left"
                                     data-pagination-detail-h-align="right"
-                                    data-url="">
+                                    data-show-pagination-switch="true"
+                                    data-page-list="[10, 25, 50, 100, ALL]">
+
+                                
 
                                     <thead id="thead" class="col-sm-3 text-center">
 
                                         <tr>
                                             <th scope="col" >View</th>
                                             <!-- <th scope="col">Image</th> -->
-                                            <th scope="col" data-field ="Name" data-sortable="true">Name <span><small>(Firstname, Mi, Lastname)</small></span></th>
+                                            <th scope="col" data-field ="Name" data-sortable="true" data-switchable="false">Name <span><small>(Firstname, Mi, Lastname)</small></span></th>
                                             <th scope="col" data-field ="Address" data-sortable="true">Address</th>
                                             <th scope="col" data-field ="Age" data-sortable="true">Age</th>
                                             <th scope="col" data-field ="Gender" data-sortable="true">Gender</th>
@@ -183,7 +187,7 @@
                                         <?php endforeach; ?>
                                     </tbody>
                                 </table>
-                        </div><!--end wrapper-->            
+                        </div><!--end wrapper-->  <br><br>           
                     </div><!--end container -->
             </div>
 

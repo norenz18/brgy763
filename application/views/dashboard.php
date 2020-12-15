@@ -155,7 +155,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </div>
 
                         <div class="tab">
-                            <h4><a href="<?php echo site_url('CrudController/viewlist'); ?>" id="offtab"><i class="fas fa-users-cog"></i> BRGY. OFFICIALS</a></h4> 
+                            <h4><a href="<?php echo site_url('Officials'); ?>" id="offtab"><i class="fas fa-users-cog"></i> BRGY. OFFICIALS</a></h4> 
                         </div> 
                     </div>
 
