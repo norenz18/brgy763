@@ -2,7 +2,7 @@
 
                 <div class="nav">
                     <ul>
-                        <li><a href="<?php echo site_url('CrudController/viewlist');?>">RESIDENTS</a></li>
+                        <li><a href="<?php echo site_url('BlotterController');?>">BLOTTER</a></li>
                         <li><a href="<?php echo site_url('users/login'); ?>"><i class="fas fa-sign-out-alt"></i> Log out</a></li>
                     </ul>       
                 </div>
@@ -100,7 +100,7 @@
                         </div><!-- end of modal -->
 
                         <div class="container-fluid" id="table-wrapper">
-                                <table id="table-list" class="table table-sm table-hover table-striped"  
+                                <table id="table-list" class="table table-sm table-hover table-border"  
                                     data-toggle="table"
                                     data-pagination="true"
                                     data-search="true"
@@ -119,7 +119,7 @@
                                             <th scope="col" >Case No.</th><!-- data-field ="CaseNo." data-sortable="true"  -->
                                             <th scope="col" data-field ="Complainant" data-sortable="true">Complainant</th>
                                             <th scope="col" data-field ="ComplainedResident" data-sortable="true">Complained Resident</th>
-                                            <th scope="col" data-field ="DateofFiling" data-sortable="true">Date of Filing</th>
+                                            <th scope="col" data-field ="DateofFiling" data-sortable="true">Date of Filing <small>(year/month/day)</small></th>
                                             <th scope="col" data-field ="Person-in-Charge" data-sortable="true">Person-in-Charge</th>
                                             <th scope="col" data-field ="Status" data-sortable="true">Status</th>
                                             <th scope="col" data-field ="Action">Action</th>
@@ -135,8 +135,8 @@
                                                 <td class="text-center"><?php echo $setrows->dateOfFiling; ?></td>
                                                 <td class="text-center"><?php echo $setrows->pic; ?></td>
                                                 <td class="text-center"><?php echo $setrows->status; ?></td>
-                                                <td class="text-center"><a class="btn btn-success btn-sm" data-toggle="tooltip"  title="View details" href=""> <i class="fas fa-eye"></i></a>
-                                                <a class="btn btn-info btn-sm" data-toggle="tooltip" title="Edit details" href=""><i class="fas fa-edit"></i></a> <!-- <?php echo site_url('CrudController/edit');?>/<?php echo $row->id;?>-->
+                                                <td class="text-center"><a class="btn btn-success btn-sm" data-toggle="tooltip"  title="View details" href=""> <i class="fas fa-print"></i></a>
+                                                <a class="btn btn-info btn-sm" data-toggle="tooltip" title="Edit details" href="<?php echo site_url('BlotterController/edit'); ?>/<?php echo $setrows->id;?>"><i class="fas fa-edit"></i></a> 
 
                                              
                                                 </td>      
