@@ -28,7 +28,7 @@
                                     <!-- Button trigger modal -->
                         &nbsp&nbsp;&nbsp;&nbsp;<button type="button" id="btn-add" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-user-plus"></i> ADD RESIDENT</button>
                         
-                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal fade" id="exampleModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"> <!-- tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" -->
                             <div class="modal-dialog modal-xl">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -131,6 +131,7 @@
 
                             </div>
                             <button type="submit" class="btn btn-success btn-sm"><i class="fas fa-save"></i> Save</button>
+                            <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
 
                         </form>  
                         </div><!--end of modal body-->

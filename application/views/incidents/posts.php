@@ -6,16 +6,30 @@
                         <li><a href="<?php echo site_url('PostsController');?>">INCIDENT REPORT</a></li>
                         <li><a href="<?php echo site_url('users/login'); ?>"><i class="fas fa-sign-out-alt"></i> Log out</a></li>
                     </ul>       
-            </div>
-            <br>
-
+            </div><br>
+        
 
         <div class="container" id="incidentTab">
         
+              <!--  <div class="nav-main">
+
+                        <ul>
+                        <li><img id="brgylogo" alt="brgy. 763 zone 83" src="<?php echo site_url('img/brgylogo.png'); ?>" /></li>
+                        <li><a href="<?php echo site_url('CrudController');?>"><i class="far fa-chart-bar"></i> Dashboard</a></li>
+                        <li><a href="<?php echo site_url('CrudController/viewlist');?>"><i class="fas fa-users"></i> Residents</a></li>
+                        <li><a href="<?php echo site_url('PostsController');?>"><i class="fas fa-clipboard-list"></i> Incident Report</a></li>
+                        <li><a href="<?php echo site_url('BlotterController');?>"><i class="fas fa-book"></i> Blotter</a></li> <i class="fas fa-print"></i>
+                        <li><a href=""><i class="fas fa-scroll"></i> Permits&Certs.</a></li>                                      
+                        <li><a href="<?php echo site_url('Officials');?>"><i class="fas fa-users-cog"></i> Officials</a></li>          
+                        </ul>
+
+                </div>-->
+
+
                         <button type="button" id="btnadd" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-plus"></i> ADD REPORT</button>
                         <input type="text" id="searchbar" onkeyup="myFunc();" placeholder=" Search..">&nbsp;<i class="fas fa-search"></i><br><br>
                     
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal fade" id="exampleModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                         <div class="modal-dialog modal-xl">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -40,6 +54,7 @@
                                                         </div>                 
                                                 
                                                         <button type="submit" class="btn btn-success btn-sm">Submit</button>
+                                                        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
                                         </form>  
                                 </div><!--end of modal body-->
 
@@ -60,8 +75,12 @@
                                         <?php endforeach; ?>  
                                 </table>
                                 </div>
-                        </div>
-
+                        </div> 
+                   
         </div> <!-- end of IncidentTab -->
 
 <?php $this->load->view('includes/footer'); ?>
+
+
+
+
