@@ -5,7 +5,7 @@
             <div   div class="nav">
                     <ul>
                         <li><a href="<?php echo site_url('PostsController');?>"><i class="fas fa-angle-double-left"></i> Back</a></li>
-                        <li><a href="<?php echo site_url('#');?>">INCIDENTS REPORT EDIT</a></li>
+                        <li><a href="<?php echo site_url('#');?>">INCIDENTS REPORT</a></li>
                         <li><a href="<?php echo site_url('users/login'); ?>">Log out</a></li>
                     </ul>       
             </div><br>
@@ -21,7 +21,7 @@
                     </div>
 
                     <div class="form-group">
-                        <textarea  name="body" id="editor1" class="form-control" rows="10" cols="10"><?php echo $post['body']; ?></textarea><!-- id="editor1" -->
+                        <textarea  name="body" id="editor" class="form-control" rows="10" cols="10"><?php echo $post['body']; ?></textarea><!-- id="editor1" -->
                     </div>                 
                                        
                     <button type="submit" onclick="myFunctionbtn()" class="btn btn-success btn-sm">Submit</button>

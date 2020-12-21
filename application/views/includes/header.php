@@ -299,8 +299,10 @@
        }
        #incidentTab{
 
-          height: 82vh;
+          height: auto;
           width: 100%;
+          padding-left: 0;
+          padding-right: 0;
        }
        #incidentTab #searchbar{
 
@@ -310,15 +312,24 @@
           margin-left: 10px;
           outline: none;
        }
-       #incidentTab #post-side #post-body{
+       #incidentTab #table-posts #tbody tr #post-title{
 
-          border: 1px solid black;
-          padding: 5px;
-          margin-right: 5px; 
-          border-radius: 5px;
+          width: 500px;
+          margin: 0;
+         
+        }
+        #incidentTab #table-posts #tbody tr #post-body{
+
+          width: 300px;
+          margin: 0;
+
+        }
+        #incidentTab #table-posts #tbody tr td{
+
+          width: 200px;
           text-align: center;
-          width: 100%;
-       }
+        }
+
        #incident_section{
           margin: 50px;
           height: 150vh;
@@ -332,54 +343,9 @@
          letter-spacing: 3px;
        }
        #incident_section #postdate, #postbody{
-
         color: black;
-
        }
-       #post-side {
-
-        position:relative;
-
-        }
-        #post-scroll {
-        
-          height: 65vh;
-          overflow: auto;  
-
-        }
-        #post-scroll #tbl-post{
-
-          
-          display: flex;
-          justify-content: space-around;
-          align-items: center;
-        
-        }
-        #post-scroll #tbl-post tr td{
-
-          display: flex;
-          flex-direction: column;
-          justify-content: space-around;
-          align-items: center;
-          width: 100%;
-          padding: 10px;
-          overflow: hidden;
-
-        }
-        #post-scroll #tbl-post tr td h1{
-
-          margin-top: 10px;
-        }
-        #post-scroll #tbl-post tr td p{
-
-         
-        }
-        #post-scroll #tbl-post tr #post-body{
-
-          width: 100%;
-          padding: 15px;
-        }
-      
+       
 
     </style>
 
