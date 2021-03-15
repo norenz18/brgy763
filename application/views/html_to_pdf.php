@@ -47,7 +47,7 @@
         }
         #pdf #pdf-content h6{
 
-            font-size: 14px;
+            font-size: 15px;
             line-height: 40px;
 
         }
