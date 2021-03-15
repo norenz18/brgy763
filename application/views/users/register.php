@@ -14,11 +14,30 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <style>
 
-    html,body{
 
-        height: 100vh;
+html,body {
+        height: 90vh;
+		background-color: #ccc;
+		margin-top: 10px;
+		font-family: nexa;		
+	}
+	h1 {
+		color: #555;
+		background-color: transparent;
+		border-bottom: 2px solid #D0D0D0;
+		font-size: 3rem;
+		font-weight: 700;
+		margin: 0 0 12px 0;
+		padding: 10px;
+	}
+    .container {
+		
+		/* padding: 10px 0; */
+		font-size: 18px;
+		border: 1px solid #D8D8D8;
+		box-shadow: 0 0 8px #D0D0D0;
+	}
 
-    }
 
     </style>
 
@@ -57,12 +76,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <input type="password" class="form-control" id="passVal2" name="password2" placeholder="Confirm Password">
               
             </div>
-            <button type="submit" class="btn btn-primary btn-sm">Submit</button>
-            <p>Proceed to&nbsp;<a id="regText" href="<?php echo site_url('Users/login'); ?> ">Log In!</a></p>
+
+            <div class="form-group col-sm-3">
+                <button type="submit" class="btn btn-primary btn-sm">Submit</button>
+                <p>Proceed to&nbsp;<a id="regText" href="<?php echo site_url('Users/login'); ?> ">Log In!</a></p>
+            </div>
         </div>
 
         <?php echo form_close(); ?>
-
 
 </body>
 </html>

@@ -103,8 +103,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 					
 				<script src="<?php echo site_url('bootstrap/js/jquery.slim.min.js') ?>"> </script>
-    <script src="<?php echo site_url('bootstrap/js/bootstrap.min.js') ?>"></script>
-    <script src="<?php echo site_url('bootstrap/js/jquery.js') ?>"></script>
-    <script src="<?php echo site_url('bootstrap/js/jquery-ui.js') ?>"></script>
+				<script src="<?php echo site_url('bootstrap/js/bootstrap.min.js') ?>"></script>
+				<script src="<?php echo site_url('bootstrap/js/jquery.js') ?>"></script>
+				<script src="<?php echo site_url('bootstrap/js/jquery-ui.js') ?>"></script>
 </body>
 </html>
