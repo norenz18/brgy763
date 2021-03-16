@@ -1,193 +1,166 @@
 <?php $this->load->view('includes/header'); ?>
-       
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<style>
-  
-    html, body{
-
-        height: auto;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        background: linear-gradient(45deg, #9fd8ef 17%,#9fd8ef 33%,#9fd8ef 33%,#9fd8ef 34%,#e4f5fc 43%,#e4f5fc 51%,#2ab0ed 77%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    }
-    #cap{
-
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-    }
-    #cap #capt{
-
-        height: 400px;
-        filter: drop-shadow(20px 20px 25px #000000);
-        border-radius: 15px;
-        border: none; 
-
-    }
-    #cap #blogo, #lmanila{
-
-        height: 200px;
-        width: 200px;
-        filter: drop-shadow(20px 20px 25px #000000);
-    }
-   
-    #kag{
-
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: flex-end;
-        width: auto;
-        padding: 0;
-       
-       
-    }
-    #kag img{
-
-        height: 300px;
-        width: auto;
-        object-fit: contain;
-        border-radius: 15px;
-        border: none;
-        filter: drop-shadow(20px 20px 25px black);
-    }
-    #sk {
-
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: flex-start;
-        width: auto;
-        padding: 0;
-    }
-    #sk img{
-
-        height: 250px;
-        width: auto;
-        object-fit: cover;
-        border-radius: 15px;
-        border: none;
-        filter: drop-shadow(20px 20px 25px #000000);
-    }
-    
-
-
-    
-</style>
-
-</head>
-<body>
-
+            
                 <div class="nav">
                     <ul>
                         <li><a href="<?php echo site_url('CrudController/viewlist');?>"><i class="fas fa-angle-double-left"></i> Back</a></li>
                         <li><a href="<?php echo site_url('Officials');?>">BRGY. OFFICIALS</a></li>
                         <li><a href="<?php echo site_url('users/login'); ?>">Log out</a></li>
                     </ul>       
-                </div><br>
+                </div>
 
-                <h1 class="text-center"><?php echo $title; ?></h1>
+                <div class="container-fluid d-flex justify-content-around" id="main-container">
 
-                <div class="container" id="cap">
-                    <img id="blogo" src="<?php echo site_url('img/blogo.png'); ?>" alt="">
-                    <img id="capt" src="<?php echo site_url('img/captain.png'); ?>" alt="">
-                    <img id="lmanila" src="<?php echo site_url('img/logomanila.png'); ?>" alt="">
+                            <div class="nav-main">
 
-                </div><br>
+                                    <ul>
+                                        <li><img id="brgylogo" alt="brgy. 763 zone 83" src="<?php echo site_url('img/brgylogo.png'); ?>" /></li>
+                                        <li><a href="<?php echo site_url('CrudController');?>"><i class="far fa-chart-bar"></i> Dashboard</a></li>
+                                        <li><a href="<?php echo site_url('CrudController/viewlist');?>"><i class="fas fa-users"></i> Residents</a></li>
+                                        <li><a href="<?php echo site_url('PostsController');?>"><i class="fas fa-clipboard-list"></i> Incident Report</a></li>
+                                        <li><a href="<?php echo site_url('BlotterController');?>"><i class="fas fa-book"></i> Blotter</a></li> <!--<i class="fas fa-print"></i>-->
+                                        <li><a href=""><i class="fas fa-scroll"></i> Permits&Certs.</a></li>                                      
+                                        <li><a href="<?php echo site_url('Officials');?>"><i class="fas fa-users-cog"></i> Officials</a></li>          
+                                    </ul>
 
-                <div class="container" id="kag">
-                        <img src="<?php echo site_url('img/kagawad.png'); ?>" alt="">
-                        <img src="<?php echo site_url('img/kagawad2.png'); ?>" alt="">
-                        <img src="<?php echo site_url('img/kagawad3.png'); ?>" alt="">
-                        <img src="<?php echo site_url('img/kagawad4.png'); ?>" alt="">               
-                </div><br>
+                            </div>
 
-                <div class="container" id="kag">
-                        <img src="<?php echo site_url('img/kagawad5.png'); ?>" alt="">
-                        <img src="<?php echo site_url('img/kagawad6.png'); ?>" alt="">
-                        <img src="<?php echo site_url('img/kagawad7.png'); ?>" alt="">                 
-                </div><br>
+                        <div class="container"><br><br>
+                        
+                                    <!-- Button trigger modal -->
+                        &nbsp&nbsp;&nbsp;&nbsp;<button type="button" id="btn-add" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-plus"></i> BRGY. OFFICIAL</button>
+                        
+                        <div class="modal fade" id="exampleModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title text-info" id="exampleModalLabel">BRGY OFFICIAL</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    
+                                </div>
 
-                <div class="container" id="sk">
-                        <img id="sec" src="<?php echo site_url('img/secretary.png'); ?>" alt="">
-                        <img src="<?php echo site_url('img/sk.png'); ?>" alt="">
-                        <img id="tre" src="<?php echo site_url('img/treasurer.png'); ?>" alt="">
-                </div><br>
+                                <h5><small class="modal-title text-danger" id="exampleModalLabel">&nbsp&nbsp;&nbsp;Note: Make sure all the details are correct.</small></h5>
 
-
-<?php $this->load->view('includes/footer'); ?>
-
-<!-- <div class="container">
-<form method="post" action="<?php echo site_url('CrudController/create')?>" enctype="multipart/form-data">
+                        <div class="modal-body"> <!--opening modal body-->
+                        
+                        <form method="post" action="<?php echo site_url('Officials/createOfficials')?>" enctype="multipart/form-data">
                    
 
-                   <div class="form-row">
+                            <div class="form-row">
+                            
+                                <div class="form-group col-sm-3">
+                                    <label for="">First Name</label>
+                                    <input type="text" class="form-control" name="firstname" required>
+                                </div>
 
-                       <div class="form-group">
-                           <label for="">Brgy. Captain</label> <br>
-                           <input type="file" name="userfile" size="20" required>
-                       </div>
+                                <div class="form-group col-sm-3">
+                                    <label for="">Last Name</label>
+                                    <input type="text" class="form-control" name="lastname" required>
+                                </div>
 
-                       <div class="form-group">
-                           <label for="">Kagawad #1</label> <br>
-                           <input type="file" name="userfile" size="20" required>
-                       </div>
+                                <div class="form-group col-sm-3">
+                                    <label for="">Middle Name or Initial</label>
+                                    <input type="text" class="form-control" name="middlename" >
+                                </div>
 
-                       <div class="form-group">
-                           <label for="">Kagawad #2</label> <br>
-                           <input type="file" name="userfile" size="20" required>
-                       </div>
+                                <div class="form-group col-sm-3">
+                                    <label for="Position">Position</label><br>
+                                    <select class="form-control" id="role" name="role" required>
+                                        <option value=""></option>
+                                        <option value="Punong Barangay">Punong Barangay</option>
+                                        <option value="Kagawad">Kagawad</option>
+                                        <option value="Sk Chairman">Sk Chairman</option>
+                                        <option value="Secretary">Secretary</option>
+                                        <option value="Treasurer">Treasurer</option>
+                                    </select>
+                                </div>
 
-                       <div class="form-group">
-                           <label for="">Kagawad #3</label> <br>
-                           <input type="file" name="userfile" size="20" required>
-                       </div>
 
-                       <div class="form-group">
-                           <label for="">Kagawad #4</label> <br>
-                           <input type="file" name="userfile" size="20" required>
-                       </div>
+                            </div>
 
-                       <div class="form-group">
-                           <label for="">Kagawad #5</label> <br>
-                           <input type="file" name="userfile" size="20" required>
-                       </div>
+                            <button type="submit" class="btn btn-success btn-sm"><i class="fas fa-save"></i> Save</button>
+                            <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
 
-                       <div class="form-group">
-                           <label for="">Kagawad #6</label> <br>
-                           <input type="file" name="userfile" size="20" required>
-                       </div>
-                       
-                       <div class="form-group">
-                           <label for="">Kagawad #7</label> <br>
-                           <input type="file" name="userfile" size="20" required>
-                       </div>
+                        </form>  
 
-                       <div class="form-group">
-                           <label for="">SK Chairman</label> <br>
-                           <input type="file" name="userfile" size="20" required>
-                       </div>
+                        </div><!--end of modal body-->
 
-                       <div class="form-group">
-                           <label for="">Secretary</label> <br>
-                           <input type="file" name="userfile" size="20" required>
-                       </div>
+                            </div>
+                            </div>
+                        </div><!-- end of modal -->
 
-                       <div class="form-group">
-                           <label for="">Treasurer</label> <br>
-                           <input type="file" name="userfile" size="20" required>
-                       </div>
-                      
-                     
+                        <div class="container-fluid" id="table-wrapper">
+                                <table id="table-list" class="table table-sm table-hover table-border"  
+                                    data-toggle="table"
+                                    data-pagination="true"
+                                    data-search="true"
+                                    data-search-align="left"
+                                    data-show-fullscreen="true"
+                                    data-pagination-pre-text="Prev"
+                                    data-pagination-next-text="Next"
+                                    data-pagination-h-align="left"
+                                    data-pagination-detail-h-align="right"
+                                    data-show-pagination-switch="true"
+                                    data-page-list="[10, 25, 50, 100, ALL]">
 
-                   </div>
-                   <button type="submit" class="btn btn-success btn-sm"><i class="fas fa-save"></i> Save</button>
+                                    <thead id="thead" class="col-sm-3 text-center">
 
-               </form> 
-</div> -->
+                                        <tr>
+                                            <th scope="col-sm-3" class="col-sm-3 text-center" data-field ="firstname" data-sortable="true">Full Name <small>(First Name, M.Name/Initial, Last Name)</small></th>
+                                            <th scope="col-sm-3" class="col-sm-3 text-center" data-field ="role" data-sortable="true">Position</th>
+                                            <!-- <th scope="col-sm-3" class="col-sm-3 text-center" data-field ="rank" data-sortable="true">Rank</th> -->
+                                            <th scope="col-sm-1">Action</th>  
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tbody">
+                                 
+                                        <?php foreach($result as $setrows) : ?>  
+                                            <tr>
+                                                <td class="text-left"><strong><?php echo $setrows->firstname; ?> <?php echo $setrows->middlename; ?> <?php echo $setrows->lastname; ?></strong></td>
+                                                <td class="text-center"><?php echo $setrows->role; ?></td>  
+                                                 
+                                                <td class="text-center"><a class="btn btn-info btn-sm" data-toggle="tooltip" title="Edit details" href="<?php echo site_url('Officials/editOfficial'); ?>/<?php echo $setrows->id; ?>"><i class="fas fa-edit"></i></a></td> 
+                                            </tr>
+                                        <?php endforeach; ?>
+                                 
+                                    </tbody>
+                                </table>
+                        </div><!--end wrapper--> <br><br>           
+                    </div><!--end container -->
+            </div> 
+
+
+<?php $this->load->view('includes/footer') ?>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

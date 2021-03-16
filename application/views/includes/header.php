@@ -57,6 +57,10 @@
           position: relative;
                 
         }
+        input{
+
+          text-transform: capitalize;
+        }
         #textArea{
 
           resize: none;
