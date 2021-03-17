@@ -102,7 +102,7 @@
                             <button type="submit" class="btn btn-success btn-sm"><i class="fas fa-save"></i> Save</button>
                             <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
 
-                        </form>  
+                        </form>   <!-- end of form -->
 
                         </div><!--end of modal body-->
 
@@ -135,15 +135,15 @@
                                     </thead>
                                     <tbody id="tbody">
                                  
-                                        <?php foreach($result as $setrows) : ?>  
-                                            <tr>
-                                                <td class="text-left"><strong><?php echo $setrows->firstname; ?> <?php echo $setrows->middlename; ?> <?php echo $setrows->lastname; ?></strong></td>
-                                                <td class="text-center"><?php echo $setrows->role; ?></td>  
-                                                <td class="text-center"><?php echo $setrows->rank; ?></td>  
-                                                 
-                                                <td class="text-center"><a class="btn btn-info btn-sm" data-toggle="tooltip" title="Edit details" href="<?php echo site_url('Officials/editOfficial'); ?>/<?php echo $setrows->id; ?>"><i class="fas fa-edit"></i></a></td> 
-                                            </tr>
-                                        <?php endforeach; ?>
+                                    <?php foreach($result as $setrows) : ?>  
+                                        <tr>
+                                            <td class="text-left"><strong><?php echo $setrows->firstname; ?> <?php echo $setrows->middlename; ?> <?php echo $setrows->lastname; ?></strong></td>
+                                            <td class="text-center"><?php echo $setrows->role; ?></td>  
+                                            <td class="text-center"><?php echo $setrows->rank; ?></td>  
+                                            <td class="text-center"><a class="btn btn-info btn-sm" data-toggle="tooltip" title="Edit details" href="<?php echo site_url('Officials/editOfficial'); ?>/<?php echo $setrows->id; ?>"><i class="fas fa-edit"></i></a></td>
+                                            
+                                        </tr>
+                                    <?php endforeach; ?>
                                  
                                     </tbody>
                                 </table>

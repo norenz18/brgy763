@@ -48,9 +48,9 @@
 
                             <div class="form-row">
                                
-                                <div class="form-group col-sm-1">
+                                <div class="form-group col-sm-2">
                                     <label for="">Case No.*</label>
-                                    <input type="number" class="form-control" name="caseNo" required>
+                                    <input type="text" class="form-control" name="caseNo" required>
                                 </div>
 
                                 <div class="form-group col-sm-3">
@@ -68,7 +68,7 @@
                                     <input type="date" class="form-control" name="dateOfFiling" required>
                                 </div>
                                 
-                                <div class="form-group col-sm-3">
+                                <div class="form-group col-sm-2">
                                     <label for="">Person-in-Charge*</label>
                                     <input type="text" class="form-control" name="pic" required>
                                 </div>

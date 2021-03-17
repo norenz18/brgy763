@@ -94,7 +94,7 @@
                                                 <tr>
                                                         <td class="text-center" id="post-title"><strong><?php echo $post['title']; ?></strong></td>
                                                         <td><h6 id="post-body"><?php echo word_limiter($post['body'], 5); ?></h6></td>
-                                                        <td><small id="post-date">Posted: <?php echo $post['created_at']; ?></small><br></td>
+                                                        <td><small id="post-date"><?php echo $post['created_at']; ?></small><br></td>
                                                         <td><a class="btn btn-info btn-sm" href="<?php echo site_url('PostsController/view/'.$post['slug']); ?>">Read Report</a></td>
                                                 </tr>
                                         <?php endforeach; ?>  

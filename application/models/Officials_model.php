@@ -55,7 +55,7 @@ class Officials_model extends CI_Model {
         $this->db->where('id', $id);
         $this->db->update('officials', $data);
     }
-    function deleteData($id){ #deleting data in database
+    function deleteOfficialData($id){ #deleting data in database
  
         $this->db->where('id', $id);
         $this->db->delete('officials');

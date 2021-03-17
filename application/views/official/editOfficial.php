@@ -48,7 +48,7 @@
                                     <label for="rank">Rank</label><br>
                                     <select class="form-control" id="rank" name="rank" value="<?php echo $setrows->rank; ?>" required>
                                         <option><?php echo $setrows->rank; ?></option>
-                                        <option value=""></option>
+                                        <option disabled>----------</option>
                                         <option value="1">1 - Punong Barangay</option>
                                         <option value="2">2 - Kagawad</option>
                                         <option value="3">3 - Kagawad</option>
@@ -66,9 +66,39 @@
 
 
             </div>
-                           <button type="submit" class="btn btn-success btn-sm"><i class="fas fa-save"></i> Save</button>
-                           <a href="<?php echo site_url('Officials')?>"><button type="button" class="btn btn-danger btn-sm">Cancel</button></a>
-      </form>
+                    <button type="submit" class="btn btn-success btn-sm"><i class="fas fa-save"></i> Save</button>
+                    <a href="<?php echo site_url('Officials')?>"><button type="button" class="btn btn-secondary btn-sm">Cancel</button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    
+                    
+                    <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#staticBackdrop">
+                                                    <i class="fas fa-trash-alt"> Delete</i>
+                                                    </button>
+
+                                                    <!-- Modal -->
+                                                    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="staticBackdropLabel">Delete Brgy. Official</h5>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            This action can cause deleting information of a Brgy. Official <br>
+                                                            Are you sure you want to delete?
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+                                                            
+                                                            <a class="btn btn-danger btn-sm" data-toggle="tooltip" id="dltbtn" title="Delete details" href="<?php echo site_url('Officials/deleteOfficial');?>/<?php echo $setrows->id;?> "><i class="fas fa-trash-alt"></i> Delete</a>
+      
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                    </div>
+                 
+                        </form>
 </div>
 
     <?php $this->load->view('includes/footer'); ?>

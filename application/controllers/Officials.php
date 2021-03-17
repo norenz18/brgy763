@@ -34,6 +34,12 @@ class Officials extends CI_Controller {
         $this->Officials_model->updateOfficialData($id);
         redirect("Officials");
     }
+    public function deleteOfficial($id){ #DELETING DATA
+        $this->Officials_model->deleteOfficialData($id);
+        redirect('officials');
+    } 
+
+ 
 
 
 }
