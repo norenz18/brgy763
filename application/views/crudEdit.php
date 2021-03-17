@@ -79,22 +79,24 @@
                     </div>
       
                     <div class="form-group col-sm-2">
-                      
-                      <label for="">Voter Status</label><br>
-                      <input type="radio" id="voterStatus" name="voterStatus" value="Yes" required>
-                      <label for="">Yes</label><br>
-                      <input type="radio" id="voterStatus" name="voterStatus" value="No" required>
-                      <label for="">No</label><br>
-                      
-                    </div>
+                                    <label for="">Voter Status</label><br>
+                                    <select id="" class="form-control" id="voterStatus" name="voterStatus" value="<?php echo $row->voterStatus; ?>" required>
+                                        <option><?php echo $row->voterStatus; ?></option>
+                                        <option disabled>---</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                </div>
 
-                    <div class="form-group col-sm-2">
-                    <label for="male">Gender</label><br>
-                        <input type="radio" id="gender" name="gender" value="Male" required>
-                        <label for="male">Male</label><br>
-                        <input type="radio" id="gender" name="gender" value="Female" required>
-                        <label for="female">Female</label><br>
-                    </div>
+                                <div class="form-group col-sm-2">
+                                    <label for="">Gender</label><br>
+                                    <select id="" class="form-control" id="gender" name="gender" value="<?php echo $row->gender; ?>" required>
+                                        <option><?php echo $row->gender; ?></option>
+                                        <option disabled>---</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                    </select>
+                                </div>
 
             </div><!--end class form row-->
             <br><br>

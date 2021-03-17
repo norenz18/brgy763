@@ -50,7 +50,7 @@
 
                                 <div class="form-group">
                                     <label for="">Upload Image</label> <br>
-                                    <input type="file" name="userfile" size="20" required>
+                                    <input type="file" name="userfile" size="20">
                                 </div>
                                
                                 <div class="form-group col-sm-3">
@@ -109,27 +109,26 @@
                                     <input type="text" class="form-control" name="address" id="address" required>
                                 </div>
 
-                                <div class="form-group col-sm-2" >
-                                
+                                <div class="form-group col-sm-2">
                                     <label for="">Voter Status</label><br>
-                                    <input type="radio" id="voterStatus" name="voterStatus" value="Yes" required>
-                                    <label for="">Yes</label><br>
-                                    <input type="radio" id="voterStatus" name="voterStatus" value="No" required>
-                                    <label for="">No</label><br>
-                                    
+                                    <select id="" class="form-control" id="voterStatus" name="voterStatus" required>
+                                        <option value=""></option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
                                 </div>
 
-                                <div class="form-group col-sm-2" >
-                                
-                                    <label for="male">Gender</label><br>
-                                    <input type="radio" id="gender" name="gender" value="Male" required>
-                                    <label for="male">Male</label><br>
-                                    <input type="radio" id="gender" name="gender" value="Female" required>
-                                    <label for="female">Female</label><br>
-                                    
+                                <div class="form-group col-sm-2">
+                                    <label for="">Gender</label><br>
+                                    <select id="" class="form-control" id="gender" name="gender" required>
+                                        <option value=""></option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                    </select>
                                 </div>
 
-                            </div>
+
+                            </div><br><br><br>
                             <button type="submit" class="btn btn-success btn-sm"><i class="fas fa-save"></i> Save</button>
                             <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
 
