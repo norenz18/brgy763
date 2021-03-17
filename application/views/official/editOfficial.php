@@ -44,6 +44,25 @@
                                     </select>
                                 </div>
 
+                                <div class="form-group col-sm-2">
+                                    <label for="rank">Rank</label><br>
+                                    <select class="form-control" id="rank" name="rank" value="<?php echo $setrows->rank; ?>" required>
+                                        <option><?php echo $setrows->rank; ?></option>
+                                        <option value=""></option>
+                                        <option value="1">1 - Punong Barangay</option>
+                                        <option value="2">2 - Kagawad</option>
+                                        <option value="3">3 - Kagawad</option>
+                                        <option value="4">4 - Kagawad</option>
+                                        <option value="5">5 - Kagawad</option>
+                                        <option value="6">6 - Kagawad</option>
+                                        <option value="7">7 - Kagawad</option>
+                                        <option value="8">8 - Kagawad</option>
+                                        <option value="9">9 - Sk Chairman</option>
+                                        <option value="10">10 - Secretary</option>
+                                        <option value="11">11 - Treasurer</option>
+                                    </select>
+                                </div>
+
 
 
             </div>
