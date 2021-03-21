@@ -18,8 +18,8 @@ class CrudController extends CI_Controller {
         $config['upload_path'] = './img';
         $config['allowed_types'] = 'gif|jpg|png|jpeg';
         $config['max_size'] = '2048';
-        $config['max_width'] = '3000';
-        $config['max_height'] = '3000';
+        $config['max_width'] = '1600';
+        $config['max_height'] = '1600';
 
         $this->load->library('upload', $config);
 

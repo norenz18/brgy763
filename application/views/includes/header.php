@@ -5,19 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" href="<?php echo site_url('img/brgylogo.png'); ?>" type="gif/image" sizes="16x16">
-    
-
     <!-- Bootstrap CSS -->
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"> -->
-    
     <link rel="stylesheet" href="<?php echo site_url('bootstrap/css/bootstrap.min.css') ?> ">
     <link rel="stylesheet" type="text/css" media="screen" href="<?php site_url('bootstrap/css/jquery-ui.css') ?>" />
     <link rel="stylesheet" href="<?php echo site_url('fontawesome/css/all.css') ?>">
     <link rel="stylesheet" href="<?php echo site_url('asset/bootstrap-table.min.css') ?> ">
- 
-
-    <script src="<?php echo site_url('ckeditor/ckeditor.js') ?>"></script>
-   
    
     <style>
         ::-webkit-scrollbar {

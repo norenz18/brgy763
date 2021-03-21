@@ -56,15 +56,15 @@
                     <ul id="resProfile">
                             
                                 <li><strong>First Name:</strong> <span><?php echo $row->firstName; ?></li>
-                                <li><strong>Last Name:</strong> <span><?php echo $row->lastName; ?></li>
-                                <li><strong>Mi:</strong> <span><?php echo $row->mi; ?></li>
-                                <li><strong>Contact:</strong> <span><?php echo $row->contact; ?></li>
-                                <li><strong>Address:</strong> <span><?php echo $row->address; ?> Dist. 5 San Andres, Manila &nbsp;</li>
-                                <li><strong>Age:</strong> <span><?php echo $row->age; ?></li>
-                                <li><strong>Voter Status:</strong> <span><?php echo $row->voterStatus; ?></li>
-                                <li><strong>Gender:</strong> <span><?php echo $row->gender; ?></li>
-                                <li><strong>Civil Status:</strong> <span><?php echo $row->civilStatus; ?></li>
-                                <li><strong>Birthdate:</strong> <span><?php echo $row->birthdate; ?></li>                                             
+                                <li><strong>Last Name:</strong> <span>&nbsp;<?php echo $row->lastName; ?></li>
+                                <li><strong>Mi:</strong> <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $row->mi; ?></li>
+                                <li><strong>Contact:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><?php echo $row->contact; ?></li>
+                                <li><strong>Address:</strong> <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $row->address; ?> Dist. 5 San Andres, Manila &nbsp;</li>
+                                <li><strong>Age:</strong> <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $row->age; ?></li>
+                                <li><strong>Voter Status:</strong><span><?php echo $row->voterStatus; ?></li>
+                                <li><strong>Gender:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><?php echo $row->gender; ?></li>
+                                <li><strong>Civil Status:</strong>&nbsp;&nbsp;<span><?php echo $row->civilStatus; ?></li>
+                                <li><strong>Birthdate:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><?php echo $row->birthdate; ?></li>                                             
                                 <li><strong>Person w/ Disability:</strong> <span><?php echo $row->pwd; ?></li>                                             
                     </ul>
 

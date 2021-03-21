@@ -21,7 +21,7 @@
                     </div>
 
                     <div class="form-group">
-                        <textarea  name="body" id="editor" class="form-control" rows="10" cols="10"><?php echo $post['body']; ?></textarea><!-- id="editor1" -->
+                        <textarea  name="body" id="editor" class="form-control" rows="10" cols="10" required><?php echo $post['body']; ?></textarea><!-- id="editor1" -->
                     </div>                 
                                        
                     <button type="submit" onclick="myFunctionbtn()" class="btn btn-success btn-sm">Submit</button>

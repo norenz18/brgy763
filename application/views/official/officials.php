@@ -127,9 +127,10 @@
                                     <thead id="thead" class="col-sm-3 text-center">
 
                                         <tr>
-                                            <th scope="col-sm-3" class="col-sm-3 text-center" data-field ="firstname" data-sortable="true">Full Name <small>(First Name, M.Name/Initial, Last Name)</small></th>
-                                            <th scope="col-sm-3" class="col-sm-3 text-center" data-field ="role" data-sortable="true">Position</th>
-                                            <th scope="col-sm-3" class="col-sm-3 text-center" data-field ="rank" data-sortable="true">Rank</th>
+                                            <th scope="col-sm-3" class="col-sm-3 text-center">Full Name <small>(First Name, M.Name/Initial, Last Name)</small></th> <!-- data-field ="firstname" data-sortable="true" -->
+                                            <!-- <th scope="col-sm-3" class="col-sm-3 text-center" data-field ="role" data-sortable="true">Chairmanship</th> -->
+                                            <th scope="col-sm-3" class="col-sm-3 text-center" >Position</th> <!-- data-field ="role" data-sortable="true" -->
+                                            <th scope="col-sm-3" class="col-sm-3 text-center" >Rank</th> <!-- data-field ="rank" data-sortable="true" -->
                                             <th scope="col-sm-1">Action</th>  
                                         </tr>
                                     </thead>
@@ -138,6 +139,7 @@
                                     <?php foreach($result as $setrows) : ?>  
                                         <tr>
                                             <td class="text-left"><strong><?php echo $setrows->firstname; ?> <?php echo $setrows->middlename; ?> <?php echo $setrows->lastname; ?></strong></td>
+                                        
                                             <td class="text-center"><?php echo $setrows->role; ?></td>  
                                             <td class="text-center"><?php echo $setrows->rank; ?></td>  
                                             <td class="text-center"><a class="btn btn-info btn-sm" data-toggle="tooltip" title="Edit details" href="<?php echo site_url('Officials/editOfficial'); ?>/<?php echo $setrows->id; ?>"><i class="fas fa-edit"></i></a></td>

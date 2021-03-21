@@ -47,11 +47,11 @@
                                         <form method="post" action="<?php echo site_url('PostsController/create')?> ">
                                                
                                                         <div class="form-group">
-                                                                <label for="">&nbsp;INCIDENT TITLE:<input type="text" class="form-control" name="title" placeholder="Add Report title.."> </label><br>
+                                                                <label for="">&nbsp;INCIDENT TITLE:<input type="text" class="form-control" name="title" placeholder="Add report title.." required> </label><br>
                                                         </div>
 
                                                         <div class="form-group">
-                                                                <textarea class="form-control" name="body" rows="10" cols="10" placeholder="Add text.."></textarea>
+                                                                <textarea class="form-control" name="body" rows="10" cols="10" placeholder="Add text.." required></textarea>
                                                         </div>                 
                                                 
                                                         <button type="submit" class="btn btn-success btn-sm">Submit</button>

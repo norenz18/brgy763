@@ -3,7 +3,8 @@
 <head>
     <meta charset="utf-8">
     <title>Brgy. 763 Zone 83 District V. Manila</title>
-
+    <!-- <link rel="icon" href="<?php echo site_url('img/brgylogo.png'); ?>" type="image/gif" sizes="16x16">  -->
+    <link rel="icon" href="<?php echo site_url('img/brgylogo.png'); ?>" type="gif/image" sizes="16x16">
     <style>
     *{
         padding: 0;
