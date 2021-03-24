@@ -2,75 +2,100 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brgy. 763 Zone 83 District V. Manila</title>
-    <!-- <link rel="icon" href="<?php echo site_url('img/brgylogo.png'); ?>" type="image/gif" sizes="16x16">  -->
-    <link rel="icon" href="<?php echo site_url('img/brgylogo.png'); ?>" type="gif/image" sizes="16x16">
+  
+  
     <style>
-    *{
+
+        *{
         padding: 0;
         margin: 0;
         box-sizing: border-box;
-    }
+        }
         html,body{
 
-            font-family: montserrat; /*normal;*/
+            font-family: calibri, arial, sans-serif;
+
+        }
+        .container{
+
+            position: relative;
+            height: 100%;
+            border: 2px solid black;
         
         }
-        #pdf{
-            position: relative;
+        .container .bg-logo{
+         
+            position: absolute;
+            background-image: url('img/logomanila2.png');
+            background-size: 88%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed; 
+            margin: 0;
+            padding: 5px;
+            width: auto;
+            height: 100%;
         }
-        .pdfile .headerpdf img, h3{
+         .container .bg-logo .pdf-header h5, h2, h1{
             
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center; 
-            
-        }
-
-        #brgylogo, #blogo{
-
-            height: 100px;
-            width: 130px;
-
-        }
-        #pdf h2, h4{
-           
             text-align: center;
 
-        }#pdf h4{
-
-            color: red;
         }
-        #pdf #pdf-content p h5{
-
-            font-size: 11px;
+        #brgylogo, #blogo{
+            
+            width: 110px;
+            height: 110px;
         }
-        #pdf #pdf-content h6{
-
-            font-size: 15px;
-            line-height: 40px;
-
-        }
-
-        
 
     </style>
 </head>
 <body>
  
-<div class="container" id="pdf">
+    <div class="container" id="pdf">
 
-    <div class="pdfile">
+            <div class="bg-logo">
+                <div class="pdf-header">
+                
+                        <h5>
+                        REPUBLIC OF THE PHILIPPINES <br>
+                        CITY OF MANILA <br>
+                        BARANGAY 763 ZONE 83 <br>
+                        DISTRICT V   
+                        </h5>
+
+
+                        <h2>ANG HIRAP NITO!</h2>
+                        <h1>GUSTO KO NANG GRUMADUATE!!!</h1>
+                        
+                     
+                </div>
+               
+
+            </div>
+
+    </div>
+    
+
+</body>
+</html>
+<!-- <li><img src="<?php echo site_url('img/brgylogo1.png'); ?>" id="brgylogo" alt="brgy. 763 logo"></li>
+<li><img src="<?php echo site_url('img/newblogo.png'); ?>" id="blogo" alt="blogo"></li> -->
+
+   
+        <!-- <p>Click here to More Information for Pakainfo.com <a href="https://www.pakainfo.com/" alt="CodeIgniter 3 PDF Generate Tutorial With Example" title="CodeIgniter 3 PDF Generate Tutorial With Example">Pakainfo.com</a>.</p> -->
+  
+            <!-- <div class="pdfile">
         <div class="headerpdf">
-            <img src="<?php echo site_url('img/brgylogo.png'); ?>" id="brgylogo" alt="brgy. 763 logo">
+          
                 <h3>
                 REPUBLIC OF THE PHILIPPINES <br>
                 CITY OF MANILA <br>
                 BARANGAY 763 ZONE 83 <br>
                 DISTRICT V   
                 </h3>
-            <img src="<?php echo site_url('img/blogo.png'); ?>" id="blogo" alt="blogo">
      </div>
 
         <h4>OFFICE OF THE BARANGAY CHAIRMAN</h4>
@@ -135,16 +160,6 @@
 
             District 5, Manila City 1017 Philippines.  
         </h5>  
-    </div> 
-
-
-</div>
+    </div>  -->
     
-
-</body>
-</html>
-
-   
-        <!-- <p>Click here to More Information for Pakainfo.com <a href="https://www.pakainfo.com/" alt="CodeIgniter 3 PDF Generate Tutorial With Example" title="CodeIgniter 3 PDF Generate Tutorial With Example">Pakainfo.com</a>.</p> -->
   
- 

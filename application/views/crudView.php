@@ -12,7 +12,7 @@
                             <div class="nav-main">
 
                                     <ul>
-                                        <li><img id="brgylogo" alt="brgy. 763 zone 83" src="<?php echo site_url('img/brgylogo.png'); ?>" /></li>
+                                        <li><img id="brgylogo" alt="brgy. 763 zone 83" src="<?php echo site_url('img/brgylogo1.png'); ?>" /></li>
                                         <li><a href="<?php echo site_url('CrudController');?>"><i class="far fa-chart-bar"></i> Dashboard</a></li>
                                         <li><a href="<?php echo site_url('CrudController/viewlist');?>"><i class="fas fa-users"></i> Residents</a></li>
                                         <li><a href="<?php echo site_url('PostsController');?>"><i class="fas fa-clipboard-list"></i> Incident Report</a></li>
@@ -59,7 +59,7 @@
                                 </div>
 
                                 <div class="form-group col-sm-3">
-                                    <label for="">Last Name</label>
+                                    <label for="">Last Name <small>(Suffix)</small></label>
                                     <input type="text" class="form-control" name="lastName" required>
                                 </div>
 
@@ -110,7 +110,7 @@
                                 </div>
 
                                 <div class="form-group col-sm-2">
-                                    <label for="">Voter Status</label><br>
+                                    <label for="">Registered Voter?</label><br>
                                     <select id="" class="form-control" id="voterStatus" name="voterStatus" required>
                                         <option value=""></option>
                                         <option value="Yes">Yes</option>

@@ -22,13 +22,31 @@
                                 </div>
 
                                 <div class="form-group col-sm-3">
-                                    <label for="">Last Name</label>
+                                    <label for="">Last Name <small>(Suffix)</small></label>
                                     <input type="text" class="form-control" name="lastname" value="<?php echo $setrows->lastname; ?>"  required>
                                 </div>
 
                                 <div class="form-group col-sm-3">
                                     <label for="">Middle Name or Initial</label>
                                     <input type="text" class="form-control" name="middlename" value="<?php echo $setrows->middlename; ?>"  >
+                                </div>
+
+                                <div class="form-group col-sm-3">
+                                    <label for="chairmanship">Chairmanship</label><br>
+                                    <select class="form-control" id="chairmanship" name="chairmanship" value="<?php echo $setrows->chairmanship; ?>" required>
+                                        <option><?php echo $setrows->chairmanship; ?></option>
+                                        <option disabled>----------</option>
+                                        <option value="Presiding Officer">Presiding Officer</option>
+                                        <option value="Committee on Appropriation">Appropriation</option>
+                                        <option value="Committee on Peace & Order">Peace & Order</option>
+                                        <option value="Committee on Health">Health</option>
+                                        <option value="Committee on Education">Education</option>
+                                        <option value="Committee on Rules">Rules</option>
+                                        <option value="Committee on Infra">Infra</option>
+                                        <option value="Committee on Solid Waste">Solid Waste</option>
+                                        <option value="Committee on Sports">Sport</option>
+                                        <option value="No Declared Chairmanship">- No Declared Chairmanship </option>
+                                    </select>
                                 </div>
 
                                 <div class="form-group col-sm-3">

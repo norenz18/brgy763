@@ -10,7 +10,7 @@ class Mpdf extends CI_Controller {
         $live_mpdf->WriteHTML($all_html);
         $live_mpdf->Output(); // simple run and opens in browser
         //$live_mpdf->Output('pakainfo_details.pdf','D'); // it CodeIgniter downloads the file into the main dynamic system, with give your file name
-
+       
     }
  
 }

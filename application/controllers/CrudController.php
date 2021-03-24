@@ -18,8 +18,8 @@ class CrudController extends CI_Controller {
         $config['upload_path'] = './img';
         $config['allowed_types'] = 'gif|jpg|png|jpeg';
         $config['max_size'] = '2048';
-        $config['max_width'] = '1600';
-        $config['max_height'] = '1600';
+        // $config['max_width'] = '1600';
+        // $config['max_height'] = '1600';
 
         $this->load->library('upload', $config);
 
@@ -46,7 +46,9 @@ class CrudController extends CI_Controller {
     public function update($id){ #UPDATING DATA
        
         $this->Crud_model->updateData($id);
-        redirect("CrudController/viewlist");
+        // redirect("CrudController/viewlist");
+        $data['row'] = $this->Crud_model->getData($id);
+        $this->load->view('crudRead', $data);
     }
 
     public function delete($id){ #DELETING DATA

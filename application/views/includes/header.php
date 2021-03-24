@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" href="<?php echo site_url('img/brgylogo.png'); ?>" type="gif/image" sizes="16x16">
+    <link rel="icon" href="<?php echo site_url('img/brgylogo1.png'); ?>" type="gif/image" sizes="16x16">
     <!-- Bootstrap CSS -->
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="<?php echo site_url('bootstrap/css/bootstrap.min.css') ?> ">
@@ -38,7 +38,7 @@
           padding: 0;
           margin: 0;
           box-sizing: border-box;
-          font-family: 'nexa', sans-serif;
+          font-family: nexa, 'poppins', sans-serif;
           font-weight: 400;
  
         }
@@ -49,6 +49,23 @@
           height: 100vh;
           position: relative;
                 
+        }
+        /* DASHBOARD CONSTRUCTION */
+        .under{
+
+          /* 
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50% 50%); */
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          /* display: grid;
+          place-items: center; */
+          height: 90vh;
         }
         input{
 
@@ -159,7 +176,7 @@
           object-fit: cover;
 
           }
-          #brgy{
+          /* #brgy{
 
           width: 130px;
           height: auto;
@@ -183,7 +200,7 @@
           width: 100%;
           height: auto;
         
-        }
+        } */
         #editContainer{
           height: 81.5vh;
         }
@@ -208,6 +225,12 @@
           background-color: #123a4a;
           color: #fff;
           width: auto;
+        }
+        .profileImg{
+           
+           height: 150px;
+           width: 150px;
+
         }
         #tbody #profileImg{
 

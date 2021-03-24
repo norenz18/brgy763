@@ -48,6 +48,7 @@ class Crud_model extends CI_Model {
        
         $data = array(
             
+           
             'lastName' => $this->input->post('lastName'),
             'firstName' => $this->input->post('firstName'),
             'mi' => $this->input->post('mi'),

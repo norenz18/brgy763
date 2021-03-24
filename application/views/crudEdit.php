@@ -12,17 +12,13 @@
 
       <h6 class="text-danger">Note: Editing details can cause misleading information, make sure all the details are correct and valid.</h6>
       <br>
-      <form method="post" action="<?php echo site_url('CrudController/update')?>/<?php echo $row->id; ?>"> <!--  enctype="multipart/form-data" -->
+      <form method="post" action="<?php echo site_url('CrudController/update')?>/<?php echo $row->id; ?>" enctype="multipart/form-data"> <!--  enctype="multipart/form-data" -->
             <div class="form-row">
 
-                    <!-- <div class="form-group col-sm-3">
-                        <label for="">Upload Image</label>
-                        <input type="file" name="userfile" size="20">
-                    </div> -->
-
-                    <div class="form-group col-sm-3">
-                        <label for="">Last Name</label>
-                        <input type="text" class="form-control" name="lastName" value="<?php echo $row->lastName; ?>" required>
+                    <div class="form-group col-sm-2">
+                        <img class="profileImg" id="profileImg" src="<?php echo site_url('img'); ?>/<?php echo $row->profImage; ?>">
+                        <label for="">Resident Image</label>
+                        <!-- <input type="file" name="userfile" size="20"> -->
                     </div>
 
                     <div class="form-group col-sm-3">
@@ -30,9 +26,14 @@
                         <input type="text" class="form-control" name="firstName" value="<?php echo $row->firstName; ?>" required>
                     </div>
 
+                    <div class="form-group col-sm-3">
+                        <label for="">Last Name <small>(Suffix)</small></label>
+                        <input type="text" class="form-control" name="lastName" value="<?php echo $row->lastName; ?>" required>
+                    </div>
+
                     <div class="form-group col-sm-1">
                         <label for="">M.I.</label>
-                        <input type="text" class="form-control" name="mi" value="<?php echo $row->mi; ?>" required>
+                        <input type="text" class="form-control" name="mi" value="<?php echo $row->mi; ?>" >
                     </div>
 
                     <div class="form-group col-sm-2">
@@ -79,7 +80,7 @@
                     </div>
       
                     <div class="form-group col-sm-2">
-                                    <label for="">Voter Status</label><br>
+                                    <label for="">Registered Voter?</label><br>
                                     <select id="" class="form-control" id="voterStatus" name="voterStatus" value="<?php echo $row->voterStatus; ?>" required>
                                         <option><?php echo $row->voterStatus; ?></option>
                                         <option disabled>---</option>

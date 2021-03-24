@@ -14,7 +14,7 @@
                             <div class="nav-main">
 
                                     <ul>
-                                        <li><img id="brgylogo" alt="brgy. 763 zone 83" src="<?php echo site_url('img/brgylogo.png'); ?>" /></li>
+                                        <li><img id="brgylogo" alt="brgy. 763 zone 83" src="<?php echo site_url('img/brgylogo1.png'); ?>" /></li>
                                         <li><a href="<?php echo site_url('CrudController');?>"><i class="far fa-chart-bar"></i> Dashboard</a></li>
                                         <li><a href="<?php echo site_url('CrudController/viewlist');?>"><i class="fas fa-users"></i> Residents</a></li>
                                         <li><a href="<?php echo site_url('PostsController');?>"><i class="fas fa-clipboard-list"></i> Incident Report</a></li>
@@ -56,13 +56,30 @@
                                 </div>
 
                                 <div class="form-group col-sm-3">
-                                    <label for="">Last Name</label>
+                                    <label for="">Last Name <small>(Suffix)</small></label>
                                     <input type="text" class="form-control" name="lastname" required>
                                 </div>
 
                                 <div class="form-group col-sm-3">
                                     <label for="">Middle Name or Initial</label>
                                     <input type="text" class="form-control" name="middlename" >
+                                </div>
+
+                                <div class="form-group col-sm-2">
+                                    <label for="chairmanship">Chairmanship</label><br>
+                                    <select class="form-control" id="chairmanship" name="chairmanship" required>
+                                        <option value=""></option>
+                                        <option value="Presiding Officer">Presiding Officer</option>
+                                        <option value="Committee on Appropriation">Appropriation</option>
+                                        <option value="Committee on Peace & Order">Peace & Order</option>
+                                        <option value="Committee on Health">Health</option>
+                                        <option value="Committee on Education">Education</option>
+                                        <option value="Committee on Rules">Rules</option>
+                                        <option value="Committee on Infra">Infra</option>
+                                        <option value="Committee on Solid Waste">Solid Waste</option>
+                                        <option value="Committee on Sports">Sport</option>
+                                        <option value="No Declared Chairmanship">- No Declared Chairmanship </option>
+                                    </select>
                                 </div>
 
                                 <div class="form-group col-sm-2">
@@ -127,8 +144,8 @@
                                     <thead id="thead" class="col-sm-3 text-center">
 
                                         <tr>
-                                            <th scope="col-sm-3" class="col-sm-3 text-center">Full Name <small>(First Name, M.Name/Initial, Last Name)</small></th> <!-- data-field ="firstname" data-sortable="true" -->
-                                            <!-- <th scope="col-sm-3" class="col-sm-3 text-center" data-field ="role" data-sortable="true">Chairmanship</th> -->
+                                            <th scope="col-sm-3" class="col-sm-3 text-center" >Full Name <small>(First Name, M.Name/Initial, Last Name)</small></th> <!-- data-field ="firstname" data-sortable="true" -->
+                                            <th scope="col-sm-3" class="col-sm-3 text-center" >Chairmanship</th> <!-- data-field ="role" data-sortable="true" -->
                                             <th scope="col-sm-3" class="col-sm-3 text-center" >Position</th> <!-- data-field ="role" data-sortable="true" -->
                                             <th scope="col-sm-3" class="col-sm-3 text-center" >Rank</th> <!-- data-field ="rank" data-sortable="true" -->
                                             <th scope="col-sm-1">Action</th>  
@@ -139,7 +156,7 @@
                                     <?php foreach($result as $setrows) : ?>  
                                         <tr>
                                             <td class="text-left"><strong><?php echo $setrows->firstname; ?> <?php echo $setrows->middlename; ?> <?php echo $setrows->lastname; ?></strong></td>
-                                        
+                                            <td class="text-center"><?php echo $setrows->chairmanship; ?></td>
                                             <td class="text-center"><?php echo $setrows->role; ?></td>  
                                             <td class="text-center"><?php echo $setrows->rank; ?></td>  
                                             <td class="text-center"><a class="btn btn-info btn-sm" data-toggle="tooltip" title="Edit details" href="<?php echo site_url('Officials/editOfficial'); ?>/<?php echo $setrows->id; ?>"><i class="fas fa-edit"></i></a></td>

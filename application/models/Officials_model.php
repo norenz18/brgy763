@@ -16,6 +16,7 @@ class Officials_model extends CI_Model {
             'firstname' => $this->input->post('firstname'),
             'lastname' => $this->input->post('lastname'),
             'middlename' => $this->input->post('middlename'),
+            'chairmanship' => $this->input->post('chairmanship'),
             'role' => $this->input->post('role'),
             'rank' => $this->input->post('rank')
            
@@ -48,6 +49,7 @@ class Officials_model extends CI_Model {
             'firstname' => $this->input->post('firstname'),
             'lastname' => $this->input->post('lastname'),
             'middlename' => $this->input->post('middlename'),
+            'chairmanship' => $this->input->post('chairmanship'),
             'role' => $this->input->post('role'),
             'rank' => $this->input->post('rank')
             
