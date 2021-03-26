@@ -18,64 +18,76 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	html,body {
 		
-		margin: 40px;
+		margin: 0;
+		padding: 0;
 		font-family: nexa, tahoma, arial, sans-serif;
+	
 	
 	}
 	.welcome-container{
 
 		position: relative;
+		height: 100vh;
 
 	}
 
 	.welcome-container #bglogo{
+
 		position: absolute;
         position: fixed;
         left: 50%;
         transform: translateX(-50%);
-        height: 80vh;
+        height: 100vh;
         width: 50%;
-        filter: opacity(20%);
+        filter: opacity(30%);
         z-index: -20;
 
-
 	}
-    #su, #pcd{
+	.welcome-container #container {
 
-        text-decoration: none;
-        color: #555;
-        padding: 5px;
 	
-    }
-	#su:hover, #pcd:hover{
-
-		border-bottom: 1px solid grey;
-	
-	}
-	h1 {
-		color: #555;
-		background-color: transparent;	
-		font-size: 27px;
-		font-weight: 700;
-		margin: 0 0 14px 0;
-		padding: 14px 15px 10px 15px;
-		transition: .3s ease-in-out;
-	}
-
-	#brgylogo, #blogo{
-
-		height: 100px;
-		width: 150px;
-	}
-
-	.container {
-		margin: 10px;
-		padding: 20px 0;
-		border: 1px solid #D0D0D0;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		border: 3px solid rgba(255,255,255,1);
 		box-shadow: 0 0 8px #D0D0D0;
-	}
-
 	
+
+	}
+	.welcome-container #container .login-container {
+
+		position: absolute;
+		padding: 50px 50px 50px;
+		border-radius: 20px;
+		border: 3px solid rgba(255,255,255,0.425);
+		background-color: rgba(255,255,255,0.5);
+		filter: blur(0.5);
+		color: black;
+		font-size: 18px;
+		font-weight: bolder;
+
+		/* FLEX */
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+	}
+	input[type=text],[type=password]{
+
+		border: none;
+		border-bottom: 1px solid black;
+		border-radius: 5px;
+		background: transparent;
+		outline: none;
+		font-size: 18px;
+		/* text-transform: Initial; */
+		
+	}
+	
+			
 	</style>
 </head>
 <body>
@@ -84,18 +96,74 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 		<img id="bglogo" src="<?php echo site_url('img/brgylogo1.png');?>"> 	
 
-		<h1 class="container text-center">
-			<img src="<?php echo site_url('img/brgylogo1.png'); ?>" id="brgylogo" alt="brgy. 763 logo">&nbsp;&nbsp;<?php echo $title ?>&nbsp;
-			<img src="<?php echo site_url('img/newblogo.png'); ?>" id="blogo" alt="blogo">
-		</h1>
+				<div class="container d-flex justify-content-center text-center" id="container">
 
-		<div class="container text-center">
-			<h1><a href="<?php echo site_url('Users/register'); ?>" id="su">Sign Up?</a></h1>
-        	<h1><a href="<?php echo site_url('Users/login'); ?>" id="pcd">Proceed to Log In</a></h1>	
-		</div>
+					<div class="login-container">	
+
+					<?php if($this->session->flashdata('user_loggedin')): ?>
+					<?php echo '<p class="alert alert-success">' .$this->session->flashdata('user_loggedin').'</p>'; ?>
+					<?php endif; ?>
+	
+					<?php if($this->session->flashdata('login_failed')): ?>
+					<?php echo '<p class="alert alert-danger">' .$this->session->flashdata('login_failed').'</p>'; ?>
+					<?php endif; ?>
+
+
+						<form action="<?php echo site_url('Users/login');?>" method="POST">					
+							<h1><strong>Login</strong></h1>
+
+							<div class="form-group col-md-12">
+								<label for=""><strong>Username</strong></label>
+								<input type="text" name="username" id="username" placeholder="Enter Username" class="form-control" required>
+									<!-- <select type="text" class="form-control" id="username" name="username" required>
+                                        <option value=""></option>
+                                        <option value="Admin">Admin</option>
+                                        <option value="Secretary">Secretary</option>
+                                    </select> -->
+							</div>
+
+							<div class="form-group col-md-12">
+								<label for=""><strong>Password</strong></label>
+								<input type="password" name="password" id="password" placeholder="Enter Password" class="form-control" required>
+							</div>
+
+							<div class="form-group col-md-12">							
+								<input type="submit" name="login" value="Login" class="form-control btn btn-dark">					
+							</div>
+							
+							<p>Dont have an account?&nbsp;<a id="regText" href="<?php echo site_url('Users/register'); ?> ">Sign up here!</a></p>
+						</form>
+					</div>	
+				</div>
 
 	</div>
+
+								
+				<script src="<?php echo site_url('bootstrap/js/jquery.slim.min.js') ?>"> </script>
+				<script src="<?php echo site_url('bootstrap/js/bootstrap.min.js') ?>"></script>
+				<script src="<?php echo site_url('bootstrap/js/jquery.js') ?>"></script>
+				<script src="<?php echo site_url('bootstrap/js/jquery-ui.js') ?>"></script>
+
 </body>
 </html>
 
+<!-- 
+				<h1 class="container text-center">	
+					<img src="<?php echo site_url('img/brgylogo1.png'); ?>" id="brgylogo" alt="brgy. 763 logo">
+						Welcome to Brgy. 763 Zone 83 District V, Manila
+					<img src="<?php echo site_url('img/newblogo.png'); ?>" id="blogo" alt="blogo">
+				</h1> -->
 
+<!-- 		
+			<h1 class="container text-center">
+				<img src="<?php echo site_url('img/brgylogo1.png'); ?>" id="brgylogo" alt="brgy. 763 logo">&nbsp;&nbsp;<?php echo $title ?>&nbsp;
+				<img src="<?php echo site_url('img/newblogo.png'); ?>" id="blogo" alt="blogo">
+			</h1> -->
+
+		
+
+
+		<!-- <div class="container text-center">
+			<h1><a href="<?php echo site_url('Users/register'); ?>" id="su">Sign Up?</a></h1>
+        	<h1><a href="<?php echo site_url('Users/login'); ?>" id="pcd">Proceed to Log In</a></h1>	
+		</div> -->

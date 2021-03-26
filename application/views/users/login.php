@@ -1,4 +1,4 @@
-<?php 
+<!-- <?php 
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?><!DOCTYPE html>
 <html lang="en">
@@ -31,6 +31,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	#username, #password{
 
 		width: 300px;
+		
 	}
 	#brgylogo, #blogo{
 
@@ -107,4 +108,4 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<script src="<?php echo site_url('bootstrap/js/jquery.js') ?>"></script>
 				<script src="<?php echo site_url('bootstrap/js/jquery-ui.js') ?>"></script>
 </body>
-</html>
+</html> -->

@@ -16,26 +16,35 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 html,body {
+
         height: 90vh;
 		background-color: #ccc;
 		margin-top: 10px;
 		font-family: nexa;		
+
 	}
+    input[type=email]{
+
+        text-transform: initial;
+
+    }
 	h1 {
-		color: #555;
+
+		color: black;
 		background-color: transparent;
-		border-bottom: 2px solid #D0D0D0;
 		font-size: 3rem;
 		font-weight: 700;
-		margin: 0 0 12px 0;
-		padding: 10px;
+		padding: 14px;
+
 	}
     .container {
 		
-		/* padding: 10px 0; */
+	
 		font-size: 18px;
-		border: 1px solid #D8D8D8;
-		box-shadow: 0 0 8px #D0D0D0;
+        background-color: rgba(255,255,255,0.5);
+        border-radius: 20px;
+
+        
 	}
 
 
@@ -79,7 +88,7 @@ html,body {
 
             <div class="form-group col-sm-3">
                 <button type="submit" class="btn btn-primary btn-sm">Submit</button>
-                <p>Proceed to&nbsp;<a id="regText" href="<?php echo site_url('Users/login'); ?> ">Log In!</a></p>
+                <p>Proceed to&nbsp;<a id="regText" href="<?php echo site_url('welcome'); ?> ">Log In!</a></p>
             </div>
         </div>
 

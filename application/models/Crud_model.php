@@ -70,6 +70,8 @@ class Crud_model extends CI_Model {
         $this->db->delete('tbl_name');
         
     }
+
+  
     
 
 //     function readData($id){ #showing data 
@@ -77,5 +79,7 @@ class Crud_model extends CI_Model {
 //         $query = $this->db->query('SELECT * FROM tbl_name WHERE `id` =' .$id);
 //         return $query->row();
 //    }
+
+
     
 }

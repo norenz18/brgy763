@@ -3,7 +3,7 @@
                 <div class="nav">
                     <ul>
                         <li><a href="<?php echo site_url('BlotterController');?>">BLOTTER</a></li>
-                        <li><a href="<?php echo site_url('users/login'); ?>"><i class="fas fa-sign-out-alt"></i> Log out</a></li>
+                        <li><a href="<?php echo site_url('welcome'); ?>"><i class="fas fa-sign-out-alt"></i> Log out</a></li>
                     </ul>       
                 </div>
 
@@ -79,7 +79,6 @@
                                         <option value=""></option>
                                         <option value="Pending">Pending</option>
                                         <option value="Ongoing">On-going</option>
-                                        <option value="Resolved">Resolved Issue</option>
                                     </select>
                                 </div>
 

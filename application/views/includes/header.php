@@ -176,31 +176,7 @@
           object-fit: cover;
 
           }
-          /* #brgy{
-
-          width: 130px;
-          height: auto;
-          filter: drop-shadow(10px 10px 8px grey);
-          transition: .3s ease-in-out;
-          display: flex;
-          justify-content: space-between;
-          align-content: flex-start;
-
-         }
-         #brgy:hover{
-
-          transform: translateY(-5%);
-
-        }
-        #opac{
-
-          position: relative;
-          background-color: #e3f2fd;
-          box-shadow: 0px 5px 20px lightgrey;
-          width: 100%;
-          height: auto;
-        
-        } */
+  
         #editContainer{
           height: 81.5vh;
         }
@@ -364,6 +340,61 @@
        }
        #incident_section #postdate, #postbody{
         color: black;
+       }
+
+       /* DASHBOARD */
+      .dataCount{
+
+        margin: 20px 0 20px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: flex-start;
+        align-content: flex-end;
+
+       }
+      .dataCount .count{
+
+       
+        width: 350px;
+        height: 120px;
+        border: 3px solid #123a4a;
+        border-radius: 5px;
+        background-color: rgba(255,255,255,0.425);
+        position: relative;
+
+       }
+       .dataCount .count:nth-child(2){
+
+        border-color: #F7B217;
+
+       }
+       .dataCount .count:nth-child(3){
+
+        border-color: #30C730;
+
+       }
+       .dataCount .count:nth-child(4){
+
+        border-color: #CE93C9;
+
+       }
+     
+       .dataCount .count h3{
+
+        position: absolute;
+        text-align: center;
+        color: #00000;
+        font-size: 25px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: auto;
+        width: 100%;
+        margin: 0;
+       
+      
        }
        
 

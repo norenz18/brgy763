@@ -43,7 +43,7 @@ class Users extends CI_Controller {
 		$this->form_validation->set_rules('password', 'Password', 'required');
 
 		if($this->form_validation->run() === FALSE){
-			$this->load->view('users/login');
+			$this->load->view('welcome');
 		}else{
 
 
@@ -62,8 +62,8 @@ class Users extends CI_Controller {
 
 			}else{
 				//set message
-			$this->session->set_flashdata('login_failed', 'Login Invalid');
-			redirect('Users/login');
+			$this->session->set_flashdata('login_failed', 'Login failed! <br> Make sure your <span style="color: red;">Username</span> and  <span style="color: red;">Password</span> are correct!');
+			redirect('welcome');
 
 			}
 

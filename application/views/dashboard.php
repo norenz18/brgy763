@@ -3,7 +3,7 @@
                 <div class="nav">
                     <ul>
                         <li><a href="<?php echo site_url('CrudController');?>">DASHBOARD</a></li>
-                        <li><a href="<?php echo site_url('users/login'); ?>"><i class="fas fa-sign-out-alt"></i> Log out</a></li>
+                        <li><a href="<?php echo site_url('welcome'); ?>"><i class="fas fa-sign-out-alt"></i> Log out</a></li>
                     </ul>
                 </div>
 
@@ -23,11 +23,46 @@
 
                             </div>
 
-                    <div class="container">
-                        
-                            <h1 class="under">THIS PAGE IS UNDER CONSTRUCTION!</h1>
+                    <div class="container dataCount">
+
+                                <div class="count">
+                                    <h3>TOTAL POPULATION<br><i class="fas fa-users"></i>        
+                                        <?php echo $this->db->count_all('tbl_name'); ?><br>
+                                    </h3>                                  
+                                </div>
+
+                                <div class="count">
+                                    <h3>ON-GOING CASES<br><i class="fas fa-exclamation-circle"></i>
+                                        <?php $this->db->select('*');
+                                        $this->db->from('blotter');
+                                        $this->db->like('status', 'On-going');
+                                        echo $this->db->count_all_results(); ?>
+                                    </h3>
+                                </div>
+
+                                <div class="count">
+                                <h3>REGISTERED VOTERS<br><i class="fas fa-user-check"></i>
+                                        <?php $this->db->select('*');
+                                        $this->db->from('tbl_name');
+                                        $this->db->like('voterStatus', 'Yes');
+                                        echo $this->db->count_all_results(); ?>
+                                    </h3>
+                                </div>
+
+                                <div class="count">
+                                <h3>DIFFERENTLY ABLED PERSON<br><i class="fas fa-wheelchair"></i>
+                                        <?php $this->db->select('*');
+                                        $this->db->from('tbl_name');
+                                        $this->db->like('pwd', 'Yes');
+                                        echo $this->db->count_all_results(); ?>
+                                    </h3>
+                                </div>
+
+                            
          
                     </div><!--end container -->
+
+
                 </div> <!-- end of main container -->
 
 

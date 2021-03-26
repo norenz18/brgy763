@@ -4,7 +4,7 @@
                     <ul>
                         <li><a href="<?php echo site_url('BlotterController');?>"><i class="fas fa-angle-double-left"></i> Back</a></li>
                         <li><a href="">BLOTTER RECORDS</a></li>
-                        <li><a href="<?php echo site_url('users/login'); ?>">Log out</a></li>
+                        <li><a href="<?php echo site_url('welcome'); ?>">Log out</a></li>
                     </ul>       
                 </div><br>
 

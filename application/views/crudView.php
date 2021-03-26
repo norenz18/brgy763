@@ -3,7 +3,7 @@
                 <div class="nav">
                     <ul>
                         <li><a href="<?php echo site_url('CrudController/viewlist');?>">RESIDENTS</a></li>
-                        <li><a href="<?php echo site_url('users/login'); ?>"><i class="fas fa-sign-out-alt"></i> Log out</a></li>
+                        <li><a href="<?php echo site_url('welcome'); ?>"><i class="fas fa-sign-out-alt"></i> Log out</a></li>
                     </ul>       
                 </div>
 
@@ -187,10 +187,11 @@
                                         <?php endforeach; ?>
                                     </tbody>
                                 </table>
-                        </div><!--end wrapper-->  <br><br>           
+                        </div><!--end wrapper-->  <br><br>       
                     </div><!--end container -->
             </div>
 
-
 <?php $this->load->view('includes/footer') ?>
+            
+
             
