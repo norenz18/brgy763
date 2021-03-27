@@ -180,7 +180,7 @@
                                                 <td class="text-center"><?php echo $row->gender; ?></td>
                                                 <td class="text-center"><?php echo $row->voterStatus; ?></td>
                                                 <td class="text-center"><a class="btn btn-success btn-sm" data-toggle="tooltip"  title="View details" href="<?php echo site_url('CrudController/read');?>/<?php echo $row->id; ?>"> <i class="fas fa-eye"></i></a> <a class="btn btn-info btn-sm" data-toggle="tooltip" title="Edit details" href="<?php echo site_url('CrudController/edit');?>/<?php echo $row->id;?>"><i class="fas fa-edit"></i></a>
-
+                                                <a class="btn btn-success btn-sm" data-toggle="tooltip" target="__blank"  title="View details" href="<?php echo site_url('CrudController/createPdf'); ?>/<?php echo $row->id; ?>"> <i class="fas fa-print"></i></a>
                                              
                                                 </td>      
                                             </tr>

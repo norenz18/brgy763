@@ -37,6 +37,12 @@ class BlotterController extends CI_Controller {
         redirect("BlotterController");
     }
 
+    
+    public function generatepdf(){ #SHOW INDIVIDUAL DATA
+       
+        $this->load->view('blotters/generatepdf');
+    }
+
     // public function deleteBlotter($id){ #DELETING DATA
     //     $this->Blotter_model->deleteBlotterData($id);
     //     redirect('BlotterController');
