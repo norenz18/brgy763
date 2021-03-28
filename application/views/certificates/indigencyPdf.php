@@ -84,10 +84,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     
     <div class="container" id="pdf">
+
+    <a class="btn btn-success btn-sm" data-toggle="tooltip" target="__blank"  title="View details" href="<?php echo site_url('Certificate/createPdf'); ?>/<?php echo $row->id; ?>"><i class="fas fa-print"></i></a>
                   
             <div class="bg-logo">
-
-            <a class="btn btn-success btn-sm" data-toggle="tooltip" target="__blank"  title="View details" href="<?php echo site_url('CrudController/createPdf'); ?>/<?php echo $row->id; ?>"><i class="fas fa-print"></i></a>
      
                 <div class="pdf-header">
                      
@@ -113,9 +113,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
 
                 <div class="officialSection">
+<
                     <h4>
                         <b>
-                            This     is   to    certify    that <strong style="text-transform: uppercase;text-decoration: underline;"> <?php echo $row->firstName; ?> <?php echo $row->mi; ?> <?php echo $row->lastName; ?> </strong> <br>
+                            This     is   to    certify    that <strong style="text-transform: uppercase;text-decoration: underline;"> <?php echo $row->fullName; ?>  </strong> <br>
 
                             Filipino of legal age,  with present address at <br>
 
@@ -127,7 +128,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                             the purpose of <br> ____________________________________________ <br>
 
-                            Done this  <strong style="text-transform: uppercase;text-decoration: underline;"> <?php echo date('F  d,  Y');; ?> </strong><br>
+                            Done this  <strong style="text-transform: uppercase;text-decoration: underline;"> </strong><br>
 
                             at the Office of the Barangay Chairman, <br> Barangay 763 Zone 83 
 
@@ -158,7 +159,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </div>
 
     <?php }  ?>
-
 
 </body>
 </html>

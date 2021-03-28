@@ -17,7 +17,7 @@
                                         <li><a href="<?php echo site_url('CrudController/viewlist');?>"><i class="fas fa-users"></i> Residents</a></li>
                                         <li><a href="<?php echo site_url('PostsController');?>"><i class="fas fa-clipboard-list"></i> Incident Report</a></li>
                                         <li><a href="<?php echo site_url('BlotterController');?>"><i class="fas fa-book"></i> Blotter</a></li> <!--<i class="fas fa-print"></i>-->
-                                        <li><a href=""><i class="fas fa-scroll"></i> Permits&Certs.</a></li>                                      
+                                        <li><a href="<?php echo site_url('CertificateController'); ?>"><i class="fas fa-scroll"></i> Permits&Certs.</a></li>                                      
                                         <li><a href="<?php echo site_url('Officials');?>"><i class="fas fa-users-cog"></i> Officials</a></li>          
                                     </ul>
 
@@ -135,7 +135,7 @@
                                                 <td class="text-center"><?php echo $setrows->dateOfFiling; ?></td>
                                                 <td class="text-center"><?php echo $setrows->pic; ?></td>
                                                 <td class="text-center"><?php echo $setrows->status; ?></td>
-                                                <!-- <td class="text-center"><a class="btn btn-success btn-sm" data-toggle="tooltip" target="__blank"  title="View details" href="<?php echo site_url('Mpdf'); ?>"> <i class="fas fa-print"></i></a> -->
+                                                <td class="text-center"><a class="btn btn-success btn-sm" data-toggle="tooltip" target="__blank"  title="View details" href="<?php echo site_url('Mpdf'); ?>"> <i class="fas fa-print"></i></a>
                                                 <a class="btn btn-info btn-sm" data-toggle="tooltip" title="Edit details" href="<?php echo site_url('BlotterController/edit'); ?>/<?php echo $setrows->id;?>"><i class="fas fa-edit"></i></a> 
 
                                              

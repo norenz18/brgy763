@@ -65,17 +65,18 @@ class CrudController extends CI_Controller {
         $this->load->view('crudView',$data);
   
     }
-    // public function html_to_pdf($id){ #SHOW INDIVIDUAL DATA
-    //     $data['row'] = $this->Crud_model->getData($id);
-    //     $this->load->view('html_to_pdf', $data);
-    // }
-    public function createPdf()
+    public function html_to_pdf($id){ #SHOW INDIVIDUAL DATA
+        $data['row'] = $this->Crud_model->getDatax($id);
+        $this->load->view('html_to_pdf', $data);
+    }
+    public function createPdf($id)
     {
         $live_mpdf = new \Mpdf\Mpdf();
-        $all_html = $this->load->view('html_to_pdf',[],true); //CodeIgniter view file name
+        $data['row'] = $this->Crud_model->getDatax($id);
+        $all_html = $this->load->view('html_to_pdf',$data,true); //CodeIgniter view file name
         $live_mpdf->WriteHTML($all_html);
         $live_mpdf->Output(); // simple run and opens in browser
-        //$live_mpdf->Output('pakainfo_details.pdf','D'); // it CodeIgniter downloads the file into the main dynamic system, with give your file name
+        // $live_mpdf->Output('pakainfo_details.pdf','D'); // it CodeIgniter downloads the file into the main dynamic system, with give your file name
        
     }
     
