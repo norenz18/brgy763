@@ -145,7 +145,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <b>NOT VALID WITHOUT A SEAL</b>             
                         </h5>
                         
-                        <h5  style="text-align: center">
+                        <h5  style="text-align: right">
                         <strong style="text-transform: uppercase;text-decoration: underline;"> <?php echo $setrows->punongBrgy; ?></strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
                          <b>PUNONG BARANGAY</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </h5>
