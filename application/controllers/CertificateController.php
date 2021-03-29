@@ -12,22 +12,51 @@ class CertificateController extends CI_Controller {
     }
 	public function index(){
 
-        // $data['result'] = $this->Certs_model->getCertificateData();
-        $this->load->view('certificates/permitsAndCertificates');
+        $data['result'] = $this->Certs_model->getAllCertsData();
+        $this->load->view('certificates/permitsAndCertificates', $data);
 
 	}
     public function createCert(){
 
-        $data['row'] = $this->Certs_model->getCertsData();
-        // $this->load->view('certificates/indigencyPdf',$data);
-        redirect("CertificateController", $data);
+        $this->Certs_model->createCerts();
+        redirect("CertificateController");
 
     }
-    public function indigencySection(){
+    public function edit($id){ #EDITING DATA
+        $this->load->helper('form');
+        $this->load->library('form_validation');
+        
+        $data['setrows'] = $this->Certs_model->getCertsData($id);
+        $this->load->view('certificates/edit', $data);
+    }
+    public function updateCerts($id){ #UPDATING DATA
+       
+        $this->Certs_model->updateCertsData($id);
+        redirect("CertificateController");
+    }
+
+    public function indigencySection(){ #create section 
 
         $this->load->view('certificates/indigency');
 
     }
+    public function indigencyPdf($id){ #SHOW INDIVIDUAL DATA
+        $data['setrows'] = $this->Certs_model->getCertsData($id);
+        $this->load->view('certificates/indigencyPdf', $data);
+    }
+    public function CreateCertPdf($id)
+    {
+        $live_mpdf = new \Mpdf\Mpdf();
+        $data['setrows'] = $this->Certs_model->getCertsData($id);
+        $all_html = $this->load->view('certificates/indigencyPdf',$data,true); //CodeIgniter view file name
+        $live_mpdf->WriteHTML($all_html);
+        $live_mpdf->Output(); // simple run and opens in browser
+        // $live_mpdf->Output('pakainfo_details.pdf','D'); // it CodeIgniter downloads the file into the main dynamic system, with give your file name
+       
+    }
+
+
+
     
 
     // public function create(){ #CREATING DATA TO VIEWLIST

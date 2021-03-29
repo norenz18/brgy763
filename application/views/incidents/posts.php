@@ -18,8 +18,8 @@
                         <li><a href="<?php echo site_url('CrudController');?>"><i class="far fa-chart-bar"></i> Dashboard</a></li>
                         <li><a href="<?php echo site_url('CrudController/viewlist');?>"><i class="fas fa-users"></i> Residents</a></li>
                         <li><a href="<?php echo site_url('PostsController');?>"><i class="fas fa-clipboard-list"></i> Incident Report</a></li>
-                        <li><a href="<?php echo site_url('BlotterController');?>"><i class="fas fa-book"></i> Blotter</a></li> <!--<i class="fas fa-print"></i>-->
-                        <li><a href="<?php echo site_url('Certificate'); ?>"><i class="fas fa-scroll"></i> Permits&Certs.</a></li>                                      
+                        <li><a href="<?php echo site_url('BlotterController');?>"><i class="fas fa-book"></i> Blotter</a></li> 
+                        <li><a href="<?php echo site_url('CertificateController'); ?>"><i class="fas fa-scroll"></i> Permits&Certs.</a></li>                                      
                         <li><a href="<?php echo site_url('Officials');?>"><i class="fas fa-users-cog"></i> Officials</a></li>          
                 </ul>
 

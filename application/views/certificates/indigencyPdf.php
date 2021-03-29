@@ -84,10 +84,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     
     <div class="container" id="pdf">
-
-    <a class="btn btn-success btn-sm" data-toggle="tooltip" target="__blank"  title="View details" href="<?php echo site_url('Certificate/createPdf'); ?>/<?php echo $row->id; ?>"><i class="fas fa-print"></i></a>
                   
             <div class="bg-logo">
+
+            <a class="btn btn-success btn-sm" data-toggle="tooltip" target="__blank"  title="View details" href="<?php echo site_url('CertificateController/CreateCertPdf'); ?>/<?php echo $setrows->id; ?>"><i class="fas fa-print"></i></a>
      
                 <div class="pdf-header">
                      
@@ -113,22 +113,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
 
                 <div class="officialSection">
-<
+
                     <h4>
                         <b>
-                            This     is   to    certify    that <strong style="text-transform: uppercase;text-decoration: underline;"> <?php echo $row->fullName; ?>  </strong> <br>
+                            This     is   to    certify    that <strong style="text-transform: uppercase;text-decoration: underline;"> <?php echo $setrows->fullName; ?>  </strong> <br>
 
                             Filipino of legal age,  with present address at <br>
 
-                            <strong style="text-transform: uppercase;text-decoration: underline;"> <?php echo $row->address; ?> San Andres Manila 1017</strong> <br> is a resident and is an 
+                            <strong style="text-transform: uppercase;text-decoration: underline;"> <?php echo $setrows->address; ?> San Andres Manila 1017</strong> <br> is a resident and is an 
 
                             INDIGENT of Barangay 763 Zone 83 District 5 Manila. <br>
 
                             This certification is issued upon the request of the concerned for 
 
-                            the purpose of <br> ____________________________________________ <br>
+                            the purpose of <br>  <strong style="text-transform: uppercase;text-decoration: underline;"> <?php echo $setrows->purpose; ?> </strong> <br>
 
-                            Done this  <strong style="text-transform: uppercase;text-decoration: underline;"> </strong><br>
+                            Done this  <strong style="text-transform: uppercase;text-decoration: underline;"> <?php echo $setrows->date; ?> </strong><br>
 
                             at the Office of the Barangay Chairman, <br> Barangay 763 Zone 83 
 
@@ -141,17 +141,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         
                    <div class="footText">
 
-                        <h6 style="text-align: left;">
+                        <h5 style="text-align: left;">
                             <b>NOT VALID WITHOUT A SEAL</b>             
-                        </h6>
+                        </h5>
                         
-                        <h6  style="text-align: right">
-                        <b>EDISON "SONNY" M. JIMENO </b><br>
+                        <h5  style="text-align: center">
+                        <strong style="text-transform: uppercase;text-decoration: underline;"> <?php echo $setrows->punongBrgy; ?></strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
                          <b>PUNONG BARANGAY</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        
-            
-                            
-                        </h6>
+                        </h5>
                     </div>
               
                     

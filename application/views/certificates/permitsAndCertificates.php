@@ -27,6 +27,51 @@
 
                         <a href="<?php echo site_url('CertificateController/indigencySection'); ?>">INDIGENCY</a>
                         
+
+                        <div class="container-fluid" id="table-wrapper">
+                                <table id="table-list" class="table table-sm table-hover table-border"  
+                                    data-toggle="table"
+                                    data-pagination="true"
+                                    data-search="true"
+                                    data-search-align="left"
+                                    data-show-fullscreen="true"
+                                    data-pagination-pre-text="Prev"
+                                    data-pagination-next-text="Next"
+                                    data-pagination-h-align="left"
+                                    data-pagination-detail-h-align="right"
+                                    data-show-pagination-switch="true"
+                                    data-page-list="[10, 25, 50, 100, ALL]">
+
+                                    <thead id="thead" class="col-sm-3 text-center">
+
+                                        <tr>
+                                           
+                                            <th scope="col" data-field ="fullName" data-sortable="true">Fullname</th>
+                                            <!-- <th scope="col" data-field ="address" data-sortable="true">Address</th> -->
+                                            <th scope="col" data-field ="purpose" data-sortable="true">Purpose</th>
+                                            <!-- <th scope="col" data-field ="date" data-sortable="true">Date</th> -->
+                                            <!-- <th scope="col" data-field ="punongBrgy" data-sortable="true">Punong Brgy</th> -->
+                                            <th scope="col" data-field ="Action">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tbody">
+                                        <?php foreach($result as $setrows) : ?>  
+                                            <tr>
+                                            
+                                                <td class="text-left" style="text-transform: uppercase;"><?php echo $setrows->fullName; ?></td>
+                                                <!-- <td class="text-center"><?php echo $setrows->address; ?></td> -->
+                                                <td class="text-center" style="text-transform: uppercase;"><?php echo $setrows->purpose; ?></td>
+                                                <!-- <td class="text-center"><?php echo $setrows->date; ?></td>
+                                                <td class="text-center"><?php echo $setrows->punongBrgy; ?></td> -->
+                                                <td class="text-center"><a class="btn btn-success btn-sm" data-toggle="tooltip"  title="View details" href="<?php echo site_url('CertificateController/edit');?>/<?php echo $setrows->id; ?>"> <i class="fas fa-eye"></i></a> <a class="btn btn-info btn-sm" data-toggle="tooltip" title="Edit details" href="<?php echo site_url('CrudController/edit');?>/<?php echo $setrows->id;?>"><i class="fas fa-edit"></i></a>
+                                                <a class="btn btn-primary btn-sm" data-toggle="tooltip" target="__blank"  title="View details" href="<?php echo site_url('CertificateController/indigencyPdf'); ?>/<?php echo $setrows->id; ?>"> <i class="fas fa-print"></i></a>
+                                             
+                                                </td> 
+                                            </tr>
+                                        <?php endforeach; ?>
+                                    </tbody>
+                                </table>
+                        </div><!--end wrapper--> <br><br>     
                       
                         </div><!--end container -->
                 </div> <!-- end of main container -->
