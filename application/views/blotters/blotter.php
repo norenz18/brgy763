@@ -135,11 +135,7 @@
                                                 <td class="text-center"><?php echo $setrows->dateOfFiling; ?></td>
                                                 <td class="text-center"><?php echo $setrows->pic; ?></td>
                                                 <td class="text-center"><?php echo $setrows->status; ?></td>
-                                                <td class="text-center"><a class="btn btn-success btn-sm" data-toggle="tooltip" target="__blank"  title="View details" href="<?php echo site_url('Mpdf'); ?>"> <i class="fas fa-print"></i></a>
-                                                <a class="btn btn-info btn-sm" data-toggle="tooltip" title="Edit details" href="<?php echo site_url('BlotterController/edit'); ?>/<?php echo $setrows->id;?>"><i class="fas fa-edit"></i></a> 
-
-                                             
-                                                </td>      
+                                                <td class="text-center"><a class="btn btn-info btn-sm" data-toggle="tooltip" title="Edit details" href="<?php echo site_url('BlotterController/edit'); ?>/<?php echo $setrows->id;?>"><i class="fas fa-edit"></i></a></td>      
                                             </tr>
                                         <?php endforeach; ?>
                                     </tbody>

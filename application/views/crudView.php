@@ -69,13 +69,13 @@
                                 </div>
 
                                 <div class="form-group col-sm-2">
-                                    <label for="">Birthdate</label>
-                                    <input type="date" class="form-control" name="birthdate" required>
+                                    <label for="birthdate">Birthdate: <small>Mm/Dd/Yy</small></label>
+                                    <input type="text" class="form-control" name="birthdate" id = "birthdate" required>
                                 </div>
                                 
                                 <div class="form-group col-sm-1">
                                     <label for="">Age</label>
-                                    <input type="number" class="form-control" name="age" required>
+                                    <input type="number" class="form-control" name="age" id = "age" readonly required>
                                 </div>
 
                                 <div class="form-group col-sm-2">
@@ -171,18 +171,14 @@
                                     <tbody id="tbody">
                                         <?php foreach($result as $row) : ?>  
                                             <tr>
-<!--                                             
-                                                <td class="text-center"></td> -->
+
                                                 <!-- <td id="profileImg"><img id="profileImg" src="<?php echo site_url('img'); ?>/<?php echo $row->profImage; ?>"></td> -->
                                                 <td class="text-left" id="fml"><?php echo $row->firstName; ?> <?php echo $row->mi; ?> <?php echo $row->lastName; ?></td>
                                                 <td class="text-left" id="adrs"><?php echo $row->address; ?> Dist. 5 San Andres, Manila</td>
                                                 <td class="text-center"><?php echo $row->age; ?></td>
                                                 <td class="text-center"><?php echo $row->gender; ?></td>
                                                 <td class="text-center"><?php echo $row->voterStatus; ?></td>
-                                                <td class="text-center"><a class="btn btn-success btn-sm" data-toggle="tooltip"  title="View details" href="<?php echo site_url('CrudController/read');?>/<?php echo $row->id; ?>"> <i class="fas fa-eye"></i></a> <a class="btn btn-info btn-sm" data-toggle="tooltip" title="Edit details" href="<?php echo site_url('CrudController/edit');?>/<?php echo $row->id;?>"><i class="fas fa-edit"></i></a>
-                                                <a class="btn btn-primary btn-sm" data-toggle="tooltip" target="__blank"  title="View details" href="<?php echo site_url('CrudController/html_to_pdf'); ?>/<?php echo $row->id; ?>"> <i class="fas fa-print"></i></a>
-                                             
-                                                </td>      
+                                                <td class="text-center"><a class="btn btn-success btn-sm" data-toggle="tooltip"  title="View details" href="<?php echo site_url('CrudController/read');?>/<?php echo $row->id; ?>"> <i class="fas fa-eye"></i></a> <a class="btn btn-info btn-sm" data-toggle="tooltip" title="Edit details" href="<?php echo site_url('CrudController/edit');?>/<?php echo $row->id;?>"><i class="fas fa-edit"></i></a></td>      
                                             </tr>
                                         <?php endforeach; ?>
                                     </tbody>

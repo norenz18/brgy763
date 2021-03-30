@@ -36,20 +36,31 @@
                         <input type="text" class="form-control" name="mi" value="<?php echo $row->mi; ?>" >
                     </div>
 
-                    <div class="form-group col-sm-2">
+                    <!-- <div class="form-group col-sm-2">
                         <label for="">Birthdate</label>
                         <input type="date" class="form-control" name="birthdate" value="<?php echo $row->birthdate; ?>" required>
-                    </div>
+                    </div> -->
 
                     <div class="form-group col-sm-2">
                         <label for="">Contact</label>
                         <input type="number" class="form-control" name="contact" value="<?php echo $row->contact; ?>" required>
                     </div>
 
+                    <div class="form-group col-sm-2">
+                        <label for="birthdate">Birthdate: <small>Mm/Dd/Yy</small></label>
+                        <input type="text" class="form-control" name="birthdate" id="birthdate" value="<?php echo $row->birthdate; ?>" required>
+                    </div>
+                                
                     <div class="form-group col-sm-1">
                         <label for="">Age</label>
-                        <input type="number" class="form-control" name="age" value="<?php echo $row->age; ?>" required>
+                        <input type="number" class="form-control" name="age" id="age"  value="<?php echo $row->age; ?>" readonly required>
                     </div>
+
+
+                    <!-- <div class="form-group col-sm-1">
+                        <label for="">Age</label>
+                        <input type="number" class="form-control" name="age" value="<?php echo $row->age; ?>" required>
+                    </div> -->
 
                     <div class="form-group col-sm-2">
                         <label for="civilStatus">Civil Status</label><br>
