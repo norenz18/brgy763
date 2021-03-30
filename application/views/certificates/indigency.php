@@ -59,7 +59,7 @@
             <br><br>
             <button type="submit" class="btn btn-primary btn-sm" value="save"><i class="fas fa-save"></i> Save</button>
                 <!-- <a class="btn btn-success btn-sm" data-toggle="tooltip" target="__blank"  title="View details" href="<?php echo site_url('Certificate/indigencyPdf'); ?>/<?php echo $row->id; ?>"><i class="fas fa-print"></i></a> -->
-            <a href="<?php echo site_url('Certificate')?>"><button type="button" class="btn btn-danger btn-sm">Cancel</button></a>
+            <a href="<?php echo site_url('CertificateController')?>"><button type="button" class="btn btn-danger btn-sm">Cancel</button></a>
       </form>
                         
                       
