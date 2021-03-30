@@ -12,10 +12,16 @@
     <link rel="stylesheet" type="text/css" media="screen" href="<?php site_url('bootstrap/css/jquery-ui.css') ?>" />
     <link rel="stylesheet" href="<?php echo site_url('fontawesome/css/all.css') ?>">
     <link rel="stylesheet" href="<?php echo site_url('asset/bootstrap-table.min.css') ?> ">
-    <!--  datepicker -->
+
+
+     <!-- datepicker -->
     <link rel="stylesheet" href="<?php echo site_url('jquery/jquery-ui.min.css') ?> ">
     <script src="<?php echo site_url('jquery/external/jquery/jquery.js') ?>"></script>
     <script src="<?php echo site_url('jquery/jquery-ui.min.js') ?>"></script>
+
+    <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
 
    
     <style>

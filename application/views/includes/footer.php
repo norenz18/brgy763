@@ -54,7 +54,7 @@
                     age = today.getFullYear() - ui.selectedYear;
                     $('#age').val(age);
                 },
-                changeMonth: true,
+                changeMonth: true
                
             })
         });
