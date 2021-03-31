@@ -405,7 +405,9 @@
         height: auto;
         width: 100%;
         margin: 0;
-       
+        /* -webkit-text-stroke: 1px darkgrey;
+       -webkit-text-fill-color: white; */
+
       
        }
        
