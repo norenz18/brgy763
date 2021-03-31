@@ -47,7 +47,7 @@
 
                                         <tr>
                                            
-                                            <th scope="col" data-field ="fullName" data-sortable="true">Fullname</th>
+                                            <th scope="col" data-field ="fullName" data-sortable="true">Full Name</th>
                                             <!-- <th scope="col" data-field ="address" data-sortable="true">Address</th> -->
                                             <th scope="col" data-field ="purpose" data-sortable="true">Purpose</th>
                                             <!-- <th scope="col" data-field ="date" data-sortable="true">Date</th> -->
