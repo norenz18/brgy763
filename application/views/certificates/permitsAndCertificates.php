@@ -24,11 +24,12 @@
                             </div>
 
                         <div class="container"><br><br>
-
-                        <a href="<?php echo site_url('CertificateController/indigencySection'); ?>">INDIGENCY</a>
                         
-
                         <div class="container-fluid" id="table-wrapper">
+
+                        <a href="<?php echo site_url('CertificateController/indigencySection'); ?>"  class="btn btn-secondary btn-sm">CREATE INDIGENCY</a>&nbsp;&nbsp;&nbsp;
+                        <a href="<?php echo site_url('CertificateController/indigencySection'); ?>"  class="btn btn-secondary btn-sm">CREATE CLEARANCE</a>&nbsp;&nbsp;&nbsp;
+                        <a href="<?php echo site_url('CertificateController/indigencySection'); ?>"  class="btn btn-secondary btn-sm">CREATE BUSINESS PERMIT</a><br><br>
                                 <table id="table-list" class="table table-sm table-hover table-border"  
                                     data-toggle="table"
                                     data-pagination="true"
