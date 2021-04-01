@@ -35,20 +35,34 @@ class CertificateController extends CI_Controller {
         redirect("CertificateController");
     }
 
-    public function indigencySection(){ #create section 
+    // public function create(){ #create section 
 
-        $this->load->view('certificates/indigency');
+    //     $this->load->view('certificates/createPdf');
 
-    }
+    // }
     public function indigencyPdf($id){ #SHOW INDIVIDUAL DATA
         $data['setrows'] = $this->Certs_model->getCertsData($id);
         $this->load->view('certificates/indigencyPdf', $data);
+    }
+    public function clearancePdf($id){ #SHOW INDIVIDUAL DATA
+        $data['setrows'] = $this->Certs_model->getCertsData($id);
+        $this->load->view('certificates/clearancePdf', $data);
     }
     public function CreateCertPdf($id)
     {
         $live_mpdf = new \Mpdf\Mpdf();
         $data['setrows'] = $this->Certs_model->getCertsData($id);
         $all_html = $this->load->view('certificates/indigencyPdf',$data,true); //CodeIgniter view file name
+        $live_mpdf->WriteHTML($all_html);
+        $live_mpdf->Output(); // simple run and opens in browser
+        // $live_mpdf->Output('pakainfo_details.pdf','D'); // it CodeIgniter downloads the file into the main dynamic system, with give your file name
+       
+    }
+    public function CreateCertPdfs($id)
+    {
+        $live_mpdf = new \Mpdf\Mpdf();
+        $data['setrows'] = $this->Certs_model->getCertsData($id);
+        $all_html = $this->load->view('certificates/clearancePdf',$data,true); //CodeIgniter view file name
         $live_mpdf->WriteHTML($all_html);
         $live_mpdf->Output(); // simple run and opens in browser
         // $live_mpdf->Output('pakainfo_details.pdf','D'); // it CodeIgniter downloads the file into the main dynamic system, with give your file name

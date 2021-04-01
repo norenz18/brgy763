@@ -59,7 +59,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         .container .bg-logo .officialSection h4{
 
             /* font-size: 18px; */
-            line-height: 30px;
+            line-height: 40px;
             word-spacing: 3px;
             text-align: center;
             width: 100%;
@@ -74,7 +74,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             box-sizing: border-box;
             
         }
-         span a{
+        span a{
 
             display: flex;
             justify-content: center;
@@ -90,7 +90,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             outline: none;
             border: 1px solid;
             border-radius: 5px;
-            margin: 30px 0 0 150px;
+            margin: 30px 0 0 350px;
             width: 130px;
             height: 30px;
             cursor: pointer;
@@ -110,10 +110,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             color: #FFFFFF;
             font-weight: bolder;
             word-spacing: 1px;
-            
+           
             
           
         }
+      
       
 
     </style>
@@ -127,6 +128,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                   
             <div class="bg-logo">
 
+          
                 <div class="pdf-header">
                      
                     <h3>
@@ -141,12 +143,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                      
                     </h3>
     
-                </div>  
+                </div> 
 
                 <div class="titleCert">
 
                         <h4 style="color: red"><b>OFFICE OF THE BARANGAY CHAIRMAN</b></h4>
-                        <h1><strong>CERTIFICATE OF INDIGENCY</strong> </h1>
+                        <h1><strong>CERTIFICATE</strong> </h1>
 
                 </div>
 
@@ -158,21 +160,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                             Filipino of legal age,  with present address at <br>
 
-                            <strong style="text-transform: uppercase;text-decoration: underline;"> <?php echo $setrows->address; ?> San Andres Manila 1017</strong> <br> is a resident and is an 
-
-                            INDIGENT of Barangay 763 Zone 83 District 5 Manila. <br>
+                            <strong style="text-transform: uppercase;text-decoration: underline;"> <?php echo $setrows->address; ?> San Andres Manila 1017</strong> <br> is a resident of Barangay 763 Zone 83 District 5 Manila. <br>
 
                             This certification is issued upon the request of the concerned for 
 
-                            the purpose of <br>  <strong style="text-transform: uppercase;text-decoration: underline;"> <?php echo $setrows->purpose; ?> </strong> <br>
+                            the purpose of <strong style="text-transform: uppercase;text-decoration: underline;"> <?php echo $setrows->purpose; ?> </strong> <br>
 
-                            Done this  <strong style="text-transform: uppercase;text-decoration: underline;"> <?php echo $setrows->date; ?> </strong><br>
+                            Done this  <strong style="text-transform: uppercase;text-decoration: underline;"> <?php echo $setrows->date; ?> </strong>
 
                             at the Office of the Barangay Chairman, <br> Barangay 763 Zone 83 
 
                             District 5, Manila City 1017 Philippines.  
 
-                        </b>
+                        </>
                     </h4>
 
                 </div>
@@ -195,10 +195,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <?php }  ?>
 
-    <span><a href="<?php echo site_url('CertificateController/CreateCertPdfs'); ?>/<?php echo $setrows->id; ?>"><button class="btn" data-toggle="tooltip" target="__blank"  title="Print" href=""><i class="fas fa-print"></i></button></a>
+        
+        <span><a href="<?php echo site_url('CertificateController/CreateCertPdfs'); ?>/<?php echo $setrows->id; ?>"><button class="btn" data-toggle="tooltip" target="__blank"  title="Print" href=""><i class="fas fa-print"></i></button></a>
         </span>
   
-
 </body>
 </html>
 
