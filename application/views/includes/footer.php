@@ -60,15 +60,14 @@
         });
 
         // HIDE AND SHOW
-        // $(function() {    // Makes sure the code contained doesn't run until
-        //           //     all the DOM elements have loaded
+        $(function() {    // Makes sure the code contained doesn't run until
+                  //     all the DOM elements have loaded
+        $('#category').change(function(){
+            $('.categories').hide();
+            $('#' + $(this).val()).show();
+        });
 
-        // $('#category').change(function(){
-        //     $('.categories').hide();
-        //     $('#' + $(this).val()).show();
-        // });
-
-        // });
+        });
 
 
         // ACCESS CAMERA

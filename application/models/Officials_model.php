@@ -7,12 +7,13 @@ class Officials_model extends CI_Model {
         $this->load->database();
 
     }
-    function createOfficial() { #INSERTING DATA TO DATABASE
+    function createOfficial($profImage) { #INSERTING DATA TO DATABASE
 
         $data = array(
             
            
             // 'id' => $this->input->post('id'),
+            'profImage' => $profImage,
             'firstname' => $this->input->post('firstname'),
             'lastname' => $this->input->post('lastname'),
             'middlename' => $this->input->post('middlename'),
@@ -39,13 +40,14 @@ class Officials_model extends CI_Model {
 
     }
 
-    function updateOfficialData($id){ #updating data to database
+    function updateOfficialData($id, $profImage){ #updating data to database
 
        
         $data = array(
             
 
             // 'id' => $this->input->post('id'),
+            'profImage' => $profImage,
             'firstname' => $this->input->post('firstname'),
             'lastname' => $this->input->post('lastname'),
             'middlename' => $this->input->post('middlename'),

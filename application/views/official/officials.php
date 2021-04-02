@@ -49,6 +49,11 @@
                    
 
                             <div class="form-row">
+
+                                <div class="form-group">
+                                    <label for="">Upload Image</label> <br>
+                                    <input type="file" name="userfile" id="profImage" size="20">
+                                </div>
                             
                                 <div class="form-group col-sm-3">
                                     <label for="">First Name</label>
@@ -70,14 +75,17 @@
                                     <select class="form-control" id="chairmanship" name="chairmanship" required>
                                         <option value=""></option>
                                         <option value="Presiding Officer">Presiding Officer</option>
-                                        <option value="Committee on Appropriation">Appropriation</option>
+                                        <option value="Committee on Appropriations">Appropriations</option>
                                         <option value="Committee on Peace & Order">Peace & Order</option>
-                                        <option value="Committee on Health">Health</option>
-                                        <option value="Committee on Education">Education</option>
-                                        <option value="Committee on Rules">Rules</option>
-                                        <option value="Committee on Infra">Infra</option>
-                                        <option value="Committee on Solid Waste">Solid Waste</option>
-                                        <option value="Committee on Sports">Sport</option>
+                                        <option value="Committee on Health, Social Services & Sanitation">Health, Social Services & Sanitation</option>
+                                        <option value="Committee on Education, Cultural Affairs & Tourism">Education, Cultural Affairs & Tourism</option>
+                                        <option value="Committee on Justice & Human Rights">Justice & Human Rights</option>
+                                        <option value="Committee on Public works & Infrastructure">Public works & Infrastructure</option>
+                                        <option value="Committee on Solid Waste Management">Solid Waste Management</option>
+                                        <option value="Committee on Youth & Sport Development">Youth & Sport Development</option>
+                                        <option value="Committee on Transportation, Communication & Public Service">Transportation, Communication & Public Service</option>
+                                        <option value="Committee on Women, Family Senior Citizens & Minors">Women, Family Senior Citizens & Minors</option>
+                                        <option value="Committee on Livelihood & Job Employment">Livelihood & Job Employment</option>
                                         <option value="No Declared Chairmanship">- No Declared Chairmanship </option>
                                     </select>
                                 </div>
@@ -130,7 +138,7 @@
                         <div class="container-fluid" id="table-wrapper">
                                 <table id="table-list" class="table table-sm table-hover table-border"  
                                     data-toggle="table"
-                                    data-pagination="true"
+                                    data-pagination="false"
                                     data-search="true"
                                     data-search-align="left"
                                     data-show-fullscreen="true"
@@ -144,10 +152,11 @@
                                     <thead id="thead" class="col-sm-3 text-center">
 
                                         <tr>
+                                            <th scope="col-sm-3" class="col-sm-3 text-center" >Image</th> <!-- data-field ="firstname" data-sortable="true" -->
                                             <th scope="col-sm-3" class="col-sm-3 text-center" >Full Name <small>(First Name, M.Name/Initial, Last Name)</small></th> <!-- data-field ="firstname" data-sortable="true" -->
                                             <th scope="col-sm-3" class="col-sm-3 text-center" >Chairmanship</th> <!-- data-field ="role" data-sortable="true" -->
-                                            <th scope="col-sm-3" class="col-sm-3 text-center" >Position</th> <!-- data-field ="role" data-sortable="true" -->
-                                            <th scope="col-sm-3" class="col-sm-3 text-center" >Rank</th> <!-- data-field ="rank" data-sortable="true" -->
+                                            <!-- <th scope="col-sm-3" class="col-sm-3 text-center" >Position</th> data-field ="role" data-sortable="true" -->
+                                          <!--   <th scope="col-sm-3" class="col-sm-3 text-center" >Rank</th> data-field ="rank" data-sortable="true" -->
                                             <th scope="col-sm-1">Action</th>  
                                         </tr>
                                     </thead>
@@ -155,12 +164,17 @@
                                  
                                     <?php foreach($result as $setrows) : ?>  
                                         <tr>
-                                            <td class="text-left"><strong><?php echo $setrows->firstname; ?> <?php echo $setrows->middlename; ?> <?php echo $setrows->lastname; ?></strong></td>
-                                            <td class="text-center"><?php echo $setrows->chairmanship; ?></td>
-                                            <td class="text-center"><?php echo $setrows->role; ?></td>  
-                                            <td class="text-center"><?php echo $setrows->rank; ?></td>  
-                                            <td class="text-center"><a class="btn btn-info btn-sm" data-toggle="tooltip" title="Edit details" href="<?php echo site_url('Officials/editOfficial'); ?>/<?php echo $setrows->id; ?>"><i class="fas fa-edit"></i></a></td>
                                             
+                                            <td id="officialImage"><img id="officialImage" src="<?php echo site_url('img'); ?>/<?php echo $setrows->profImage; ?>"></td>
+                                            <td class="text-left"><strong>Hon. <?php echo $setrows->firstname; ?> <?php echo $setrows->middlename; ?> <?php echo $setrows->lastname; ?></strong></td>
+                                            <td class="text-center"><?php echo $setrows->chairmanship; ?></td>
+                                            <!-- <td class="text-center"><?php echo $setrows->role; ?></td>   -->
+                                            <!-- <td class="text-center"><?php echo $setrows->rank; ?></td>   -->
+                                            <td class="text-center">
+                                            <a class="btn btn-success btn-sm" data-toggle="tooltip"  title="View details" href="<?php echo site_url('Officials/read');?>/<?php echo $setrows->id; ?>"> <i class="fas fa-eye"></i></a>&nbsp;
+                                            <a class="btn btn-info btn-sm" data-toggle="tooltip" title="Edit details" href="<?php echo site_url('Officials/editOfficial'); ?>/<?php echo $setrows->id; ?>"><i class="fas fa-edit"></i></a>
+                                           </td>
+                                           
                                         </tr>
                                     <?php endforeach; ?>
                                  

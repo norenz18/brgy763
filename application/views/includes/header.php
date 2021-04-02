@@ -198,6 +198,13 @@
           color: #fff;
           width: auto;
         }
+        #officialImage{
+
+          height: 150px;
+          width: 150px;
+          object-fit: contain;
+
+        }
         .profileImg{
            
            height: 190px;
@@ -212,7 +219,7 @@
 
           height: 100px;
           width: 100px;
-          object-fit: cover;
+          object-fit: contain;
         }
         #tbody tr #fml{
           width: 300px;

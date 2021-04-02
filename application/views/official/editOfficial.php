@@ -12,9 +12,16 @@
 
       <h6 class="text-danger">Note: Editing details can cause misleading information, make sure all the details are correct and valid.</h6>
       <br>
-      <form method="post" action="<?php echo site_url('Officials/updateOfficials')?>/<?php echo $setrows->id; ?>"> <!--  enctype="multipart/form-data" -->
+      <form method="post" action="<?php echo site_url('Officials/updateOfficials')?>/<?php echo $setrows->id; ?>" enctype="multipart/form-data"> <!--   -->
          
             <div class="form-row">
+
+                                <div class="form-group col-sm-12">
+                       
+                                    <img class="profileImg" id="profileImg" src="<?php echo site_url('img'); ?>/<?php echo $setrows->profImage; ?>">&nbsp;
+                                    <label for="">Upload Image <br><input type="file" name="userfile" style="cursor:pointer;" value="<?php echo site_url('img'); ?>/<?php echo $setrows->profImage; ?>" size="20" required></label>
+                                      
+                                </div>  
 
                                 <div class="form-group col-sm-3">
                                     <label for="">First Name</label>
@@ -37,14 +44,17 @@
                                         <option><?php echo $setrows->chairmanship; ?></option>
                                         <option disabled>----------</option>
                                         <option value="Presiding Officer">Presiding Officer</option>
-                                        <option value="Committee on Appropriation">Appropriation</option>
+                                        <option value="Committee on Appropriations">Appropriations</option>
                                         <option value="Committee on Peace & Order">Peace & Order</option>
-                                        <option value="Committee on Health">Health</option>
-                                        <option value="Committee on Education">Education</option>
-                                        <option value="Committee on Rules">Rules</option>
-                                        <option value="Committee on Infra">Infra</option>
-                                        <option value="Committee on Solid Waste">Solid Waste</option>
-                                        <option value="Committee on Sports">Sport</option>
+                                        <option value="Committee on Health, Social Services & Sanitation">Health, Social Services & Sanitation</option>
+                                        <option value="Committee on Education, Cultural Affairs & Tourism">Education, Cultural Affairs & Tourism</option>
+                                        <option value="Committee on Justice & Human Rights">Justice & Human Rights</option>
+                                        <option value="Committee on Public works & Infrastructure">Public works & Infrastructure</option>
+                                        <option value="Committee on Solid Waste Management">Solid Waste Management</option>
+                                        <option value="Committee on Youth & Sport Development">Youth & Sport Development</option>
+                                        <option value="Committee on Transportation, Communication & Public Service">Transportation, Communication & Public Service</option>
+                                        <option value="Committee on Women, Family Senior Citizens & Minors">Women, Family Senior Citizens & Minors</option>
+                                        <option value="Committee on Livelihood & Job Employment">Livelihood & Job Employment</option>
                                         <option value="No Declared Chairmanship">- No Declared Chairmanship </option>
                                     </select>
                                 </div>
