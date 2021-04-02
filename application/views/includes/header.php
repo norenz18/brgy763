@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="<?php echo site_url('fontawesome/css/all.css') ?>">
     <link rel="stylesheet" href="<?php echo site_url('asset/bootstrap-table.min.css') ?> ">
 
+    <!-- wWEBCAM JS -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.25/webcam.min.js"></script> -->
 
      <!-- datepicker -->
     <link rel="stylesheet" href="<?php echo site_url('jquery/jquery-ui.min.css') ?> ">
@@ -58,26 +60,9 @@
         html,body{
           
           background: #f2f2f2;
-          height: 100vh;
+          height: 80vh;
           position: relative;
                 
-        }
-        /* DASHBOARD CONSTRUCTION */
-        .under{
-
-          /* 
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50% 50%); */
-
-          display: flex;
-          justify-content: center;
-          align-items: center;
-
-          /* display: grid;
-          place-items: center; */
-          height: 90vh;
         }
         input{
 
@@ -216,14 +201,13 @@
         }
         .profileImg{
            
-           height: 150px;
-           width: 150px;
+           height: 190px;
+           width: 190px;
 
         }
-        #tbody #profileImg{
+        #tbody{
 
-          height: 100px;
-          width: 100px;
+          text-transform: capitalize;
         }
         #tbody tr #fml{
           width: 300px;
@@ -278,6 +262,7 @@
          margin-left: 50px;
          border: 1px solid lightgrey;
          padding: 30px;
+         text-transform: capitalize;
 
        }
        .main-content #div-content #resProfile li{

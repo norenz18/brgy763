@@ -45,12 +45,22 @@
                         
                         <form method="post" action="<?php echo site_url('CrudController/create')?>" enctype="multipart/form-data">
                    
-
                             <div class="form-row">
 
                                 <div class="form-group">
                                     <label for="">Upload Image</label> <br>
-                                    <input type="file" name="userfile" size="20">
+                                    <input type="file" name="userfile" id="profImage" size="20">
+                                    <!-- <video src="" id="video" width="300" height="300" autoplay></video>
+                                    <button id="snap">Take Photo</button>
+                                    <canvas id="canvas" width="300" height="300"></canvas> -->
+                                    
+                                    <!-- <div id="my_camera"></div>
+                                    <br/>
+                                    <input type=button value="Take Snapshot" onClick="take_snapshot()">
+                                    <input type="hidden" name="image"  class="image-tag">
+
+                                    <div id="profImage">Your captured image will appear here...</div> -->
+
                                 </div>
                                
                                 <div class="form-group col-sm-3">
@@ -186,6 +196,8 @@
                         </div><!--end wrapper-->  <br><br>       
                     </div><!--end container -->
             </div>
+
+            
 
 <?php $this->load->view('includes/footer') ?>
             

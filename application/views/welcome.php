@@ -93,10 +93,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 
 	<div class="welcome-container">
-
+            
 		<img id="bglogo" src="<?php echo site_url('img/brgylogo1.png');?>"> 	
 
 				<div class="container d-flex justify-content-center text-center" id="container">
+				
 
 					<div class="login-container">	
 
@@ -115,11 +116,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<div class="form-group col-md-12">
 								<label for=""><strong>Username</strong></label>
 								<input type="text" name="username" id="username" placeholder="Enter Username" class="form-control" required>
-									<!-- <select type="text" class="form-control" id="username" name="username" required>
-                                        <option value=""></option>
-                                        <option value="Admin">Admin</option>
-                                        <option value="Secretary">Secretary</option>
-                                    </select> -->
 							</div>
 
 							<div class="form-group col-md-12">
@@ -138,7 +134,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	</div>
 
-								
 				<script src="<?php echo site_url('bootstrap/js/jquery.slim.min.js') ?>"> </script>
 				<script src="<?php echo site_url('bootstrap/js/bootstrap.min.js') ?>"></script>
 				<script src="<?php echo site_url('bootstrap/js/jquery.js') ?>"></script>
@@ -147,23 +142,3 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </body>
 </html>
 
-<!-- 
-				<h1 class="container text-center">	
-					<img src="<?php echo site_url('img/brgylogo1.png'); ?>" id="brgylogo" alt="brgy. 763 logo">
-						Welcome to Brgy. 763 Zone 83 District V, Manila
-					<img src="<?php echo site_url('img/newblogo.png'); ?>" id="blogo" alt="blogo">
-				</h1> -->
-
-<!-- 		
-			<h1 class="container text-center">
-				<img src="<?php echo site_url('img/brgylogo1.png'); ?>" id="brgylogo" alt="brgy. 763 logo">&nbsp;&nbsp;<?php echo $title ?>&nbsp;
-				<img src="<?php echo site_url('img/newblogo.png'); ?>" id="blogo" alt="blogo">
-			</h1> -->
-
-		
-
-
-		<!-- <div class="container text-center">
-			<h1><a href="<?php echo site_url('Users/register'); ?>" id="su">Sign Up?</a></h1>
-        	<h1><a href="<?php echo site_url('Users/login'); ?>" id="pcd">Proceed to Log In</a></h1>	
-		</div> -->

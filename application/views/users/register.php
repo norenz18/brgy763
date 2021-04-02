@@ -15,11 +15,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <style>
 
 
-html,body {
+    *{
+
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+
+    }
+    html,body{
 
         height: 90vh;
 		background-color: #ccc;
-		margin-top: 10px;
+        margin-top: 10px;
 		font-family: nexa;		
 
 	}
@@ -43,7 +50,7 @@ html,body {
 		font-size: 18px;
         background-color: rgba(255,255,255,0.5);
         border-radius: 20px;
-
+     
         
 	}
 
@@ -52,46 +59,51 @@ html,body {
 
 </head>
 <body>
-    
 
-        <?php echo validation_errors(); ?>
         <?php echo form_open('users/register'); ?>
 
-        <div class="container">
+    <div class="container d-flex justify-content-evenly">
+
+        <div class="container-fluid">
             <h1>Sign Up</h1>
-            <div class="form-group col-sm-3">
+            <h6 style="color: red;"><small><?php echo validation_errors(); ?></small></h6>
+            <div class="form-group col-sm-12">
                 <label for="">Name</label>
                 <input type="text" class="form-control" name="name" placeholder="Name">
             </div>
             
-            <div class="form-group col-sm-3">
+            <div class="form-group col-sm-12">
                 <label for="">Email</label>
                 <input type="email" class="form-control" name="email" placeholder="Email">
             </div>
 
-            <div class="form-group col-sm-3">
+            <div class="form-group col-sm-12">
                 <label for="">Username</label>
                 <input type="text" class="form-control" name="username" placeholder="Username">
             </div>
 
-            <div class="form-group col-sm-3">
+            <div class="form-group col-sm-12">
                 <label for="">Password</label>
                 <input type="password" class="form-control" id="passVal" name="password" placeholder="password">
               
             </div>
 
-            <div class="form-group col-sm-3">
+            <div class="form-group col-sm-12">
                 <label for="">Confirm Password</label>
                 <input type="password" class="form-control" id="passVal2" name="password2" placeholder="Confirm Password">
               
             </div>
 
-            <div class="form-group col-sm-3">
+            <div class="form-group col-sm-12">
                 <button type="submit" class="btn btn-primary btn-sm">Submit</button>
                 <p>Proceed to&nbsp;<a id="regText" href="<?php echo site_url('welcome'); ?> ">Log In!</a></p>
             </div>
         </div>
 
+        <iframe src="https://www.youtube.com/embed/NfY8UhPgqII?autoplay=1&mute=1" class="mt-5" style="width: 1500px; height: 500px;" frameborder="5"></iframe>
+
+    </div>
+        
         <?php echo form_close(); ?>
 
 </body>

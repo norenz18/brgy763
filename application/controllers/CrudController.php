@@ -17,9 +17,25 @@ class CrudController extends CI_Controller {
 
         $config['upload_path'] = './img';
         $config['allowed_types'] = 'gif|jpg|png|jpeg';
-        $config['max_size'] = '2048';
+        $config['max_size'] = '5048';
         // $config['max_width'] = '1600';
         // $config['max_height'] = '1600';
+
+        // $img = $_POST['userfile'];
+        // $folderPath = "img";
+
+        // $image_parts = explode(";base64,", $img);
+        // $image_type_aux = explode("userfile/", $image_parts[0]);
+        // $image_type = $image_type_aux[1];
+      
+        // $image_base64 = base64_decode($image_parts[1]);
+        // $fileName = uniqid() . '.jpeg';
+      
+        // $file = $folderPath . $fileName;
+        // file_put_contents($file, $image_base64);
+      
+        // print_r($fileName);
+
 
         $this->load->library('upload', $config);
 
@@ -38,15 +54,46 @@ class CrudController extends CI_Controller {
     }
 
     public function edit($id){ #EDITING DATA
+
+        $config['upload_path'] = './img';
+        $config['allowed_types'] = 'gif|jpg|png|jpeg';
+        $config['max_size'] = '5048';
+
+        $this->load->library('upload', $config);
+
+        if(!$this->upload->do_upload()){
+
+            $errors = array('error' => $this->upload->display_errors());
+            $profImage = 'noimage.jpg';
+        }else{
+
+            $data = array('upload_data' => $this->upload->data());
+            $profImage = $_FILES['userfile']['name'];
+        }
         
         $data['row'] = $this->Crud_model->getData($id);
         $this->load->view('crudEdit', $data);
     }
 
     public function update($id){ #UPDATING DATA
+
+        $config['upload_path'] = './img';
+        $config['allowed_types'] = 'gif|jpg|png|jpeg';
+        $config['max_size'] = '5048';
+
+        $this->load->library('upload', $config);
+
+        if(!$this->upload->do_upload()){
+
+            $errors = array('error' => $this->upload->display_errors());
+            $profImage = 'noimage.jpg';
+        }else{
+
+            $data = array('upload_data' => $this->upload->data());
+            $profImage = $_FILES['userfile']['name'];
+        }
        
-        $this->Crud_model->updateData($id);
-        // redirect("CrudController/viewlist");
+        $this->Crud_model->updateData($id,$profImage);
         $data['row'] = $this->Crud_model->getData($id);
         $this->load->view('crudRead', $data);
     }

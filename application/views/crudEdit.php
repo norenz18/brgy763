@@ -11,14 +11,30 @@
     <div class="container" id="editContainer">
 
       <h6 class="text-danger">Note: Editing details can cause misleading information, make sure all the details are correct and valid.</h6>
-      <br>
       <form method="post" action="<?php echo site_url('CrudController/update')?>/<?php echo $row->id; ?>" enctype="multipart/form-data"> <!--  enctype="multipart/form-data" -->
             <div class="form-row">
 
-                    <div class="form-group col-sm-2">
+                    <!-- <div class="form-group col-sm-2">
                         <img class="profileImg" id="profileImg" src="<?php echo site_url('img'); ?>/<?php echo $row->profImage; ?>">
-                        <label for="">Resident Image</label>
+                        <label for="">Resident Image</label> -->
                         <!-- <input type="file" name="userfile" size="20"> -->
+                    <!-- </div> -->
+
+                    <div class="form-group col-sm-12">
+                       
+                        <img class="profileImg" id="profileImg" src="<?php echo site_url('img'); ?>/<?php echo $row->profImage; ?>">&nbsp;
+                        <label for="">Upload Image <br><input type="file" name="userfile" value="<?php echo site_url('img'); ?>/<?php echo $row->profImage; ?>" size="20" required></label>
+                                    <!-- <video src="" id="video" width="300" height="300" autoplay></video>
+                                    <button id="snap">Take Photo</button>
+                                    <canvas id="canvas" width="300" height="300"></canvas> -->
+                                    
+                                    <!-- <div id="my_camera"></div>
+                                    <br/>
+                                    <input type=button value="Take Snapshot" onClick="take_snapshot()">
+                                    <input type="hidden" name="image"  class="image-tag">
+
+                                    <div id="profImage">Your captured image will appear here...</div> -->
+
                     </div>
 
                     <div class="form-group col-sm-3">

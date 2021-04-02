@@ -59,6 +59,7 @@
             })
         });
 
+        // HIDE AND SHOW
         // $(function() {    // Makes sure the code contained doesn't run until
         //           //     all the DOM elements have loaded
 
@@ -69,8 +70,48 @@
 
         // });
 
+
+        // ACCESS CAMERA
+        // let canvas = document.querySelector('#canvas');
+        // let context = canvas.getContext('2d');
+        // let video = document.querySelector('#video');
+
+        // if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia){
+
+        //     navigator.mediaDevices.getUserMedia({video: true}).then((stream) =>{
+        //         video.srcObject = stream;
+        //         video.play();
+
+        //     });
+
+        // }
+
+        // document.getElementById('snap').addEventListener('click', () => {
+
+        //     context.drawImage(video, 0, 0, 300, 300);
+
+        // });
+
+
+        // WEBCAM JS
+    //     Webcam.set({
+    //     width: 490,
+    //     height: 390,
+    //     image_format: 'jpeg',
+    //     jpeg_quality: 90
+    // });
+  
+    // Webcam.attach( '#my_camera' );
+  
+    // function take_snapshot() {
+    //     Webcam.snap( function(data_uri) {
+    //         $(".image-tag").val(data_uri);
+    //         document.getElementById('profImage').innerHTML = '<img src="'+data_uri+'"/>';
+    //     } );
+    // }
+
+
     </script>
-    
 
     <script src="<?php echo site_url('bootstrap/js/jquery.slim.min.js') ?>"> </script>
     <script src="<?php echo site_url('bootstrap/js/bootstrap.min.js') ?>"></script>
@@ -81,7 +122,5 @@
     <!-- <script> CKEDITOR.replace( 'editor1' );</script> -->
 
    
-
- 
   </body>
 </html>

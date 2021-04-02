@@ -43,12 +43,12 @@ class Crud_model extends CI_Model {
 
     }
 
-    function updateData($id){ #updating data to database
+    function updateData($id, $profImage){ #updating data to database
 
        
         $data = array(
             
-           
+            'profImage' => $profImage,
             'lastName' => $this->input->post('lastName'),
             'firstName' => $this->input->post('firstName'),
             'mi' => $this->input->post('mi'),
