@@ -166,12 +166,12 @@
                                         <tr>
                                             
                                             <td id="officialImage"><img id="officialImage" src="<?php echo site_url('img'); ?>/<?php echo $setrows->profImage; ?>"></td>
-                                            <td class="text-left"><strong>Hon. <?php echo $setrows->firstname; ?> <?php echo $setrows->middlename; ?> <?php echo $setrows->lastname; ?></strong></td>
+                                            <td class="text-center"><strong><?php echo $setrows->firstname; ?> <?php echo $setrows->middlename; ?> <?php echo $setrows->lastname; ?></strong></td>
                                             <td class="text-center"><?php echo $setrows->chairmanship; ?></td>
                                             <!-- <td class="text-center"><?php echo $setrows->role; ?></td>   -->
                                             <!-- <td class="text-center"><?php echo $setrows->rank; ?></td>   -->
                                             <td class="text-center">
-                                            <a class="btn btn-success btn-sm" data-toggle="tooltip"  title="View details" href="<?php echo site_url('Officials/read');?>/<?php echo $setrows->id; ?>"> <i class="fas fa-eye"></i></a>&nbsp;
+                                            <a class="btn btn-success btn-sm" data-toggle="tooltip"  title="View details" href="<?php echo site_url('Officials/BrgyOfficialData');?>/<?php echo $setrows->id; ?>"> <i class="fas fa-eye"></i></a>&nbsp;
                                             <a class="btn btn-info btn-sm" data-toggle="tooltip" title="Edit details" href="<?php echo site_url('Officials/editOfficial'); ?>/<?php echo $setrows->id; ?>"><i class="fas fa-edit"></i></a>
                                            </td>
                                            

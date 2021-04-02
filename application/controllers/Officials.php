@@ -109,7 +109,7 @@ class Officials extends CI_Controller {
         $this->Officials_model->deleteOfficialData($id);
         redirect('officials');
     } 
-    public function read($id){ #SHOW INDIVIDUAL DATA
+    public function BrgyOfficialData($id){ #SHOW INDIVIDUAL DATA
         $data['setrows'] = $this->Officials_model->getOfficialData($id);
         $this->load->view('official/officialInfo', $data);
        
