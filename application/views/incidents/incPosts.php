@@ -9,14 +9,9 @@
             </div>
             <br>
 
-            <div  id="incident_section">
-                <div class="container-fluid">
-                    <h1 id="titlehead"><?php echo $post['title']; ?></h1> <br>
-                    <small id="postdate">Posted: <?php echo $post['created_at']; ?></small> <br><br>
-                    <h6 id="postbody"><?php echo $post['body']; ?></h6>
-                </div>
-        <br>
-        <hr>
+            <div  id="incident_section" >
+            
+                <div class="container-fluid" style="text-transform: capitalize;">
                 <p><a class="btn btn-info btn-sm" href="<?php echo site_url('PostsController/edit/'.$post['slug']); ?>">Edit</a>&nbsp;|
                 
                 <!-- Button trigger modal -->
@@ -43,6 +38,14 @@
                     </div>
                     </div>
                 </p>   
+
+                    <h1 id="titlehead" style="text-transform: uppercase;"><?php echo $post['title']; ?></h1> <br>
+                    <small id="postdate">Posted: <?php echo $post['created_at']; ?></small> <br><br>
+                    <h6 id="postbody"><?php echo $post['body']; ?></h6>
+                </div>
+        <br>
+        <hr>
+               
             </div>
 
            

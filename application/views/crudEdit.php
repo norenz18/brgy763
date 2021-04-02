@@ -23,7 +23,7 @@
                     <div class="form-group col-sm-12">
                        
                         <img class="profileImg" id="profileImg" src="<?php echo site_url('img'); ?>/<?php echo $row->profImage; ?>">&nbsp;
-                        <label for="">Upload Image <br><input type="file" name="userfile" value="<?php echo site_url('img'); ?>/<?php echo $row->profImage; ?>" size="20" required></label>
+                        <label for="">Upload Image <br><input type="file" name="userfile" style="cursor:pointer;" value="<?php echo site_url('img'); ?>/<?php echo $row->profImage; ?>" size="20" required></label>
                                     <!-- <video src="" id="video" width="300" height="300" autoplay></video>
                                     <button id="snap">Take Photo</button>
                                     <canvas id="canvas" width="300" height="300"></canvas> -->
@@ -127,7 +127,7 @@
                                 </div>
 
             </div><!--end class form row-->
-            <br><br>
+            <br>
             <button type="submit" onclick="myFunctionbtn()" class="btn btn-primary btn-sm" value="save"><i class="fas fa-save"></i> Save</button>
             <a href="<?php echo site_url('CrudController/viewlist')?>"><button type="button" class="btn btn-danger btn-sm">Cancel</button></a>
       </form>

@@ -169,11 +169,11 @@
 
                                         <tr>
                                             <!-- <th scope="col" >View</th> -->
-                                            <!-- <th scope="col">Image</th> -->
+                                            <th scope="col" data-field ="Image" data-sortable="false" data-switchable="false">Image</th>
                                             <th scope="col" data-field ="Name" data-sortable="true" data-switchable="false">Name <span><small>(Firstname, Mi, Lastname)</small></span></th>
                                             <th scope="col" data-field ="Address" data-sortable="true">Address</th>
                                             <th scope="col" data-field ="Age" data-sortable="true">Age</th>
-                                            <th scope="col" data-field ="Gender" data-sortable="true">Gender</th>
+                                            <!-- <th scope="col" data-field ="Gender" data-sortable="true">Gender</th> -->
                                             <th scope="col" data-field ="Voter" data-sortable="true">Voter</th>
                                             <th scope="col" data-field ="Action">Action</th>
                                         </tr>
@@ -182,13 +182,20 @@
                                         <?php foreach($result as $row) : ?>  
                                             <tr>
 
-                                                <!-- <td id="profileImg"><img id="profileImg" src="<?php echo site_url('img'); ?>/<?php echo $row->profImage; ?>"></td> -->
+                                                <td id="profileImgs"><img id="profileImgs" src="<?php echo site_url('img'); ?>/<?php echo $row->profImage; ?>"></td>
                                                 <td class="text-left" id="fml"><?php echo $row->firstName; ?> <?php echo $row->mi; ?> <?php echo $row->lastName; ?></td>
-                                                <td class="text-left" id="adrs"><?php echo $row->address; ?> Dist. 5 San Andres, Manila</td>
+                                                <td class="text-left" id="adrs"><?php echo $row->address; ?> District 5 San Andres, Manila</td>
                                                 <td class="text-center"><?php echo $row->age; ?></td>
-                                                <td class="text-center"><?php echo $row->gender; ?></td>
+                                                <!-- <td class="text-center"><?php echo $row->gender; ?></td> -->
                                                 <td class="text-center"><?php echo $row->voterStatus; ?></td>
-                                                <td class="text-center"><a class="btn btn-success btn-sm" data-toggle="tooltip"  title="View details" href="<?php echo site_url('CrudController/read');?>/<?php echo $row->id; ?>"> <i class="fas fa-eye"></i></a> <a class="btn btn-info btn-sm" data-toggle="tooltip" title="Edit details" href="<?php echo site_url('CrudController/edit');?>/<?php echo $row->id;?>"><i class="fas fa-edit"></i></a></td>      
+                                                <td class="text-center">
+                                                    <a class="btn btn-success btn-sm" data-toggle="tooltip"  title="View details" href="<?php echo site_url('CrudController/read');?>/<?php echo $row->id; ?>"> <i class="fas fa-eye"></i></a>
+                                                    <a class="btn btn-info btn-sm" data-toggle="tooltip" title="Edit details" href="<?php echo site_url('CrudController/edit');?>/<?php echo $row->id;?>"><i class="fas fa-edit"></i></a>   
+
+                                                    <a class="btn btn-danger btn-sm" data-toggle="tooltip" id="dltbtn" title="Delete details" href="<?php echo site_url('CrudController/delete');?>/<?php echo $row->id;?> "><i class="fas fa-trash-alt"></i></a>
+                                                
+                                                </td>   
+
                                             </tr>
                                         <?php endforeach; ?>
                                     </tbody>

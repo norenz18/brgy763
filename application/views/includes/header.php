@@ -53,10 +53,9 @@
           margin: 0;
           box-sizing: border-box;
           font-family: nexa, 'poppins', sans-serif;
-          font-weight: 400;
+          font-weight: 500;
  
         }
-
         html,body{
           
           background: #f2f2f2;
@@ -208,6 +207,12 @@
         #tbody{
 
           text-transform: capitalize;
+        }
+        #profileImgs{
+
+          height: 100px;
+          width: 100px;
+          object-fit: cover;
         }
         #tbody tr #fml{
           width: 300px;

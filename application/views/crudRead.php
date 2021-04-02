@@ -45,7 +45,7 @@
                                                     </div>
                                                     </div>
                 
-            </div>
+            </div> <!-- note-detail -->
            
             <div class="container d-flex justify-content-evenly" id="div-content">
                 

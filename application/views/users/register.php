@@ -79,7 +79,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
             <div class="form-group col-sm-12">
                 <label for="">Username</label>
-                <input type="text" class="form-control" name="username" placeholder="Username">
+                <input type="text" style="text-transform: initial;" class="form-control" name="username" placeholder="Username">
             </div>
 
             <div class="form-group col-sm-12">
