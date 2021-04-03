@@ -2,7 +2,7 @@
 
                 <div class="nav">
                     <ul>
-                        <li><a href="<?php echo site_url('BlotterController');?>"><i class="fas fa-angle-double-left"></i> Back</a></li>
+                        <li><a href="<?php echo site_url('Blotter');?>"><i class="fas fa-angle-double-left"></i> Back</a></li>
                         <li><a href="">BLOTTER RECORDS</a></li>
                         <li><a href="<?php echo site_url('welcome'); ?>">Log out</a></li>
                     </ul>       
@@ -12,7 +12,7 @@
 
       <h6 class="text-danger">Note: Editing details can cause misleading information, make sure all the details are correct and valid.</h6>
       <br>
-      <form method="post" action="<?php echo site_url('BlotterController/updateBlotter')?>/<?php echo $setrows->id; ?>"> <!--  enctype="multipart/form-data" -->
+      <form method="post" action="<?php echo site_url('Blotter/updateBlotter')?>/<?php echo $setrows->id; ?>"> <!--  enctype="multipart/form-data" -->
          
       <div class="form-row">
                                
@@ -61,7 +61,7 @@
 
                            </div>
                            <button type="submit" class="btn btn-success btn-sm"><i class="fas fa-save"></i> Save</button>
-                           <a href="<?php echo site_url('BlotterController')?>"><button type="button" class="btn btn-danger btn-sm">Cancel</button></a>
+                           <a href="<?php echo site_url('Blotter')?>"><button type="button" class="btn btn-danger btn-sm">Cancel</button></a>
       </form>
     </div>
 

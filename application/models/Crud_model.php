@@ -71,7 +71,7 @@ class Crud_model extends CI_Model {
         
     }
     
-    function getDatax($id){ #FETCH SINGLE DATA
+    function getDatax($id){ #FETCH SINGLE DATA FOR PDF
          
          $query = $this->db->query('SELECT * FROM tbl_name WHERE `id` =' .$id);
          return $query->row();

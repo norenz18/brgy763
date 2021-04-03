@@ -59,15 +59,25 @@
             })
         });
 
-        // HIDE AND SHOW
-        $(function() {    // Makes sure the code contained doesn't run until
-                  //     all the DOM elements have loaded
-        $('#category').change(function(){
-            $('.categories').hide();
-            $('#' + $(this).val()).show();
-        });
 
-        });
+        // function colorbg(){
+
+        //     var x = document.getElementById("category");
+        //     var bgcolor = x.option[x.selectedIndex].value;
+        //     document.body.style.backgroundColor = bgcolor;
+
+
+        // };
+
+        // HIDE AND SHOW
+        // $(function() {    // Makes sure the code contained doesn't run until
+        //           //     all the DOM elements have loaded
+        // $('#category').change(function(){
+        //     $('.categories').hide();
+        //     $('#' + $(this).val()).show();
+        // });
+
+        // });
 
 
         // ACCESS CAMERA

@@ -2,8 +2,8 @@
 
                 <div class="nav">
                     <ul>
-                        <li><a href="<?php echo site_url('CrudController/viewlist');?>"><i class="fas fa-angle-double-left"></i> Back</a></li>
-                        <li><a href="<?php echo site_url('CrudController/viewlist');?>">RESIDENTS</a></li>
+                        <li><a href="<?php echo site_url('Residents/viewlist');?>"><i class="fas fa-angle-double-left"></i> Back</a></li>
+                        <li><a href="<?php echo site_url('');?>">RESIDENTS</a></li>
                         <li><a href="<?php echo site_url('welcome'); ?>">Log out</a></li>
                     </ul>       
                 </div><br>
@@ -11,7 +11,7 @@
     <div class="container" id="editContainer">
 
       <h6 class="text-danger">Note: Editing details can cause misleading information, make sure all the details are correct and valid.</h6>
-      <form method="post" action="<?php echo site_url('CrudController/update')?>/<?php echo $row->id; ?>" enctype="multipart/form-data"> <!--  enctype="multipart/form-data" -->
+      <form method="post" action="<?php echo site_url('Residents/update')?>/<?php echo $row->id; ?>" enctype="multipart/form-data"> <!--  enctype="multipart/form-data" -->
             <div class="form-row">
 
                     <!-- <div class="form-group col-sm-2">
@@ -129,7 +129,7 @@
             </div><!--end class form row-->
             <br>
             <button type="submit" onclick="myFunctionbtn()" class="btn btn-primary btn-sm" value="save"><i class="fas fa-save"></i> Save</button>
-            <a href="<?php echo site_url('CrudController/viewlist')?>"><button type="button" class="btn btn-danger btn-sm">Cancel</button></a>
+            <a href="<?php echo site_url('Residents/viewlist')?>"><button type="button" class="btn btn-danger btn-sm">Cancel</button></a>
       </form>
     </div>
 

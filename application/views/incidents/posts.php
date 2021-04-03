@@ -3,7 +3,7 @@
             <div class="nav">
                     <ul>
                      
-                        <li><a href="<?php echo site_url('PostsController');?>">INCIDENT REPORT</a></li>
+                        <li><a href="<?php echo site_url('Reports');?>">INCIDENT REPORT</a></li>
                         <li><a href="<?php echo site_url('welcome'); ?>"><i class="fas fa-sign-out-alt"></i> Log out</a></li>
                     </ul>       
             </div>
@@ -15,11 +15,11 @@
 
                 <ul>
                         <li><img id="brgylogo" alt="brgy. 763 zone 83" src="<?php echo site_url('img/brgylogo1.png'); ?>" /></li>
-                        <li><a href="<?php echo site_url('CrudController');?>"><i class="far fa-chart-bar"></i> Dashboard</a></li>
-                        <li><a href="<?php echo site_url('CrudController/viewlist');?>"><i class="fas fa-users"></i> Residents</a></li>
-                        <li><a href="<?php echo site_url('PostsController');?>"><i class="fas fa-clipboard-list"></i> Incident Report</a></li>
-                        <li><a href="<?php echo site_url('BlotterController');?>"><i class="fas fa-book"></i> Blotter</a></li> 
-                        <li><a href="<?php echo site_url('CertificateController'); ?>"><i class="fas fa-scroll"></i> Permits&Certs.</a></li>                                      
+                        <li><a href="<?php echo site_url('Dashboard');?>"><i class="far fa-chart-bar"></i> Dashboard</a></li>
+                        <li><a href="<?php echo site_url('Residents/viewlist');?>"><i class="fas fa-users"></i> Residents</a></li>
+                        <li><a href="<?php echo site_url('Reports');?>"><i class="fas fa-clipboard-list"></i> Incident Report</a></li>
+                        <li><a href="<?php echo site_url('Blotter');?>"><i class="fas fa-book"></i> Blotter</a></li> 
+                        <li><a href="<?php echo site_url('Certificate'); ?>"><i class="fas fa-scroll"></i> Certificates</a></li>                                      
                         <li><a href="<?php echo site_url('Officials');?>"><i class="fas fa-users-cog"></i> Officials</a></li>          
                 </ul>
 
@@ -44,7 +44,7 @@
                                 <!-- <h5><small class="modal-title text-danger" id="exampleModalLabel">&nbsp&nbsp;&nbsp;Note: Make sure all the details are correct.</small></h5> -->
 
                                 <div class="modal-body"> <!--opening modal body-->
-                                        <form method="post" action="<?php echo site_url('PostsController/create')?> ">
+                                        <form method="post" action="<?php echo site_url('Reports/create')?> ">
                                                
                                                         <div class="form-group">
                                                                 <label for="">&nbsp;INCIDENT TITLE:<input type="text" class="form-control" name="title" placeholder="Add report title.." required> </label><br>
@@ -95,7 +95,7 @@
                                                         <td class="text-center" id="post-title"><strong><?php echo $post['title']; ?></strong></td>
                                                         <td><h6 id="post-body"><?php echo word_limiter($post['body'], 5); ?></h6></td>
                                                         <td><small id="post-date"><?php echo $post['created_at']; ?></small><br></td>
-                                                        <td><a class="btn btn-info btn-sm" href="<?php echo site_url('PostsController/view/'.$post['slug']); ?>">Read Report</a></td>
+                                                        <td><a class="btn btn-info btn-sm" href="<?php echo site_url('Reports/view/'.$post['slug']); ?>"><i class="fas fa-book-reader"></i></a></td>
                                                 </tr>
                                         <?php endforeach; ?>  
                                     </tbody>

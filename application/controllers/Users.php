@@ -55,7 +55,7 @@ class Users extends CI_Controller {
 			if($user_id){
                 //create session
                 $this->session->set_flashdata('user_loggedin', 'You are logged In');
-                redirect('CrudController');
+                redirect('Dashboard');
 				
 			// 	//set message
 			

@@ -2,7 +2,7 @@
 
                 <div class="nav">
                     <ul>
-                        <li><a href="<?php echo site_url('CrudController/viewlist');?>">RESIDENTS</a></li>
+                        <li><a href="<?php echo site_url('Residents/viewlist');?>">RESIDENTS</a></li>
                         <li><a href="<?php echo site_url('welcome'); ?>"><i class="fas fa-sign-out-alt"></i> Log out</a></li>
                     </ul>       
                 </div>
@@ -13,11 +13,11 @@
 
                                     <ul>
                                         <li><img id="brgylogo" alt="brgy. 763 zone 83" src="<?php echo site_url('img/brgylogo1.png'); ?>" /></li>
-                                        <li><a href="<?php echo site_url('CrudController');?>"><i class="far fa-chart-bar"></i> Dashboard</a></li>
-                                        <li><a href="<?php echo site_url('CrudController/viewlist');?>"><i class="fas fa-users"></i> Residents</a></li>
-                                        <li><a href="<?php echo site_url('PostsController');?>"><i class="fas fa-clipboard-list"></i> Incident Report</a></li>
-                                        <li><a href="<?php echo site_url('BlotterController');?>"><i class="fas fa-book"></i> Blotter</a></li> <!--<i class="fas fa-print"></i>-->
-                                        <li><a href="<?php echo site_url('CertificateController'); ?>"><i class="fas fa-scroll"></i> Permits&Certs.</a></li>                                      
+                                        <li><a href="<?php echo site_url('Dashboard');?>"><i class="far fa-chart-bar"></i> Dashboard</a></li>
+                                        <li><a href="<?php echo site_url('Residents/viewlist');?>"><i class="fas fa-users"></i> Residents</a></li>
+                                        <li><a href="<?php echo site_url('Reports');?>"><i class="fas fa-clipboard-list"></i> Incident Report</a></li>
+                                        <li><a href="<?php echo site_url('Blotter');?>"><i class="fas fa-book"></i> Blotter</a></li> <!--<i class="fas fa-print"></i>-->
+                                        <li><a href="<?php echo site_url('Certificate'); ?>"><i class="fas fa-scroll"></i> Certificates</a></li>                                      
                                         <li><a href="<?php echo site_url('Officials');?>"><i class="fas fa-users-cog"></i> Officials</a></li>          
                                     </ul>
 
@@ -43,7 +43,7 @@
 
                         <div class="modal-body"> <!--opening modal body-->
                         
-                        <form method="post" action="<?php echo site_url('CrudController/create')?>" enctype="multipart/form-data">
+                        <form method="post" action="<?php echo site_url('Residents/create')?>" enctype="multipart/form-data">
                    
                             <div class="form-row">
 
@@ -184,15 +184,15 @@
 
                                                 <td id="profileImgs"><img id="profileImgs" src="<?php echo site_url('img'); ?>/<?php echo $row->profImage; ?>"></td>
                                                 <td class="text-left" id="fml"><?php echo $row->firstName; ?> <?php echo $row->mi; ?> <?php echo $row->lastName; ?></td>
-                                                <td class="text-left" id="adrs"><?php echo $row->address; ?> District 5 San Andres, Manila</td>
+                                                <td class="text-left" id="adrs"><?php echo $row->address; ?> Brgy. 763 Zone 83 District 5 San Andres, Manila</td>
                                                 <td class="text-center"><?php echo $row->age; ?></td>
                                                 <!-- <td class="text-center"><?php echo $row->gender; ?></td> -->
                                                 <td class="text-center"><?php echo $row->voterStatus; ?></td>
                                                 <td class="text-center">
-                                                    <a class="btn btn-success btn-sm" data-toggle="tooltip"  title="View details" href="<?php echo site_url('CrudController/read');?>/<?php echo $row->id; ?>"> <i class="fas fa-eye"></i></a>
-                                                    <a class="btn btn-info btn-sm" data-toggle="tooltip" title="Edit details" href="<?php echo site_url('CrudController/edit');?>/<?php echo $row->id;?>"><i class="fas fa-edit"></i></a>   
+                                                    <a class="btn btn-success btn-sm" data-toggle="tooltip"  title="View details" href="<?php echo site_url('Residents/read');?>/<?php echo $row->id; ?>"> <i class="fas fa-eye"></i></a>
+                                                    <a class="btn btn-info btn-sm" data-toggle="tooltip" title="Edit details" href="<?php echo site_url('Residents/edit');?>/<?php echo $row->id;?>"><i class="fas fa-edit"></i></a>   
 
-                                                    <a class="btn btn-danger btn-sm" data-toggle="tooltip" id="dltbtn" title="Delete details" href="<?php echo site_url('CrudController/delete');?>/<?php echo $row->id;?> "><i class="fas fa-trash-alt"></i></a>
+                                                    <a class="btn btn-danger btn-sm" data-toggle="tooltip" id="dltbtn" title="Delete details" href="<?php echo site_url('Residents/delete');?>/<?php echo $row->id;?> "><i class="fas fa-trash-alt"></i></a>
                                                 
                                                 </td>   
 

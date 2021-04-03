@@ -59,9 +59,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         .container .bg-logo .officialSection h4{
 
             /* font-size: 18px; */
-            line-height: 40px;
+            line-height: 30px;
             word-spacing: 3px;
-            text-align: center;
+            text-align: left;
             width: 100%;
             padding: 0 30px 0;
           
@@ -70,7 +70,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         .footText{
 
         
-            margin: 100px 50px 0;
+            margin: 60px 50px 0;
             box-sizing: border-box;
             
         }
@@ -148,7 +148,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="titleCert">
 
                         <h4 style="color: red"><b>OFFICE OF THE BARANGAY CHAIRMAN</b></h4>
-                        <h1><strong>CERTIFICATE</strong> </h1>
+                        <h1><strong>BARANGAY BUSINESS PERMIT</strong> </h1>
 
                 </div>
 
@@ -156,58 +156,51 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                     <h4>
                         <b>
-                            This     is   to    certify    that <strong style="text-transform: uppercase;text-decoration: underline;"> <?php echo $setrows->fullName; ?>  </strong> <br>
+                            <p>
+                                This clearance is being issued to: <br><br>
+                                NAME OF BUSINESS: <strong style="text-transform: uppercase; text-decoration: underline;"><?php echo $setrows->businessName; ?></strong> <br>
+                                ADDRESS:          <strong style="text-transform: uppercase; text-decoration: underline; font-size: 13px;"><?php echo $setrows->address; ?> brgy 763 zone 83 san andres manila </strong> <br>
+                                KIND OF BUSINESS: <strong style="text-transform: uppercase; text-decoration: underline;"><?php echo $setrows->businessType; ?></strong> <br><br>
 
-                            Filipino of legal age,  with present address at <br>
+                                This certification is issued under the requirement of the <br>
+                                new Local Government Code Republic Act 7160 Article IV Section 152 <br>
+                                paragraph (c) and upon the request of <strong style="text-transform: uppercase; text-decoration: underline;"><?php echo $setrows->fullName; ?></strong> <br>
 
-                            <strong style="text-transform: uppercase; text-decoration: underline; font-size: 13px;"><?php echo $setrows->address; ?> brgy 763 zone 83 san andres manila </strong> <br> is a resident of Barangay 763 Zone 83 District 5 Manila. <br>
-
-                            This certification is issued upon the request of the concerned for 
-
-                            the purpose of <strong style="text-transform: uppercase;text-decoration: underline;"> <?php echo $setrows->purpose; ?> </strong> <br>
-
-                            Done this  <strong style="text-transform: uppercase;text-decoration: underline;"> <?php echo $setrows->date; ?> </strong>
-
-                            at the Office of the Barangay Chairman, <br> Barangay 763 Zone 83 
-
-                            District 5, Manila City 1017 Philippines.  
-
-                        </>
+                                Given this <strong style="text-transform: uppercase; text-decoration: underline;"><?php echo $setrows->date; ?></strong> <br>
+                                at the office of the Barangay Chairman, Barangay 763 Zone83 District 5, Manila City 1017 Philippines.
+                            </p>
+                        </b>
                     </h4>
 
                 </div>
-        
+
                    <div class="footText">
 
                         <h5 style="text-align: left;">
                             <b>NOT VALID WITHOUT A SEAL</b>             
                         </h5>
-
+                        
                         <h5 style="text-align: right">
                             <b style="text-transform: uppercase;text-align: center;border-top: 1px solid black;"><?php echo $setrows->punongBrgy; ?></b>&nbsp;<br>
                             <b>PUNONG BARANGAY</b>
                         </h5>
 
                         <br>
-                        <br>
-                        <br>
 
                         <h6 style="text-align: center;color: grey">
 
-                            Address: 2520 Esmeralda St. San Andres Manila 1017 Philippines T.02 77560703
+                            Address: 2520 Esmeralda St. San Andres Manila 1017 Philippines <br>
+                            T.02 77560703 Email Add: pbbrgy763@gmail.com
 
                         </h6>
-
                     </div>
-              
-                    
             </div> <!-- end of bg logo -->     
     </div>
 
     <?php }  ?>
 
         
-        <span><a href="<?php echo site_url('Certificate/CreateCertPdfs'); ?>/<?php echo $setrows->id; ?>"><button class="btn" data-toggle="tooltip" target="__blank"  title="Print" href=""><i class="fas fa-print"></i></button></a>
+        <span><a href="<?php echo site_url('Certificate/CreateCertPdfPermit'); ?>/<?php echo $setrows->id; ?>"><button class="btn" data-toggle="tooltip" target="_blank"  title="Print" href=""><i class="fas fa-print"></i></button></a>
         </span>
   
 </body>

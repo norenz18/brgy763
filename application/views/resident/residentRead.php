@@ -6,7 +6,7 @@
 
             <div class="nav">
                 <ul>
-                    <li><a href="<?php echo site_url('CrudController/viewlist');?>"><i class="fas fa-angle-double-left"></i> Back</a></li>
+                    <li><a href="<?php echo site_url('Residents/viewlist');?>"><i class="fas fa-angle-double-left"></i> Back</a></li>
                     <li><a href="">RESIDENT INFORMATION</a></li>
                     <li><a href="<?php echo site_url('welcome'); ?>"><i class="fas fa-sign-out-alt"></i>Log out</a></li>
                 </ul>       
@@ -15,7 +15,7 @@
 
             <div class="container note-detail">
                 <h6 class="text-danger">Note: Make sure all the information that shows below are correct. </h6> 
-                <a class="btn btn-info btn-sm" data-toggle="tooltip" title="Edit details" href="<?php echo site_url('CrudController/edit');?>/<?php echo $row->id;?> "><i class="fas fa-edit"></i>&nbsp;Edit</a>&nbsp;
+                <a class="btn btn-info btn-sm" data-toggle="tooltip" title="Edit details" href="<?php echo site_url('Residents/edit');?>/<?php echo $row->id;?> "><i class="fas fa-edit"></i>&nbsp;Edit</a>&nbsp;
                    <!-- Button trigger modal -->
                    <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#staticBackdrop">
                                                     <i class="fas fa-trash-alt"> Delete</i>
@@ -37,7 +37,7 @@
                                                         </div>
                                                         <div class="modal-footer">
                                                             <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
-                                                            <a class="btn btn-danger btn-sm" data-toggle="tooltip" id="dltbtn" title="Delete details" href="<?php echo site_url('CrudController/delete');?>/<?php echo $row->id;?> "><i class="fas fa-trash-alt"></i> Delete
+                                                            <a class="btn btn-danger btn-sm" data-toggle="tooltip" id="dltbtn" title="Delete details" href="<?php echo site_url('Residents/delete');?>/<?php echo $row->id;?> "><i class="fas fa-trash-alt"></i> Delete
 
                                                             </a>
                                                         </div>

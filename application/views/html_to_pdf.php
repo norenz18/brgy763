@@ -127,7 +127,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                             the purpose of <br> ____________________________________________ <br>
 
-                            Done this  <strong style="text-transform: uppercase;text-decoration: underline;"> <?php echo date('F  d,  Y');; ?> </strong><br>
+                            Done this  <strong style="text-transform: uppercase;text-decoration: underline;"> <?php echo date('F  d,  Y'); ?> </strong><br>
 
                             at the Office of the Barangay Chairman, <br> Barangay 763 Zone 83 
 

@@ -407,6 +407,19 @@
 
       
        }
+
+       .grey{
+
+         background-color: grey;
+       }
+       .blue{
+
+         background-color: blue;
+       }
+       .green{
+
+         background-color: green;
+       }
        
 
     </style>

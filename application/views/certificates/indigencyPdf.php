@@ -64,6 +64,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             text-align: center;
             width: 100%;
             padding: 0 30px 0;
+            
           
 
         }
@@ -158,13 +159,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                             Filipino of legal age,  with present address at <br>
 
-                            <strong style="text-transform: uppercase;text-decoration: underline;"> <?php echo $setrows->address; ?> San Andres Manila 1017</strong> <br> is a resident and is an 
+                            <strong style="text-transform: uppercase; text-decoration: underline; font-size: 13px;"><?php echo $setrows->address; ?> brgy 763 zone 83 san andres manila </strong> <br> is a resident of Barangay 763 Zone 83 District 5 Manila. <br> is a resident and is an 
 
                             INDIGENT of Barangay 763 Zone 83 District 5 Manila. <br>
 
-                            This certification is issued upon the request of the concerned for 
+                            This certification is issued upon the request of the concerned for the purpose of
 
-                            the purpose of <br>  <strong style="text-transform: uppercase;text-decoration: underline;"> <?php echo $setrows->purpose; ?> </strong> <br>
+                            <strong style="text-transform: uppercase;text-decoration: underline;"> <?php echo $setrows->purpose; ?> </strong> <br>
 
                             Done this  <strong style="text-transform: uppercase;text-decoration: underline;"> <?php echo $setrows->date; ?> </strong><br>
 
@@ -183,10 +184,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <b>NOT VALID WITHOUT A SEAL</b>             
                         </h5>
                         
-                        <h5  style="text-align: right">
-                        <strong style="text-transform: uppercase;text-decoration: underline;"> <?php echo $setrows->punongBrgy; ?></strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
-                         <b>PUNONG BARANGAY</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <h5 style="text-align: right">
+                            <b style="text-transform: uppercase;text-align: center;border-top: 1px solid black;"><?php echo $setrows->punongBrgy; ?></b>&nbsp;<br>
+                            <b >PUNONG BARANGAY</b>
                         </h5>
+
+                        <br>
+                        <br>
+                        <br>
+
+                        <h6 style="text-align: center;color: grey">
+
+                            Address: 2520 Esmeralda St. San Andres Manila 1017 Philippines
+
+                        </h6>
                     </div>
               
                     
@@ -195,7 +206,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <?php }  ?>
 
-    <span><a href="<?php echo site_url('CertificateController/CreateCertPdfs'); ?>/<?php echo $setrows->id; ?>"><button class="btn" data-toggle="tooltip" target="__blank"  title="Print" href=""><i class="fas fa-print"></i></button></a>
+    <span><a href="<?php echo site_url('Certificate/CreateCertPdf'); ?>/<?php echo $setrows->id; ?>"><button class="btn" data-toggle="tooltip" target="__blank"  title="Print" href=""><i class="fas fa-print"></i></button></a>
         </span>
   
 

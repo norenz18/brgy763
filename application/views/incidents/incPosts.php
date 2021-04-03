@@ -2,7 +2,7 @@
 
             <div class="nav">
                     <ul>
-                        <li><a href="<?php echo site_url('PostsController');?>"><i class="fas fa-angle-double-left"></i> Back</a></li>
+                        <li><a href="<?php echo site_url('Reports');?>"><i class="fas fa-angle-double-left"></i> Back</a></li>
                         <li><a href="#">INCIDENT REPORT</a></li>
                         <li><a href="<?php echo site_url('welcome'); ?>"><i class="fas fa-sign-out-alt"></i> Log out</a></li>
                     </ul>       
@@ -12,7 +12,7 @@
             <div  id="incident_section" >
             
                 <div class="container-fluid" style="text-transform: capitalize;">
-                <p><a class="btn btn-info btn-sm" href="<?php echo site_url('PostsController/edit/'.$post['slug']); ?>">Edit</a>&nbsp;|
+                <p><a class="btn btn-info btn-sm" href="<?php echo site_url('Reports/edit/'.$post['slug']); ?>">Edit</a>&nbsp;|
                 
                 <!-- Button trigger modal -->
                     <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal">Delete</button>
@@ -32,7 +32,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
-                            <a class="btn btn-danger btn-sm" href="<?php echo site_url('PostsController/delete/'.$post['id']); ?>">Delete</a>
+                            <a class="btn btn-danger btn-sm" href="<?php echo site_url('Reports/delete/'.$post['id']); ?>">Delete</a>
                         </div>
                         </div>
                     </div>

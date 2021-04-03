@@ -2,7 +2,7 @@
 
                 <div class="nav">
                     <ul>
-                        <li><a href="<?php echo site_url('CertificateController');?>">PERMIT & CERTIFICATES</a></li>
+                        <li><a href="<?php echo site_url('Certificate');?>">PERMIT & CERTIFICATES</a></li>
                         <li><a href="<?php echo site_url('welcome'); ?>"><i class="fas fa-sign-out-alt"></i> Log out</a></li>
                     </ul>       
                 </div>
@@ -13,11 +13,11 @@
 
                                     <ul>
                                         <li><img id="brgylogo" alt="brgy. 763 zone 83" src="<?php echo site_url('img/brgylogo1.png'); ?>" /></li>
-                                        <li><a href="<?php echo site_url('CrudController');?>"><i class="far fa-chart-bar"></i> Dashboard</a></li>
-                                        <li><a href="<?php echo site_url('CrudController/viewlist');?>"><i class="fas fa-users"></i> Residents</a></li>
-                                        <li><a href="<?php echo site_url('PostsController');?>"><i class="fas fa-clipboard-list"></i> Incident Report</a></li>
-                                        <li><a href="<?php echo site_url('BlotterController');?>"><i class="fas fa-book"></i> Blotter</a></li> <!--<i class="fas fa-print"></i>-->
-                                        <li><a href="<?php echo site_url('CertificateController'); ?>"><i class="fas fa-scroll"></i> Permits&Certs.</a></li>                                      
+                                        <li><a href="<?php echo site_url('Dashboard');?>"><i class="far fa-chart-bar"></i> Dashboard</a></li>
+                                        <li><a href="<?php echo site_url('Residents/viewlist');?>"><i class="fas fa-users"></i> Residents</a></li>
+                                        <li><a href="<?php echo site_url('Reports');?>"><i class="fas fa-clipboard-list"></i> Incident Report</a></li>
+                                        <li><a href="<?php echo site_url('Blotter');?>"><i class="fas fa-book"></i> Blotter</a></li> <!--<i class="fas fa-print"></i>-->
+                                        <li><a href="<?php echo site_url('Certificate'); ?>"><i class="fas fa-scroll"></i> Certificates</a></li>                                      
                                         <li><a href="<?php echo site_url('Officials');?>"><i class="fas fa-users-cog"></i> Officials</a></li>          
                                     </ul>
 
@@ -43,18 +43,18 @@
 
                         <div class="modal-body d-flex justify-content-center"> <!--opening modal body-->
 
-                        <form method="post" action="<?php echo site_url('CertificateController/createCert');?>" enctype="multipart/form-data">
+                        <form method="post" action="<?php echo site_url('Certificate/createCert');?>" enctype="multipart/form-data">
                             
                             <div class="form-row">
 
                             <div class="form-group col-sm-3">
                                 <label for="category">Category</label><br>
-                                <select class="form-control" name="category"  id="category">
+                                <select class="form-control" name="category" id="category">
                                     <option value=""></option>
                                     <option disabled>---</option>
-                                    <option style="" value="Indigency">Indigency</option>
-                                    <option style="" value="Clearance">Certificate</option>
-                                    <option style="" value="Business-Permit">Business Permit</option>
+                                    <option class=""  value="Indigency">Indigency</option>
+                                    <option class=""  value="Clearance">Certificate</option>
+                                    <option class="" value="Business-Permit">Business Permit</option>
                                 </select>
                             </div>
 
@@ -64,7 +64,7 @@
                             </div>
 
                             <div class="form-group col-sm-4">
-                                <label for="">ADDRESS</label>
+                                <label for="">ADDRESS <small class="color: grey;">(House # / Street name) </small></label>
                                 <input type="text" class="form-control" name="address" id="address" value="" required> <!-- <?php echo $col->address; ?>  -->
                             </div>
 
@@ -137,13 +137,13 @@
                                         <?php foreach($result as $setrows) : ?>  
                                             <tr>
                                             
-                                                <td class="text-center categories" style="text-transform: uppercase;"><strong style=""><?php echo $setrows->category; ?></strong></td>
+                                                <td class="text-center categories" style="text-transform: uppercase;"><strong><?php echo $setrows->category; ?></strong></td>
                                                 <td class="text-left" style="text-transform: uppercase;"><?php echo $setrows->fullName; ?></td>                                          
                                                 <td class="text-center" style="text-transform: uppercase;"><?php echo $setrows->purpose; ?></td>
-                                                <td class="text-center "><a class="btn btn-success btn-sm" data-toggle="tooltip"  title="View details" href="<?php echo site_url('CertificateController/edit');?>/<?php echo $setrows->id; ?>"><i class="fas fa-eye"></i></a> <a class="btn btn-info btn-sm" data-toggle="tooltip" title="Edit details" href="<?php echo site_url('CrudController/edit');?>/<?php echo $setrows->id;?>"><i class="fas fa-edit"></i></a>
-                                                <a class="btn btn-secondary btn-sm" id="Indigency" style="display:none;" data-toggle="tooltip" target="__blank"  title="View Indigency" href="<?php echo site_url('CertificateController/indigencyPdf'); ?>/<?php echo $setrows->id; ?>"><i class="fas fa-print"> Indigency</i></a>
-                                                <a class="btn btn-primary btn-sm" id="Clearance" style="display:none;" data-toggle="tooltip" target="__blank"  title="View Clearance" href="<?php echo site_url('CertificateController/clearancePdf'); ?>/<?php echo $setrows->id; ?>"><i class="fas fa-print"> Clearance</i></a>
-                                                <a class="btn btn-success btn-sm" id="Business-Permit" style="display:none;" data-toggle="tooltip" target="__blank"  title="View Business Permit" href="<?php echo site_url('CertificateController/businessPdf'); ?>/<?php echo $setrows->id; ?>"><i class="fas fa-print"> Business</i></a>
+                                                <td class="text-center"><a class="btn btn-info btn-sm" data-toggle="tooltip" title="Edit details" href="<?php echo site_url('Certificate/edit');?>/<?php echo $setrows->id;?>"><i class="fas fa-edit"></i></a>
+                                                <a class="btn btn-secondary btn-sm" id="Indigency" data-toggle="tooltip" target="_blank" title="View Indigency" href="<?php echo site_url('Certificate/indigencyPdf'); ?>/<?php echo $setrows->id; ?>"><i class="fas fa-print"> Indigency</i></a>
+                                                <a class="btn btn-primary btn-sm" id="Clearance" data-toggle="tooltip" target="_blank" title="View Clearance" href="<?php echo site_url('Certificate/clearancePdf'); ?>/<?php echo $setrows->id; ?>"><i class="fas fa-print"> Clearance</i></a>
+                                                <a class="btn btn-success btn-sm" id="Business-Permit" data-toggle="tooltip" target="_blank" title="View Business Permit" href="<?php echo site_url('Certificate/businessPdf'); ?>/<?php echo $setrows->id; ?>"><i class="fas fa-print"> Business</i></a>
                                              
                                                 </td> 
                                             </tr>

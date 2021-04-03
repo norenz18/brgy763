@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class PostsController extends CI_Controller {
+class Reports extends CI_Controller {
 
 
 	// public function __construct(){
@@ -30,13 +30,13 @@ class PostsController extends CI_Controller {
     public function create(){
 
         $this->post_model->create_post();
-        redirect('PostsController');
+        redirect('Reports');
 
     }
     public function delete($id){
 
         $this->post_model->delete_post($id);
-        redirect('PostsController');
+        redirect('Reports');
 
     }
     public function edit($slug){
@@ -52,7 +52,7 @@ class PostsController extends CI_Controller {
     public function update(){
 
         $this->post_model->update_post();
-        redirect('PostsController');
+        redirect('Reports');
     }
 
 }

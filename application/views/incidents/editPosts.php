@@ -4,7 +4,7 @@
     
             <div   div class="nav">
                     <ul>
-                        <li><a href="<?php echo site_url('PostsController');?>"><i class="fas fa-angle-double-left"></i> Back</a></li>
+                        <li><a href="<?php echo site_url('Reports');?>"><i class="fas fa-angle-double-left"></i> Back</a></li>
                         <li><a href="<?php echo site_url('#');?>">INCIDENTS REPORT</a></li>
                         <li><a href="<?php echo site_url('welcome'); ?>">Log out</a></li>
                     </ul>       
@@ -12,7 +12,7 @@
 
     <div class="container" id="editContainer">
 
-                <form method="post" action="<?php echo site_url('PostsController/update')?> ">
+                <form method="post" action="<?php echo site_url('Reports/update')?> ">
 
                     <input type="hidden" name="id" value="<?php echo $post['id']; ?>">
                                                
@@ -25,7 +25,7 @@
                     </div>                 
                                        
                     <button type="submit" onclick="myFunctionbtn()" class="btn btn-success btn-sm">Submit</button>
-                    <a href="<?php echo site_url('PostsController')?>"><button type="button" class="btn btn-danger btn-sm">Cancel</button></a>
+                    <a href="<?php echo site_url('Reports')?>"><button type="button" class="btn btn-danger btn-sm">Cancel</button></a>
 
                 </form>  
 

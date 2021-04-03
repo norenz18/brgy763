@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class BlotterController extends CI_Controller {
+class Blotter extends CI_Controller {
 
     public function __construct(){
         parent:: __construct();
@@ -20,7 +20,7 @@ class BlotterController extends CI_Controller {
     public function createBlotters(){ #CREATING DATA TO VIEWLIST
 
         $this->Blotter_model->createBlotter(); 
-        redirect("BlotterController");
+        redirect("Blotter");
     }
 
     public function edit($id){ #EDITING DATA
@@ -34,7 +34,7 @@ class BlotterController extends CI_Controller {
     public function updateBlotter($id){ #UPDATING DATA
        
         $this->Blotter_model->updateBlotterData($id);
-        redirect("BlotterController");
+        redirect("Blotter");
     }
 
     

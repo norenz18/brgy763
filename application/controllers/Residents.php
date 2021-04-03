@@ -1,17 +1,17 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class CrudController extends CI_Controller {
+class Residents extends CI_Controller {
 
     public function __construct(){
         parent:: __construct();
         $this->load->model('Crud_model');
     }
     
-	public function index(){ #DASHBOARD
+	// public function index(){ #DASHBOARD
 	
-        $this->load->view('dashboard');
-    }
+        
+    // }
     
     public function create(){ #CREATING DATA TO VIEWLIST
 
@@ -50,7 +50,7 @@ class CrudController extends CI_Controller {
         }
 
         $this->Crud_model->createData($profImage); 
-        redirect("CrudController/viewlist");
+        redirect("Residents/viewlist");
     }
 
     public function edit($id){ #EDITING DATA
@@ -72,7 +72,7 @@ class CrudController extends CI_Controller {
         }
         
         $data['row'] = $this->Crud_model->getData($id);
-        $this->load->view('crudEdit', $data);
+        $this->load->view('resident/residentEdit', $data);
     }
 
     public function update($id){ #UPDATING DATA
@@ -95,23 +95,25 @@ class CrudController extends CI_Controller {
        
         $this->Crud_model->updateData($id,$profImage);
         $data['row'] = $this->Crud_model->getData($id);
-        $this->load->view('crudRead', $data);
+        $this->load->view('resident/residentRead', $data);
     }
 
     public function delete($id){ #DELETING DATA
         $this->Crud_model->deleteData($id);
-        redirect('CrudController/viewlist');
+        redirect('Residents/viewlist');
     } 
     public function read($id){ #SHOW INDIVIDUAL DATA
         $data['row'] = $this->Crud_model->getData($id);
-        $this->load->view('crudRead', $data);
+        $this->load->view('resident/residentRead', $data);
     }
     public function viewlist(){ #SHOWING THE LIST
 
         $data['result'] = $this->Crud_model->getAllData();
-        $this->load->view('crudView',$data);
+        $this->load->view('resident/residentView',$data);
   
     }
+
+
     public function html_to_pdf($id){ #SHOW INDIVIDUAL DATA
         $data['row'] = $this->Crud_model->getDatax($id);
         $this->load->view('html_to_pdf', $data);

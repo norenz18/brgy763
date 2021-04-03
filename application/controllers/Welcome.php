@@ -11,7 +11,7 @@ class Welcome extends CI_Controller {
 	public function index(){
 
 		$data['title'] = 'Welcome to Brgy. 763 Zone 83 District V, Manila';
-		$this->load->view('welcome', $data);
+		$this->load->view('login', $data);
 	}
 	
 
