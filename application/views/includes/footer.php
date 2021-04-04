@@ -46,6 +46,7 @@
              }
             };
 
+            // DATEPICKER
             $(document).ready(function() {
             var age = "";
             $('#birthdate').datepicker({
@@ -59,15 +60,16 @@
             })
         });
 
+        DecoupledEditor
+        .create( document.querySelector( '#editor' ) )
+        .then( editor => {
+            const toolbarContainer = document.querySelector( '#toolbar-container' );
 
-        // function colorbg(){
-
-        //     var x = document.getElementById("category");
-        //     var bgcolor = x.option[x.selectedIndex].value;
-        //     document.body.style.backgroundColor = bgcolor;
-
-
-        // };
+            toolbarContainer.appendChild( editor.ui.view.toolbar.element );
+        } )
+        .catch( error => {
+            console.error( error );
+        } );
 
         // HIDE AND SHOW
         // $(function() {    // Makes sure the code contained doesn't run until
@@ -80,47 +82,9 @@
         // });
 
 
-        // ACCESS CAMERA
-        // let canvas = document.querySelector('#canvas');
-        // let context = canvas.getContext('2d');
-        // let video = document.querySelector('#video');
-
-        // if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia){
-
-        //     navigator.mediaDevices.getUserMedia({video: true}).then((stream) =>{
-        //         video.srcObject = stream;
-        //         video.play();
-
-        //     });
-
-        // }
-
-        // document.getElementById('snap').addEventListener('click', () => {
-
-        //     context.drawImage(video, 0, 0, 300, 300);
-
-        // });
-
-
-        // WEBCAM JS
-    //     Webcam.set({
-    //     width: 490,
-    //     height: 390,
-    //     image_format: 'jpeg',
-    //     jpeg_quality: 90
-    // });
-  
-    // Webcam.attach( '#my_camera' );
-  
-    // function take_snapshot() {
-    //     Webcam.snap( function(data_uri) {
-    //         $(".image-tag").val(data_uri);
-    //         document.getElementById('profImage').innerHTML = '<img src="'+data_uri+'"/>';
-    //     } );
-    // }
-
 
     </script>
+   
 
     <script src="<?php echo site_url('bootstrap/js/jquery.slim.min.js') ?>"> </script>
     <script src="<?php echo site_url('bootstrap/js/bootstrap.min.js') ?>"></script>
@@ -128,8 +92,7 @@
     <script src="<?php echo site_url('bootstrap/js/jquery-ui.js') ?>"></script>
     <script src="<?php echo site_url('asset/bootstrap-table.min.js') ?>"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <!-- <script> CKEDITOR.replace( 'editor1' );</script> -->
-
+    
    
   </body>
 </html>

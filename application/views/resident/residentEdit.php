@@ -128,7 +128,7 @@
 
             </div><!--end class form row-->
             <br>
-            <button type="submit" onclick="myFunctionbtn()" class="btn btn-primary btn-sm" value="save"><i class="fas fa-save"></i> Save</button>
+            <button type="submit" class="btn btn-primary btn-sm" value="save"><i class="fas fa-save"></i> Save</button>
             <a href="<?php echo site_url('Residents/viewlist')?>"><button type="button" class="btn btn-danger btn-sm">Cancel</button></a>
       </form>
     </div>

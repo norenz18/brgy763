@@ -200,9 +200,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <?php }  ?>
 
         
-        <span><a href="<?php echo site_url('Certificate/CreateCertPdfPermit'); ?>/<?php echo $setrows->id; ?>"><button class="btn" data-toggle="tooltip" target="_blank"  title="Print" href=""><i class="fas fa-print"></i></button></a>
+        <!-- <span><a href="<?php echo site_url('Certificate/CreateCertPdfPermit'); ?>/<?php echo $setrows->id; ?>"><button class="btn" data-toggle="tooltip" target="_blank"  title="Print" href=""><i class="fas fa-print"></i></button></a>
         </span>
-  
+   -->
 </body>
 </html>
 

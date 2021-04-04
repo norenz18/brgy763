@@ -75,11 +75,10 @@
 
                                 <div class="form-group col-sm-2">
                                     <label for="status">Status*</label><br>
-                                    <select class="form-control" id="status" name="status" required>
-                                        <option value=""></option>
+                                    <input type="text" class="form-control" id="status" name="status" placeholder="Pending" readonly>
+                                    <!-- <select class="form-control" id="status" name="status" readonly required>
                                         <option value="Pending">Pending</option>
-                                        <option value="Ongoing">On-going</option>
-                                    </select>
+                                    </select> -->
                                 </div>
 
                                 <div class="form-group col-lg-10">
@@ -136,6 +135,7 @@
                                                 <td class="text-center"><?php echo $setrows->pic; ?></td>
                                                 <td class="text-center"><?php echo $setrows->status; ?></td>
                                                 <td class="text-center"><a class="btn btn-info btn-sm" data-toggle="tooltip" title="Edit details" href="<?php echo site_url('Blotter/edit'); ?>/<?php echo $setrows->id;?>"><i class="fas fa-edit"></i></a></td>      
+                                                
                                             </tr>
                                         <?php endforeach; ?>
                                     </tbody>

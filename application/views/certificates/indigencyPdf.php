@@ -91,7 +91,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             outline: none;
             border: 1px solid;
             border-radius: 5px;
-            margin: 30px 0 0 150px;
+            margin: 30px 0 0 350px;
             width: 130px;
             height: 30px;
             cursor: pointer;
@@ -206,9 +206,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <?php }  ?>
 
-    <span><a href="<?php echo site_url('Certificate/CreateCertPdf'); ?>/<?php echo $setrows->id; ?>"><button class="btn" data-toggle="tooltip" target="__blank"  title="Print" href=""><i class="fas fa-print"></i></button></a>
+    <!-- <span><a href="<?php echo site_url('Certificate/CreateCertPdf'); ?>/<?php echo $setrows->id; ?>"><button class="btn" data-toggle="tooltip" target="__blank"  title="Print" href=""><i class="fas fa-print"></i></button></a>
         </span>
-  
+   -->
 
 </body>
 </html>

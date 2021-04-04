@@ -7,25 +7,18 @@
     <link rel="icon" href="<?php echo site_url('img/brgylogo1.png'); ?>" type="gif/image" sizes="16x16">
 
     <!-- Bootstrap CSS -->
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="<?php echo site_url('bootstrap/css/bootstrap.min.css') ?> ">
     <link rel="stylesheet" type="text/css" media="screen" href="<?php site_url('bootstrap/css/jquery-ui.css') ?>" />
     <link rel="stylesheet" href="<?php echo site_url('fontawesome/css/all.css') ?>">
     <link rel="stylesheet" href="<?php echo site_url('asset/bootstrap-table.min.css') ?> ">
 
-    <!-- wWEBCAM JS -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.25/webcam.min.js"></script> -->
-
      <!-- datepicker -->
     <link rel="stylesheet" href="<?php echo site_url('jquery/jquery-ui.min.css') ?> ">
     <script src="<?php echo site_url('jquery/external/jquery/jquery.js') ?>"></script>
     <script src="<?php echo site_url('jquery/jquery-ui.min.js') ?>"></script>
-
-    <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
-
    
+    <script src="<?php echo site_url('ckeditor/ckeditor.js') ?>"> </script>
+    <!-- <script src="https://cdn.ckeditor.com/ckeditor5/27.0.0/decoupled-document/ckeditor.js"></script> -->
     <style>
         ::-webkit-scrollbar {
 
@@ -404,23 +397,7 @@
         margin: 0;
         /* -webkit-text-stroke: 1px darkgrey;
        -webkit-text-fill-color: white; */
-
-      
        }
-
-       .grey{
-
-         background-color: grey;
-       }
-       .blue{
-
-         background-color: blue;
-       }
-       .green{
-
-         background-color: green;
-       }
-       
 
     </style>
 

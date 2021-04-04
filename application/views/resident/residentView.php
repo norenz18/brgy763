@@ -189,10 +189,10 @@
                                                 <!-- <td class="text-center"><?php echo $row->gender; ?></td> -->
                                                 <td class="text-center"><?php echo $row->voterStatus; ?></td>
                                                 <td class="text-center">
-                                                    <a class="btn btn-success btn-sm" data-toggle="tooltip"  title="View details" href="<?php echo site_url('Residents/read');?>/<?php echo $row->id; ?>"> <i class="fas fa-eye"></i></a>
-                                                    <a class="btn btn-info btn-sm" data-toggle="tooltip" title="Edit details" href="<?php echo site_url('Residents/edit');?>/<?php echo $row->id;?>"><i class="fas fa-edit"></i></a>   
 
-                                                    <a class="btn btn-danger btn-sm" data-toggle="tooltip" id="dltbtn" title="Delete details" href="<?php echo site_url('Residents/delete');?>/<?php echo $row->id;?> "><i class="fas fa-trash-alt"></i></a>
+                                                    <a class="btn btn-success btn-sm" data-toggle="tooltip"  title="View details" href="<?php echo site_url('Residents/read');?>/<?php echo $row->id; ?>"> <i class="fas fa-eye"></i></a>
+                                                    <a class="btn btn-info btn-sm" data-toggle="tooltip" title="Edit details" href="<?php echo site_url('Residents/edit');?>/<?php echo $row->id;?>"><i class="fas fa-edit"></i></a>
+                                                    <a class="btn btn-danger btn-sm" data-toggle="tooltip" title="Delete details" href="<?php echo site_url('Residents/delete');?>/<?php echo $row->id;?> "><i class="fas fa-trash-alt"></i></a>
                                                 
                                                 </td>   
 

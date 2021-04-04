@@ -27,7 +27,7 @@ class Certificate extends CI_Controller {
         $this->load->library('form_validation');
         
         $data['setrows'] = $this->Certs_model->getCertsData($id);
-        $this->load->view('certificates/edit', $data);
+        $this->load->view('certificates/editPdf', $data);
     }
     public function updateCerts($id){ #UPDATING DATA
        
@@ -35,11 +35,6 @@ class Certificate extends CI_Controller {
         redirect("Certificate");
     }
 
-    // public function create(){ #create section 
-
-    //     $this->load->view('certificates/createPdf');
-
-    // }
     public function indigencyPdf($id){ #SHOW INDIVIDUAL DATA
         $data['setrows'] = $this->Certs_model->getCertsData($id);
         $this->load->view('certificates/indigencyPdf', $data);

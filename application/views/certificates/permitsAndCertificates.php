@@ -49,38 +49,38 @@
 
                             <div class="form-group col-sm-3">
                                 <label for="category">Category</label><br>
-                                <select class="form-control" name="category" id="category">
+                                <select class="form-control" name="category" id="category" onchange="this.parentNode.style.backgroundColor = this.value">
                                     <option value=""></option>
                                     <option disabled>---</option>
-                                    <option class=""  value="Indigency">Indigency</option>
-                                    <option class=""  value="Clearance">Certificate</option>
-                                    <option class="" value="Business-Permit">Business Permit</option>
+                                    <option class="indigency" value="Indigency">Indigency</option>
+                                    <option class="clearance" value="Clearance">Clearance</option>
+                                    <option class="permit" value="Business-Permit">Business Permit</option>
                                 </select>
                             </div>
 
                             <div class="form-group col-sm-4">
                                 <label for="">FULL NAME</label>
-                                <input type="text" class="form-control" name="fullName" id="fullName" value="" required> <!--  -->
+                                <input type="text" class="form-control" name="fullName" id="fullName" value="" required> 
                             </div>
 
                             <div class="form-group col-sm-4">
                                 <label for="">ADDRESS <small class="color: grey;">(House # / Street name) </small></label>
-                                <input type="text" class="form-control" name="address" id="address" value="" required> <!-- <?php echo $col->address; ?>  -->
+                                <input type="text" class="form-control" name="address" id="address" value="" required> 
                             </div>
 
                             <div class="form-group col-sm-5">
                                 <label for="">PURPOSE</label>
-                                <input type="text" class="form-control" name="purpose" id="purpose" value="" required> <!-- <?php echo $col->purpose; ?>  -->
+                                <input type="text" class="form-control" name="purpose" id="purpose" value="" required> 
                             </div>
 
                             <div class="form-group col-sm-3">
                                 <label for="">DATE</label>
-                                <input type="text" class="form-control" name="date" id="date" value="" required> <!-- <?php echo $col->date; ?>  -->
+                                <input type="text" class="form-control" name="date" id="date" value="" required> 
                             </div>
 
                             <div class="form-group col-sm-4">
                                 <label for="">PUNONG BARANGAY</label>
-                                <input type="text" class="form-control" name="punongBrgy" id="punongBrgy" value="" required> <!-- <?php echo $col->punongBrgy; ?> -->
+                                <input type="text" class="form-control" name="punongBrgy" id="punongBrgy" value="" required> 
                             </div>
 
                             <div class="form-group col-sm-6">
@@ -135,15 +135,14 @@
                                     </thead>
                                     <tbody id="tbody">
                                         <?php foreach($result as $setrows) : ?>  
-                                            <tr>
-                                            
-                                                <td class="text-center categories" style="text-transform: uppercase;"><strong><?php echo $setrows->category; ?></strong></td>
+                                            <tr class="text-center categories">                                         
+                                                <td class="text-center" style="text-transform: uppercase;" ><strong><?php echo $setrows->category; ?></strong></td>
                                                 <td class="text-left" style="text-transform: uppercase;"><?php echo $setrows->fullName; ?></td>                                          
                                                 <td class="text-center" style="text-transform: uppercase;"><?php echo $setrows->purpose; ?></td>
                                                 <td class="text-center"><a class="btn btn-info btn-sm" data-toggle="tooltip" title="Edit details" href="<?php echo site_url('Certificate/edit');?>/<?php echo $setrows->id;?>"><i class="fas fa-edit"></i></a>
-                                                <a class="btn btn-secondary btn-sm" id="Indigency" data-toggle="tooltip" target="_blank" title="View Indigency" href="<?php echo site_url('Certificate/indigencyPdf'); ?>/<?php echo $setrows->id; ?>"><i class="fas fa-print"> Indigency</i></a>
-                                                <a class="btn btn-primary btn-sm" id="Clearance" data-toggle="tooltip" target="_blank" title="View Clearance" href="<?php echo site_url('Certificate/clearancePdf'); ?>/<?php echo $setrows->id; ?>"><i class="fas fa-print"> Clearance</i></a>
-                                                <a class="btn btn-success btn-sm" id="Business-Permit" data-toggle="tooltip" target="_blank" title="View Business Permit" href="<?php echo site_url('Certificate/businessPdf'); ?>/<?php echo $setrows->id; ?>"><i class="fas fa-print"> Business</i></a>
+                                                <a class="btn btn-secondary btn-sm" id="Indigency" data-toggle="tooltip" target="_blank" title="View Indigency" href="<?php echo site_url('Certificate/CreateCertPdf'); ?>/<?php echo $setrows->id; ?>"><i class="fas fa-print"> Indigency</i></a>
+                                                <a class="btn btn-primary btn-sm" id="Clearance" data-toggle="tooltip" target="_blank" title="View Clearance" href="<?php echo site_url('Certificate/CreateCertPdfs'); ?>/<?php echo $setrows->id; ?>"><i class="fas fa-print"> Clearance</i></a>
+                                                <a class="btn btn-success btn-sm" id="Business-Permit" data-toggle="tooltip" target="_blank" title="View Business Permit" href="<?php echo site_url('Certificate/CreateCertPdfPermit'); ?>/<?php echo $setrows->id; ?>"><i class="fas fa-print"> Business</i></a>
                                              
                                                 </td> 
                                             </tr>
