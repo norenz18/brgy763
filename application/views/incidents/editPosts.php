@@ -10,7 +10,7 @@
                     </ul>       
             </div><br>
 
-    <div class="container" id="editContainer">
+    <div class="container" id="editPostContainer">
 
                 <form method="post" action="<?php echo site_url('Reports/update')?> ">
 
@@ -30,5 +30,5 @@
                 </form>  
 
     </div>
-
+    <br>
 <?php $this->load->view('includes/footer'); ?>

@@ -9,7 +9,7 @@
             </div>
             <br>
 
-            <div  id="incident_section" >
+            <div id="incident_section" >
             
                 <div class="container-fluid" style="text-transform: capitalize;">
                 <p><a class="btn btn-info btn-sm" href="<?php echo site_url('Reports/edit/'.$post['slug']); ?>">Edit</a>&nbsp;|

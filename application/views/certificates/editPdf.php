@@ -3,7 +3,7 @@
                 <div class="nav">
                     <ul>
                         <li><a href="<?php echo site_url('Certificate');?>"><i class="fas fa-angle-double-left"></i> Back</a></li>
-                        <li><a href="">Certificate</a></li>
+                        <li><a href="">CERTIFICATE</a></li>
                         <li><a href="<?php echo site_url('welcome'); ?>">Log out</a></li>
                     </ul>       
                 </div><br>

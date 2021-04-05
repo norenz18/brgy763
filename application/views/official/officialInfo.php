@@ -2,7 +2,7 @@
 
     <?php { ?>
            
-        <div class="main-content">
+        <div class="main-content" id="official-Info">    
 
             <div class="nav">
                 <ul>

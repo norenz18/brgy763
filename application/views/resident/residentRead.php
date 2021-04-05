@@ -2,7 +2,7 @@
 
     <?php { ?>
            
-        <div class="main-content">
+        <div class="main-content" id="resident-info">
 
             <div class="nav">
                 <ul>
@@ -67,10 +67,12 @@
                                 <li><strong>Birthdate:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><?php echo $row->birthdate; ?></li>                                             
                                 <li><strong>Person w/ Disability:</strong> <span><?php echo $row->pwd; ?></li>                                             
                     </ul>
-
+                    
             </div>
+          
      
         </div><!-- END OF MAIN CONTENT -->
     <?php }  ?>
+    <br><br>
 
 <?php $this->load->view('includes/footer'); ?>

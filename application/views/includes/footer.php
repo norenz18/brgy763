@@ -6,7 +6,6 @@
 
        
     <script>
-
                
             function myFunction() {
             let input, filter, table, tr, td, i, txtValue;
@@ -60,16 +59,17 @@
             })
         });
 
-        DecoupledEditor
-        .create( document.querySelector( '#editor' ) )
-        .then( editor => {
-            const toolbarContainer = document.querySelector( '#toolbar-container' );
 
-            toolbarContainer.appendChild( editor.ui.view.toolbar.element );
-        } )
-        .catch( error => {
-            console.error( error );
-        } );
+        // DecoupledEditor
+        // .create( document.querySelector( '#editor' ) )
+        // .then( editor => {
+        //     const toolbarContainer = document.querySelector( '#toolbar-container' );
+
+        //     toolbarContainer.appendChild( editor.ui.view.toolbar.element );
+        // } )
+        // .catch( error => {
+        //     console.error( error );
+        // } );
 
         // HIDE AND SHOW
         // $(function() {    // Makes sure the code contained doesn't run until
@@ -81,11 +81,11 @@
 
         // });
 
-
+     
 
     </script>
    
-
+    
     <script src="<?php echo site_url('bootstrap/js/jquery.slim.min.js') ?>"> </script>
     <script src="<?php echo site_url('bootstrap/js/bootstrap.min.js') ?>"></script>
     <script src="<?php echo site_url('bootstrap/js/jquery.js') ?>"></script>

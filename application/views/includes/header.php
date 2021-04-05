@@ -16,9 +16,8 @@
     <link rel="stylesheet" href="<?php echo site_url('jquery/jquery-ui.min.css') ?> ">
     <script src="<?php echo site_url('jquery/external/jquery/jquery.js') ?>"></script>
     <script src="<?php echo site_url('jquery/jquery-ui.min.js') ?>"></script>
-   
-    <script src="<?php echo site_url('ckeditor/ckeditor.js') ?>"> </script>
-    <!-- <script src="https://cdn.ckeditor.com/ckeditor5/27.0.0/decoupled-document/ckeditor.js"></script> -->
+  
+
     <style>
         ::-webkit-scrollbar {
 
@@ -167,7 +166,23 @@
           }
   
         #editContainer{
-          height: 81.5vh;
+
+          height: 100vh;
+        
+        }
+        #editPostContainer{
+
+          height: 100vh;
+          
+        }
+        #official-Info{
+
+          height: 100vh;
+        }
+        #resident-info{
+
+          height: 100vh;
+          padding-bottom: 20px;
         }
         label{
 
@@ -175,8 +190,14 @@
         }
         #table-wrapper {
 
-          position: relative; 
+          position: relative;
+          width: auto;
          
+        }
+        #blotter-section{
+
+          width: 80%;
+
         }
         #thead{
     
@@ -193,8 +214,8 @@
         }
         #officialImage{
 
-          height: 150px;
-          width: 150px;
+          height: 100px;
+          width: 100px;
           object-fit: contain;
 
         }
@@ -239,7 +260,7 @@
        }
        .main-content{
 
-        height: 95vh;
+        height: 100vh;
 
        }
        .main-content #div-content{
@@ -398,6 +419,7 @@
         /* -webkit-text-stroke: 1px darkgrey;
        -webkit-text-fill-color: white; */
        }
+     
 
     </style>
 
