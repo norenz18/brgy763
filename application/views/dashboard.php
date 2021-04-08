@@ -30,9 +30,9 @@ button {
 
   padding: 20px;
   color: #d36c6c;
-  font-size: 23px;
   font-family: sans-serif;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
 
 }
@@ -44,6 +44,7 @@ button {
 #header button {
 
   background-color: #123a4a;
+  font-size: 12px;
 
 }
 #weekdays {
@@ -76,10 +77,11 @@ button {
   box-sizing: border-box;
   background-color: white;
   margin: 5px;
-  box-shadow: 0px 0px 3px #CBD4C2;
+  box-shadow: 0px 0px 3px darkblue;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  
 
 }
 .day:hover {
@@ -90,14 +92,14 @@ button {
 
 .day + #currentDay {
 
-  background-color:#e8f4fa;
+  background-color: #95bee5;
 
 }
 .event {
 
   font-size: 10px;
   padding: 3px;
-  background-color: #58bae4;
+  background-color: #F7665E;
   color: white;
   border-radius: 5px;
   max-height: 55px;
@@ -156,7 +158,7 @@ button {
 }
 #eventText {
 
-  font-size: 14px;
+  font-size: 18px;
 
 }
 #modalBackDrop {
@@ -219,7 +221,7 @@ button {
                                 </div>
 
                                 <div class="count">
-                                    <h3>ON-GOING CASES<br><i class="fas fa-exclamation-circle"></i>
+                                    <h3>ON-GOING <br> CASES<br><i class="fas fa-exclamation-circle"></i>
                                         <?php $this->db->select('*');
                                         $this->db->from('blotter');
                                         $this->db->like('status', 'On-going');
@@ -249,12 +251,15 @@ button {
                                 <div class="container" id="container">
                                 <div id="header">
                                     <div id="monthDisplay"></div>
-                                    <div>
-                                        <button id="backButton">Back</button>
-                                        <button id="nextButton">Next</button>
-                                    </div>
-                                  
+
+                                <div>
+                                      <button id="backButton">Back</button>
+                                      <button id="nextButton">Next</button>
                                 </div>
+              
+                                </div>
+
+                             
 
                                 <div id="weekdays">
                                     <div style="color: red;">Sunday</div>
