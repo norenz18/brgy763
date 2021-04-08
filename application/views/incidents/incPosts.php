@@ -43,11 +43,9 @@
                     <small id="postdate">Posted: <?php echo $post['created_at']; ?></small> <br><br>
                     <h6 id="postbody"><?php echo $post['body']; ?></h6>
                 </div>
-        <br>
         <hr>
                
             </div>
 
-           
-
+        
 <?php $this->load->view('includes/footer'); ?>

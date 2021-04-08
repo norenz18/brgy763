@@ -341,6 +341,7 @@
 
           width: 300px;
           margin: 0;
+         
 
         }
         #incidentTab #table-posts #tbody tr td{
@@ -350,8 +351,9 @@
         }
 
        #incident_section{
-          margin: 50px;
-          height: 150vh;
+
+          margin: 20px 50px 280px;
+          height: auto;
          
        }
        #incident_section #titlehead{
@@ -362,7 +364,12 @@
          letter-spacing: 3px;
        }
        #incident_section #postdate, #postbody{
+
         color: black;
+        resize: none;
+        padding: 5px;
+       
+
        }
 
        /* DASHBOARD */
@@ -370,17 +377,17 @@
 
         margin: 20px 0 20px;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around;
         align-items: flex-start;
-        align-content: flex-end;
+        align-content: flex-start;
 
        }
       .dataCount .count{
 
        
-        width: 350px;
+        width: 250px;
         height: 120px;
         border: 3px solid #123a4a;
         border-radius: 5px;
