@@ -44,9 +44,11 @@
           padding: 0;
           margin: 0;
           box-sizing: border-box;
-          font-family: nexa, 'poppins', sans-serif;
-          font-weight: 500;
- 
+          font-family: nexa, lucida;
+          /* font-family: lucida; */
+          font-weight: lighter;
+          
+          
         }
         html,body{
           
@@ -142,8 +144,9 @@
           }
           .nav-main ul li a{
 
+            font-family: nexa, lucida;
             color: #7c7777;
-            font-weight: 900;
+            /* font-weight: 900; */
             font-size: 18px;
             text-decoration: none;
             margin: 0 0 0 10px;
@@ -236,12 +239,15 @@
           object-fit: contain;
         }
         #tbody tr #fml{
-          width: 300px;
+
+          width: 280px;
+
         }
-       
+
         #tbody tr #adrs{
 
           width: 350px;
+          font-size: 14px;
         }
         .footer{
          

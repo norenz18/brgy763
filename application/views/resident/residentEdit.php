@@ -14,26 +14,10 @@
       <form method="post" action="<?php echo site_url('Residents/update')?>/<?php echo $row->id; ?>" enctype="multipart/form-data"> <!--  enctype="multipart/form-data" -->
             <div class="form-row">
 
-                    <!-- <div class="form-group col-sm-2">
-                        <img class="profileImg" id="profileImg" src="<?php echo site_url('img'); ?>/<?php echo $row->profImage; ?>">
-                        <label for="">Resident Image</label> -->
-                        <!-- <input type="file" name="userfile" size="20"> -->
-                    <!-- </div> -->
-
                     <div class="form-group col-sm-12">
                        
-                        <img class="profileImg" id="profileImg" src="<?php echo site_url('img'); ?>/<?php echo $row->profImage; ?>">&nbsp;
+                        <img class="profileImg" id="profileImg" src="<?php echo site_url('img'); ?>/<?php echo $row->profImage; ?>"> &nbsp;
                         <label for="">Upload Image <br><input type="file" name="userfile" style="cursor:pointer;" value="<?php echo site_url('img'); ?>/<?php echo $row->profImage; ?>" size="20" required></label>
-                                    <!-- <video src="" id="video" width="300" height="300" autoplay></video>
-                                    <button id="snap">Take Photo</button>
-                                    <canvas id="canvas" width="300" height="300"></canvas> -->
-                                    
-                                    <!-- <div id="my_camera"></div>
-                                    <br/>
-                                    <input type=button value="Take Snapshot" onClick="take_snapshot()">
-                                    <input type="hidden" name="image"  class="image-tag">
-
-                                    <div id="profImage">Your captured image will appear here...</div> -->
 
                     </div>
 
@@ -63,8 +47,8 @@
                     </div>
 
                     <div class="form-group col-sm-2">
-                        <label for="birthdate">Birthdate: <small>Mm/Dd/Yy</small></label>
-                        <input type="text" class="form-control" name="birthdate" id="birthdate" value="<?php echo $row->birthdate; ?>" required>
+                        <label for="birthdate">Birthdate: <small style="color: red;">Mm/Dd/Yy</small></label>
+                        <input type="text" class="form-control" name="birthdate" id="birthdate" placeholder="Mm/Dd/Yr" value="<?php echo $row->birthdate; ?>" required>
                     </div>
                                 
                     <div class="form-group col-sm-1">
@@ -80,7 +64,7 @@
 
                     <div class="form-group col-sm-2">
                         <label for="civilStatus">Civil Status</label><br>
-                        <select class="form-control" id="civilStatus" name="civilStatus"  value="<?php echo $row->civilStatus; ?>">
+                        <select class="form-control" id="civilStatus" name="civilStatus" value="<?php echo $row->civilStatus; ?>">
                             <option><?php echo $row->civilStatus; ?></option>
                             <option disabled>---</option>
                             <option value="Single">Single</option>
@@ -102,8 +86,8 @@
                     </div>
 
                     <div class="form-group col-sm-3">
-                        <label for="">Address</label>
-                        <input type="text" class="form-control" name="address" id="address" value="<?php echo $row->address; ?>" required>
+                        <label for="">Address <small style="color: red;">House No./Street Name</small></label>
+                        <input type="text" class="form-control" name="address" id="address" placeholder="House No. Street Name" value="<?php echo $row->address; ?>" required>
                     </div>
       
                     <div class="form-group col-sm-2">

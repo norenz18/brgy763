@@ -64,12 +64,12 @@
                                 </div>
                                
                                 <div class="form-group col-sm-3">
-                                    <label for="">First Name</label>
+                                    <label for="">First Name:</label>
                                     <input type="text" class="form-control" name="firstName" required>
                                 </div>
 
                                 <div class="form-group col-sm-3">
-                                    <label for="">Last Name <small>(Suffix)</small></label>
+                                    <label for="">Last Name: <small>(Suffix)</small></label>
                                     <input type="text" class="form-control" name="lastName" required>
                                 </div>
 
@@ -79,17 +79,17 @@
                                 </div>
 
                                 <div class="form-group col-sm-2">
-                                    <label for="birthdate">Birthdate: <small>Mm/Dd/Yy</small></label>
-                                    <input type="text" class="form-control" name="birthdate" id = "birthdate" required>
+                                    <label for="birthdate">Birthdate: <small style="color: red;">Mm/Dd/Yy</small></label>
+                                    <input type="text" class="form-control" name="birthdate" id="birthdate" placeholder="Mm/Dd/Yr" required>
                                 </div>
                                 
                                 <div class="form-group col-sm-1">
-                                    <label for="">Age</label>
+                                    <label for="">Age:</label>
                                     <input type="number" class="form-control" name="age" id = "age" readonly required>
                                 </div>
 
                                 <div class="form-group col-sm-2">
-                                    <label for="civilStatus">Civil Status</label><br>
+                                    <label for="civilStatus">Civil Status:</label><br>
                                     <select class="form-control" id="civilStatus" name="civilStatus" required>
                                         <option value=""></option>
                                         <option value="Single">Single</option>
@@ -101,12 +101,12 @@
                                 </div>
 
                                 <div class="form-group col-sm-2">
-                                    <label for="">Contact</label>
+                                    <label for="">Contact:</label>
                                     <input type="number" class="form-control" name="contact" required>
                                 </div>
 
                                 <div class="form-group col-sm-2">
-                                    <label for="">Person w/ Disability</label>
+                                    <label for="">Person w/ Disability:</label>
                                     <select id="" class="form-control" id="pwd" name="pwd" required>
                                         <option value=""></option>
                                         <option value="Yes">Yes</option>
@@ -115,8 +115,8 @@
                                 </div>
 
                                 <div class="form-group col-sm-3">
-                                    <label for="">Address</label>
-                                    <input type="text" class="form-control" name="address" id="address" required>
+                                    <label for="">Address: <small style="color: red;">House No./Street Name</small></label>
+                                    <input type="text" class="form-control" name="address" id="address" placeholder="House No. Street Name" required>
                                 </div>
 
                                 <div class="form-group col-sm-2">
@@ -129,7 +129,7 @@
                                 </div>
 
                                 <div class="form-group col-sm-2">
-                                    <label for="">Gender</label><br>
+                                    <label for="">Gender:</label><br>
                                     <select id="" class="form-control" id="gender" name="gender" required>
                                         <option value=""></option>
                                         <option value="Male">Male</option>
@@ -184,15 +184,15 @@
 
                                                 <td id="profileImgs"><img id="profileImgs" src="<?php echo site_url('img'); ?>/<?php echo $row->profImage; ?>"></td>
                                                 <td class="text-left" id="fml"><?php echo $row->firstName; ?> <?php echo $row->mi; ?> <?php echo $row->lastName; ?></td>
-                                                <td class="text-left" id="adrs"><?php echo $row->address; ?> Brgy. 763 Zone 83 District 5 San Andres, Manila</td>
-                                                <td class="text-center"><?php echo $row->age; ?></td>
+                                                <td class="text-left" id="adrs"><?php echo $row->address; ?> Brgy. 763 Zone 83 San Andres, Manila</td>
+                                                <td class="text-center" ><?php echo $row->age; ?></td>
                                                 <!-- <td class="text-center"><?php echo $row->gender; ?></td> -->
                                                 <td class="text-center"><?php echo $row->voterStatus; ?></td>
                                                 <td class="text-center">
 
                                                     <a class="btn btn-success btn-sm" data-toggle="tooltip"  title="View details" href="<?php echo site_url('Residents/read');?>/<?php echo $row->id; ?>"> <i class="fas fa-eye"></i></a>
                                                     <a class="btn btn-info btn-sm" data-toggle="tooltip" title="Edit details" href="<?php echo site_url('Residents/edit');?>/<?php echo $row->id;?>"><i class="fas fa-edit"></i></a>
-                                                    <a class="btn btn-danger btn-sm" data-toggle="tooltip" title="Delete details" href="<?php echo site_url('Residents/delete');?>/<?php echo $row->id;?> "><i class="fas fa-trash-alt"></i></a>
+                                                    <!-- <a class="btn btn-danger btn-sm" data-toggle="tooltip" title="Delete details" href="<?php echo site_url('Residents/delete');?>/<?php echo $row->id;?> "><i class="fas fa-trash-alt"></i></a> -->
                                                 
                                                 </td>   
 

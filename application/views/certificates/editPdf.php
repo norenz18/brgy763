@@ -49,7 +49,11 @@
 
             <div class="form-group col-sm-4">
                 <label for="">PUNONG BARANGAY</label>
-                <input type="text" class="form-control" name="punongBrgy" id="punongBrgy" value="<?php echo $setrows->punongBrgy; ?>" required>
+                <input type="text" class="form-control" name="punongBrgy" id="punongBrgy" value="<?php echo $setrows->punongBrgy; ?>" required> <br>
+            </div>
+
+            <div class="form-group col-sm-12">
+                <h6 class="text-danger">Fill out if you're creating business permit.</h6>
             </div>
 
             <div class="form-group col-sm-6">

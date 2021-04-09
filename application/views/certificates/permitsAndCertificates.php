@@ -60,37 +60,41 @@
 
                             <div class="form-group col-sm-4">
                                 <label for="">FULL NAME</label>
-                                <input type="text" class="form-control" name="fullName" id="fullName" value="" required> 
+                                <input type="text" class="form-control" name="fullName" id="fullName" placeholder="Enter your fullname..." value="" required> 
                             </div>
 
                             <div class="form-group col-sm-4">
                                 <label for="">ADDRESS <small class="color: grey;">(House # / Street name) </small></label>
-                                <input type="text" class="form-control" name="address" id="address" value="" required> 
+                                <input type="text" class="form-control" name="address" id="address"  placeholder="enter your address" value="" required> 
                             </div>
 
                             <div class="form-group col-sm-5">
                                 <label for="">PURPOSE</label>
-                                <input type="text" class="form-control" name="purpose" id="purpose" value="" required> 
+                                <input type="text" class="form-control" name="purpose" id="purpose"  placeholder="Ex. Educational assistance, Local employment etc."value="" required> 
                             </div>
 
                             <div class="form-group col-sm-3">
                                 <label for="">DATE</label>
-                                <input type="text" class="form-control" name="date" id="date" value="" required> 
+                                <input type="text" class="form-control" name="date" id="date" placeholder="Month Day, Year" value="" required> 
                             </div>
 
                             <div class="form-group col-sm-4">
                                 <label for="">PUNONG BARANGAY</label>
-                                <input type="text" class="form-control" name="punongBrgy" id="punongBrgy" value="" required> 
+                                <input type="text" class="form-control" name="punongBrgy" id="punongBrgy"  placeholder="Enter Brgy. Capt. name" value="" required> <br>
+                            </div>
+
+                            <div class="form-group col-sm-12">
+                                <h6 class="text-danger">Fill out if you're creating business permit.</h6>
                             </div>
 
                             <div class="form-group col-sm-6">
                                 <label for="">NAME OF BUSINESS</label>
-                                <input type="text" class="form-control" name="businessName" id="businessName" value="">
+                                <input type="text" class="form-control" name="businessName" id="businessName"  placeholder="enter your business name..." value="">
                             </div>
 
                             <div class="form-group col-sm-6">
                                 <label for="">KIND OF BUSINESS</label>
-                                <input type="text" class="form-control" name="businessType" id="businessType" value="">
+                                <input type="text" class="form-control" name="businessType" id="businessType"  placeholder="Ex. 'Retail store', 'Convenience Store' etc... " value="">
                             </div>
                             
                             </div><!--end class form col-->
@@ -135,8 +139,8 @@
                                     </thead>
                                     <tbody id="tbody">
                                         <?php foreach($result as $setrows) : ?>  
-                                            <tr class="text-center categories">                                         
-                                                <td class="text-center" style="text-transform: uppercase;" ><strong><?php echo $setrows->category; ?></strong></td>
+                                            <tr class="text-center categories" style="font-size: 13px;">                                         
+                                                <td class="text-center" style="text-transform: uppercase;"><strong><?php echo $setrows->category; ?></strong></td>
                                                 <td class="text-left" style="text-transform: uppercase;"><?php echo $setrows->fullName; ?></td>                                          
                                                 <td class="text-center" style="text-transform: uppercase;"><?php echo $setrows->purpose; ?></td>
                                                 <td class="text-center"><a class="btn btn-info btn-sm" data-toggle="tooltip" title="Edit details" href="<?php echo site_url('Certificate/edit');?>/<?php echo $setrows->id;?>"><i class="fas fa-edit"></i></a>

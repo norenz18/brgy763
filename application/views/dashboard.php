@@ -30,7 +30,7 @@ button {
 
   padding: 20px;
   color: #d36c6c;
-  font-family: sans-serif;
+  font-family: nexa, lucida;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -52,12 +52,14 @@ button {
   width: 100%;
   display: flex;
   color: #247BA0;
+  
 
 }
 #weekdays div {
 
   width: auto;
   padding: 22px;
+  font-family: nexa, lucida;
  
 }
 #calendar {
@@ -125,7 +127,7 @@ button {
   top: 100%;
   left: calc(50% - 175px);
   position: absolute;
-  font-family: sans-serif;
+  font-family: nexa, lucida;
 
 }
 #eventTitleInput {
@@ -215,7 +217,7 @@ button {
                     <div class="container dataCount">
 
                                 <div class="count">
-                                    <h3>TOTAL POPULATION<br><i class="fas fa-users"></i>        
+                                    <h3>TOTAL <br> POPULATION<br><i class="fas fa-users"></i>        
                                         <?php echo $this->db->count_all('tbl_name'); ?><br>
                                     </h3>                                  
                                 </div>
@@ -230,7 +232,7 @@ button {
                                 </div>
 
                                 <div class="count">
-                                <h3>REGISTERED VOTERS<br><i class="fas fa-user-check"></i>
+                                <h3>REGISTERED <br> VOTERS<br><i class="fas fa-user-check"></i>
                                         <?php $this->db->select('*');
                                         $this->db->from('tbl_name');
                                         $this->db->like('voterStatus', 'Yes');
@@ -239,7 +241,7 @@ button {
                                 </div>
 
                                 <div class="count">
-                                <h3>DIFFERENTLY ABLED PERSON<br><i class="fas fa-wheelchair"></i>
+                                <h3>DIFFERENTLY <br> ABLED PERSON<br><i class="fas fa-wheelchair"></i>
                                         <?php $this->db->select('*');
                                         $this->db->from('tbl_name');
                                         $this->db->like('pwd', 'Yes');

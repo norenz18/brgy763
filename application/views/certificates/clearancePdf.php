@@ -166,7 +166,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                             the purpose of <strong style="text-transform: uppercase;text-decoration: underline;"> <?php echo $setrows->purpose; ?> </strong> <br>
 
-                            Done this  <strong style="text-transform: uppercase;text-decoration: underline;"> <?php echo $setrows->date; ?> </strong>
+                            Done this  <strong style="text-transform: uppercase;text-decoration: underline;"> <?php echo $setrows->date; ?>  </strong>
 
                             at the Office of the Barangay Chairman, <br> Barangay 763 Zone 83 
 
