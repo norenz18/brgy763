@@ -1,18 +1,20 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Crud_model extends CI_Model {
+class Crud_model extends CI_Model
+{
 
-    public function __construct(){
+    public function __construct()
+    {
         $this->load->database();
-
     }
 
-   
-    function createData($profImage) { #INSERTING DATA TO DATABASE
+
+    function createData($profImage)
+    { #INSERTING DATA TO DATABASE
 
         $data = array(
-            
+
             'profImage' => $profImage,
             'lastName' => $this->input->post('lastName'),
             'firstName' => $this->input->post('firstName'),
@@ -20,6 +22,7 @@ class Crud_model extends CI_Model {
             'birthdate' => $this->input->post('birthdate'),
             'contact' => $this->input->post('contact'),
             'age' => $this->input->post('age'),
+            'seniorCitizen' => $this->input->post('seniorCitizen'),
             'voterStatus' => $this->input->post('voterStatus'),
             'gender' => $this->input->post('gender'),
             'civilStatus' => $this->input->post('civilStatus'),
@@ -27,27 +30,28 @@ class Crud_model extends CI_Model {
             'pwd' => $this->input->post('pwd')
         );
         $this->db->insert('tbl_name', $data);
-
     }
 
-    function getAllData(){ #FETCHING ALL DATA
+    function getAllData()
+    { #FETCHING ALL DATA
         // $this->db->order_by('date', 'DESC');
         $query = $this->db->query('SELECT * FROM tbl_name ORDER BY date DESC');
-        return $query->result(); 
+        return $query->result();
     }
 
-    function getData($id){ #FETCH SINGLE DATA
-         
-         $query = $this->db->query('SELECT * FROM tbl_name WHERE `id` =' .$id);
-         return $query->row();
+    function getData($id)
+    { #FETCH SINGLE DATA
 
+        $query = $this->db->query('SELECT * FROM tbl_name WHERE `id` =' . $id);
+        return $query->row();
     }
 
-    function updateData($id, $profImage){ #updating data to database
+    function updateData($id, $profImage)
+    { #updating data to database
 
-       
+
         $data = array(
-            
+
             'profImage' => $profImage,
             'lastName' => $this->input->post('lastName'),
             'firstName' => $this->input->post('firstName'),
@@ -55,6 +59,7 @@ class Crud_model extends CI_Model {
             'birthdate' => $this->input->post('birthdate'),
             'contact' => $this->input->post('contact'),
             'age' => $this->input->post('age'),
+            'seniorCitizen' => $this->input->post('seniorCitizen'),
             'voterStatus' => $this->input->post('voterStatus'),
             'gender' => $this->input->post('gender'),
             'civilStatus' => $this->input->post('civilStatus'),
@@ -64,29 +69,29 @@ class Crud_model extends CI_Model {
         $this->db->where('id', $id);
         $this->db->update('tbl_name', $data);
     }
-    function deleteData($id){ #deleting data in database
- 
+    function deleteData($id)
+    { #deleting data in database
+
         $this->db->where('id', $id);
         $this->db->delete('tbl_name');
-        
-    }
-    
-    function getDatax($id){ #FETCH SINGLE DATA FOR PDF
-         
-         $query = $this->db->query('SELECT * FROM tbl_name WHERE `id` =' .$id);
-         return $query->row();
-
     }
 
-  
-    
+    function getDatax($id)
+    { #FETCH SINGLE DATA FOR PDF
 
-//     function readData($id){ #showing data 
-
-//         $query = $this->db->query('SELECT * FROM tbl_name WHERE `id` =' .$id);
-//         return $query->row();
-//    }
+        $query = $this->db->query('SELECT * FROM tbl_name WHERE `id` =' . $id);
+        return $query->row();
+    }
 
 
-    
+
+
+    //     function readData($id){ #showing data 
+
+    //         $query = $this->db->query('SELECT * FROM tbl_name WHERE `id` =' .$id);
+    //         return $query->row();
+    //    }
+
+
+
 }
