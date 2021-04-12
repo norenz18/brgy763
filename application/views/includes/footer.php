@@ -56,13 +56,39 @@
     })
   });
 
+  // function pressed() {
+  //   var userinput = document.getElementById("birthdate").value;
+  //   var birthdate = new Date(userinput);
+  //   if (userinput == null || userinput == '') {
+  //     document.getElementById("message").innerHTML = "**Choose a date please!";
+  //     return false;
+  //   } else {
+
+  //     //calculate month difference from current date in time  
+  //     var month_diff = Date.now() - birthdate.getTime();
+
+  //     //convert the calculated difference in date format  
+  //     var age_dt = new Date(month_diff);
+
+  //     //extract year from date      
+  //     var year = age_dt.getUTCFullYear();
+
+  //     //now calculate the age of the user  
+  //     var edad = Math.abs(year - 1970);
+
+  //     //display the calculated age  
+  //     return document.getElementById("age").value = edad;
+  //   }
+  // };
+
   // SENIOR CITIZEN FUNCTIONALITY
   function pressed() {
     let aged = document.getElementById("age").value;
 
     if (aged >= 60) {
 
-      document.getElementById('seniorCitizen').value = 'Senior Citizen';
+      return document.getElementById('seniorCitizen').value = 'Senior Citizen';
+
     } else {
       document.getElementById('seniorCitizen').value = 'No';
     }

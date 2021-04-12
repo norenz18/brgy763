@@ -83,7 +83,7 @@
 
                                 <div class="form-group col-sm-2">
                                     <label for="birthdate">Birthdate: <small style="color: red;">Mm/Dd/Yy</small></label>
-                                    <input type="text" class="form-control" name="birthdate" id="birthdate" onchange="pressed()" placeholder="Month / Day / Year" required>
+                                    <input type="text" class="form-control" name="birthdate" id="birthdate" onmousemove="pressed()" placeholder="Month / Day / Year" required>
                                 </div>
 
                                 <div class="form-group col-sm-1">
