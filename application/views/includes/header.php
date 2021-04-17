@@ -214,10 +214,20 @@
       font-weight: 700;
     }
 
+    /* FOR SCROLLING TABLE IN RESIDENT VIEW */
+    /* 
+    .table-wrapper-scroll-y {
+      display: block;
+      border: 1px solid lightgrey;
+    } */
+
     #table-wrapper {
 
       position: relative;
       width: auto;
+      /* height: 500px;
+      overflow: auto; */
+
 
     }
 

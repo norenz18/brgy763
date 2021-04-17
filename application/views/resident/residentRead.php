@@ -33,6 +33,7 @@
                         </div>
                         <div class="modal-body">
                             This action can cause deleting information of a resident. <br>
+                            <span class="text-danger"> This is cannot be undone. </span><br>
                             Are you sure you want to delete?
                         </div>
                         <div class="modal-footer">

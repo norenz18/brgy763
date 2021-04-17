@@ -27,7 +27,7 @@
     <div class="container" id="resident-section"><br><br>
 
         <!-- Button trigger modal -->
-        &nbsp&nbsp;&nbsp;&nbsp;<button type="button" id="btn-add" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-user-plus"></i> ADD RESIDENT</button>
+        &nbsp&nbsp;&nbsp;&nbsp;<button type="button" style="margin-bottom: 10px;" id="btn-add" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-user-plus"></i> ADD RESIDENT</button>
 
         <div class="modal fade" id="exampleModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <!-- tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" -->
@@ -83,7 +83,7 @@
 
                                 <div class="form-group col-sm-2">
                                     <label for="birthdate">Birthdate: <small style="color: red;">Mm/Dd/Yy</small></label>
-                                    <input type="text" class="form-control" name="birthdate" id="birthdate" onmousemove="pressed()" placeholder="Month / Day / Year" required>
+                                    <input type="text" class="form-control" name="birthdate" id="birthdate" onchange="pressed()" placeholder="Month / Day / Year" required>
                                 </div>
 
                                 <div class="form-group col-sm-1">
@@ -158,10 +158,8 @@
             </div>
         </div><!-- end of modal -->
 
-        <div class="container-fluid" id="table-wrapper">
+        <div class="container-fluid table-wrapper-scroll-y" id="table-wrapper">
             <table id="table-list" class="table table-sm table-hover table-striped" data-toggle="table" data-pagination="true" data-search="true" data-search-align="left" data-show-fullscreen="true" data-pagination-pre-text="Prev" data-pagination-next-text="Next" data-pagination-h-align="left" data-pagination-detail-h-align="right" data-show-pagination-switch="true" data-page-list="[10, 25, 50, 100, ALL]">
-
-
 
                 <thead id="thead" class="col-sm-3 text-center">
 
@@ -169,6 +167,7 @@
                         <!-- <th scope="col" >View</th> -->
                         <th scope="col" data-field="Image" data-sortable="false" data-switchable="false">Image</th>
                         <th scope="col" data-field="Name" data-sortable="true" data-switchable="false">Name <span><small>(Firstname, Mi, Lastname)</small></span></th>
+
                         <th scope="col" data-field="Address" data-sortable="true">Address</th>
                         <th scope="col" data-field="Age" data-sortable="true">Age</th>
                         <th scope="col" data-field="Senior" data-sortable="true">Senior</th>
