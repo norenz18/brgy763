@@ -39,19 +39,14 @@
                 <input type="text" class="form-control" name="mi" value="<?php echo $row->mi; ?>">
             </div>
 
-            <!-- <div class="form-group col-sm-2">
-                        <label for="">Birthdate</label>
-                        <input type="date" class="form-control" name="birthdate" value="<?php echo $row->birthdate; ?>" required>
-                    </div> -->
-
             <div class="form-group col-sm-2">
                 <label for="">Contact</label>
-                <input type="number" class="form-control" name="contact" value="<?php echo $row->contact; ?>" required>
+                <input type="number" class="form-control" id="contact" name="contact" value="<?php echo $row->contact; ?>" required>
             </div>
 
             <div class="form-group col-sm-2">
                 <label for="birthdate">Birthdate: <small style="color: red;">Mm/Dd/Yy</small></label>
-                <input type="text" class="form-control" name="birthdate" id="birthdate" onchange="pressed()" placeholder="Mm/Dd/Yr" value="<?php echo $row->birthdate; ?>" required>
+                <input type="text" class="form-control" name="birthdate" id="birthdate" placeholder="Mm/Dd/Yr" value="<?php echo $row->birthdate; ?>" required>
             </div>
 
             <div class="form-group col-sm-1">
@@ -61,7 +56,7 @@
 
             <div class="form-group col-sm-2">
                 <label for="">Senior Citizen:</label>
-                <input type="text" class="form-control" name="seniorCitizen" id="seniorCitizen" value="<?php echo $row->seniorCitizen; ?>" readonly required>
+                <input type="text" class="form-control" name="seniorCitizen" id="seniorCitizen" onclick="pressed()" value="<?php echo $row->seniorCitizen; ?>" readonly required>
             </div>
 
 

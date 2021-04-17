@@ -59,7 +59,7 @@
                 <li><strong>First Name:</strong> <span><?php echo $row->firstName; ?></span></li>
                 <li><strong>Last Name:</strong> <span>&nbsp;<?php echo $row->lastName; ?></span></li>
                 <li><strong>Mi:</strong> <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $row->mi; ?></span></li>
-                <li><strong>Contact:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><?php echo $row->contact; ?></span></li>
+                <li><strong>Contact:</strong><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $row->contact; ?></span></li>
                 <li><strong>Address:</strong> <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $row->address; ?> Brgy. 763 zone 83 San Andres, Manila</span></li>
                 <li><strong>Age:</strong> <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $row->age; ?></span></li>
                 <li><strong>Senior Citizen:</strong> <span><?php echo $row->seniorCitizen; ?></span></li>

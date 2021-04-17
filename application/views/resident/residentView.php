@@ -83,7 +83,7 @@
 
                                 <div class="form-group col-sm-2">
                                     <label for="birthdate">Birthdate: <small style="color: red;">Mm/Dd/Yy</small></label>
-                                    <input type="text" class="form-control" name="birthdate" id="birthdate" onchange="pressed()" placeholder="Month / Day / Year" required>
+                                    <input type="text" class="form-control" name="birthdate" id="birthdate" placeholder="Month / Day / Year" required>
                                 </div>
 
                                 <div class="form-group col-sm-1">
@@ -93,7 +93,7 @@
 
                                 <div class="form-group col-sm-2">
                                     <label for="">Senior Citizen:</label>
-                                    <input type="text" class="form-control" name="seniorCitizen" id="seniorCitizen" readonly required>
+                                    <input type="text" class="form-control" name="seniorCitizen" onclick="pressed()" id="seniorCitizen" readonly required>
                                 </div>
 
                                 <div class="form-group col-sm-2">
@@ -110,7 +110,8 @@
 
                                 <div class="form-group col-sm-2">
                                     <label for="">Contact:</label>
-                                    <input type="number" class="form-control" name="contact" required>
+                                    <input type="number" class="form-control" id="contact" name="contact" required>
+
                                 </div>
 
                                 <div class="form-group col-sm-2">
