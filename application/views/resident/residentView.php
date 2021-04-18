@@ -3,7 +3,34 @@
 <div class="nav">
     <ul>
         <li><a href="<?php echo site_url('Residents/viewlist'); ?>">RESIDENTS</a></li>
-        <li><a href="<?php echo site_url('welcome'); ?>"><i class="fas fa-sign-out-alt"></i> Log out</a></li>
+        <li>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn" data-toggle="modal" data-target="#staticBackdrop">
+                <i id="log_out" class="fas fa-sign-out-alt"> Log out</i>
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Log Out</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            Are you sure you want to
+                            <span class="text-danger"> Log out? </span>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+                            <a type="button" class="btn btn-danger btn-sm" style="font-size: 13px;" href="<?php echo site_url('welcome'); ?>">Log Out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
     </ul>
 </div>
 
@@ -68,17 +95,17 @@
 
                                 <div class="form-group col-sm-3">
                                     <label for="">First Name:</label>
-                                    <input type="text" class="form-control" name="firstName" required>
+                                    <input type="text" class="form-control" name="firstName" placeholder="Enter your Name" required>
                                 </div>
 
                                 <div class="form-group col-sm-3">
                                     <label for="">Last Name: <small>(Suffix)</small></label>
-                                    <input type="text" class="form-control" name="lastName" required>
+                                    <input type="text" class="form-control" name="lastName" placeholder="Enter your Lastname" required>
                                 </div>
 
                                 <div class="form-group col-sm-1">
                                     <label for="">MI.</label>
-                                    <input type="text" class="form-control" name="mi">
+                                    <input type="text" class="form-control" name="mi" placeholder="Mi.">
                                 </div>
 
                                 <div class="form-group col-sm-2">
@@ -99,6 +126,7 @@
                                 <div class="form-group col-sm-2">
                                     <label for="civilStatus">Civil Status:</label><br>
                                     <select class="form-control" id="civilStatus" name="civilStatus" required>
+                                        <option value="" disabled selected>-- Select --</option>
                                         <option value=""></option>
                                         <option value="Single">Single</option>
                                         <option value="Married">Married</option>
@@ -110,13 +138,14 @@
 
                                 <div class="form-group col-sm-2">
                                     <label for="">Contact:</label>
-                                    <input type="number" class="form-control" id="contact" name="contact" required>
+                                    <input type="number" class="form-control" id="contact" name="contact" placeholder="Enter your number" required>
 
                                 </div>
 
                                 <div class="form-group col-sm-2">
-                                    <label for="">Person w/ Disability:</label>
+                                    <label for="">Person with Disability:</label>
                                     <select id="" class="form-control" id="pwd" name="pwd" required>
+                                        <option value="" disabled selected>-- Select --</option>
                                         <option value=""></option>
                                         <option value="Yes">Yes</option>
                                         <option value="No">No</option>
@@ -131,6 +160,7 @@
                                 <div class="form-group col-sm-2">
                                     <label for="">Registered Voter?</label><br>
                                     <select id="" class="form-control" id="voterStatus" name="voterStatus" required>
+                                        <option value="" disabled selected>-- Select --</option>
                                         <option value=""></option>
                                         <option value="Yes">Yes</option>
                                         <option value="No">No</option>
@@ -140,6 +170,7 @@
                                 <div class="form-group col-sm-2">
                                     <label for="">Gender:</label><br>
                                     <select id="" class="form-control" id="gender" name="gender" required>
+                                        <option value="" disabled selected>-- Select --</option>
                                         <option value=""></option>
                                         <option value="Male">Male</option>
                                         <option value="Female">Female</option>

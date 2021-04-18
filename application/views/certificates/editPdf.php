@@ -1,19 +1,47 @@
 <?php $this->load->view('includes/header'); ?>
 
-                <div class="nav">
-                    <ul>
-                        <li><a href="<?php echo site_url('Certificate');?>"><i class="fas fa-angle-double-left"></i> Back</a></li>
-                        <li><a href="">CERTIFICATE</a></li>
-                        <li><a href="<?php echo site_url('welcome'); ?>">Log out</a></li>
-                    </ul>       
-                </div><br>
+<div class="nav">
+    <ul>
+        <li><a href="<?php echo site_url('Certificate'); ?>"><i class="fas fa-angle-double-left"></i> Back</a></li>
+        <li><a href="">CERTIFICATE</a></li>
+        <li>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn" data-toggle="modal" data-target="#staticBackdrop">
+                <i id="log_out" class="fas fa-sign-out-alt"> Log out</i>
+            </button>
 
-    <div class="container" id="editContainer">
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Log Out</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            Are you sure you want to
+                            <span class="text-danger"> Log out? </span>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+                            <a type="button" class="btn btn-danger btn-sm" style="font-size: 13px;" href="<?php echo site_url('welcome'); ?>">Log Out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div><br>
 
-      <h6 class="text-danger">Note: Editing details can cause misleading information, make sure all the details are correct and valid.</h6>
-      <br>
-      <form method="post" action="<?php echo site_url('Certificate/updateCerts')?>/<?php echo $setrows->id; ?>"> <!--  enctype="multipart/form-data" -->
-         
+<div class="container" id="editContainer">
+
+    <h6 class="text-danger">Note: Editing details can cause misleading information, make sure all the details are correct and valid.</h6>
+    <br>
+    <form method="post" action="<?php echo site_url('Certificate/updateCerts') ?>/<?php echo $setrows->id; ?>">
+        <!--  enctype="multipart/form-data" -->
+
         <div class="form-row">
 
             <div class="form-group col-sm-3">
@@ -21,8 +49,8 @@
                 <select class="form-control" name="category" id="category" value="<?php echo $setrows->category; ?>">
                     <option><?php echo $setrows->category; ?></option>
                     <option disabled>---</option>
-                    <option class=""  value="Indigency">Indigency</option>
-                    <option class=""  value="Clearance">Clearance</option>
+                    <option class="" value="Indigency">Indigency</option>
+                    <option class="" value="Clearance">Clearance</option>
                     <option class="" value="Business-Permit">Business Permit</option>
                 </select>
             </div>
@@ -44,7 +72,7 @@
 
             <div class="form-group col-sm-3">
                 <label for="">DATE</label>
-                <input type="text" class="form-control" name="date" id="date" value="<?php echo $setrows->date; ?>" required> 
+                <input type="text" class="form-control" name="date" id="date" value="<?php echo $setrows->date; ?>" required>
             </div>
 
             <div class="form-group col-sm-4">
@@ -66,11 +94,13 @@
                 <input type="text" class="form-control" name="businessType" id="businessType" value="<?php echo $setrows->businessType; ?>">
             </div>
 
-        </div><!--end class form col-->
-                <button type="submit" class="btn btn-success btn-sm"><i class="fas fa-save"></i> Save</button>
-                <a href="<?php echo site_url('Certificate')?>"><button type="button" class="btn btn-danger btn-sm">Cancel</button></a>
-      </form>
+        </div>
+        <!--end class form col-->
+        <button type="submit" class="btn btn-success btn-sm"><i class="fas fa-save"></i> Save</button>
+        <a href="<?php echo site_url('Certificate') ?>"><button type="button" class="btn btn-danger btn-sm">Cancel</button></a>
+    </form>
 
-    </div><!-- container
+</div>
+<!-- container
 
     <?php $this->load->view('includes/footer'); ?>

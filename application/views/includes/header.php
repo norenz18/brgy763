@@ -45,9 +45,9 @@
       padding: 0;
       margin: 0;
       box-sizing: border-box;
-      font-family: nexa, lucida;
+      font-family: nexa, poppins, lucida;
       /* font-family: lucida; */
-      font-weight: lighter;
+      font-weight: 400;
 
 
     }
@@ -56,8 +56,17 @@
     body {
 
       background: #f2f2f2;
+      /* background-image: url("./img/logomanila2.png"); */
       height: 80vh;
       position: relative;
+
+    }
+
+    #log_out {
+
+      color: #ffffff;
+      font-size: 22px;
+      font-weight: bolder;
 
     }
 
@@ -113,11 +122,11 @@
 
     }
 
-    .nav ul li:nth-child(3) a:hover {
+    /* .nav ul li:nth-child(3) a:hover {
 
       color: #ff0000;
 
-    }
+    } */
 
     #main-container {
 
@@ -333,14 +342,42 @@
 
     .main-content #div-content #resProfile {
 
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: flex-start;
+
       margin-left: 50px;
       border: 1px solid lightgrey;
       padding: 30px;
+      width: 100%;
       text-transform: capitalize;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: flex-start;
+      position: relative;
+
+    }
+
+    .main-content #div-content #resProfile #resProfileImg {
+
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translate(-20%, -50%);
+      width: 300px;
+      height: auto;
+
+    }
+
+    .main-content #div-content #resProfile #officialProfileImg {
+
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 200px;
+      height: auto;
+      padding: 10px;
+
 
     }
 
@@ -348,29 +385,22 @@
 
       list-style: none;
       padding: 0 15px 0 0;
-
-    }
-
-    .main-content #div-content #resProfile li:nth-child(odd) {
-
-      background-color: lightgrey;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      position: relative;
       width: 100%;
-      padding: 0 5px 0;
-
-    }
-
-    .main-content #div-content #resProfile li strong {
-
-      margin-right: 15px;
-      font-size: 20px;
-
     }
 
     .main-content #div-content #resProfile li span {
 
-      font-weight: 700;
+      /* font-weight: 700; */
+      position: absolute;
+      padding-left: 200px;
       font-size: 20px;
       color: blue;
+      text-align: right;
     }
 
     #incidentTab {
