@@ -36,13 +36,6 @@
                         </div>
                     </div>
                 </li>
-                <!--<a href="<?php echo site_url('welcome'); ?>"><i class="fas fa-sign-out-alt"></i>Log out</a>-->
-
-
-
-
-
-
 
             </ul>
         </div>

@@ -47,7 +47,7 @@
             <div class="form-group col-sm-12">
 
                 <img class="profileImg" id="profileImg" src="<?php echo site_url('img'); ?>/<?php echo $setrows->profImage; ?>">&nbsp;
-                <label for="">Upload Image <br>
+                <label for="">
                     <sub>You still need to upload photo if you're editing information.
                         Press <span class="text-danger">CANCEL </span> if no changes occurs and exit. <br></sub> <br>
                     <input type="file" name="userfile" style="cursor:pointer;" value="<?php echo site_url('img'); ?>/<?php echo $setrows->profImage; ?>" size="20" required></label>

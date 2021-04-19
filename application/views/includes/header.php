@@ -67,6 +67,7 @@
       color: #ffffff;
       font-size: 22px;
       font-weight: bolder;
+      width: 100%;
 
     }
 
