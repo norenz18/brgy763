@@ -5,7 +5,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="icon" href="<?php echo site_url('img/brgylogo1.png'); ?>" type="gif/image" sizes="16x16">
+  <link rel="icon" href="<?php echo site_url('img/brgylogo1.png'); ?>" type="gif/image" sizes="32x32">
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="<?php echo site_url('bootstrap/css/bootstrap.min.css') ?> ">
@@ -480,6 +480,7 @@
       align-content: flex-start;
 
 
+
     }
 
     .dataCount .count {
@@ -491,6 +492,7 @@
       border-radius: 5px;
       background-color: rgba(255, 255, 255, 0.425);
       position: relative;
+
 
     }
 
@@ -523,7 +525,6 @@
 
       position: absolute;
       text-align: center;
-      color: 00000;
       font-size: 25px;
       top: 50%;
       left: 50%;
@@ -536,15 +537,16 @@
       /* -webkit-text-stroke: 1px darkgrey;
        -webkit-text-fill-color: white; */
     }
+
+    .dataCount .count h3 a {
+
+      color: black;
+      font-weight: 700;
+
+    }
   </style>
 
   <title>Brgy. 763, Zone 83</title>
 </head>
 
 <body>
-
-  <div class="container">
-    <?php if ($this->session->flashdata('user_registered')) : ?>
-      <?php echo '<p class="alert alert-dark">' . $this->session->flashdata('user_registered') . '</p>'; ?>
-    <?php endif; ?>
-  </div>

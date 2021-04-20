@@ -35,7 +35,7 @@
             </div>
 
             <div class="form-group col-sm-4">
-                <label for="">ADDRESS <small class="color: grey;">(House # / Street name) </small></label>
+                <label for="">ADDRESS <small class="text-danger">(House # / Street name) </small></label>
                 <input type="text" class="form-control" name="address" id="address" value="<?php echo $setrows->address; ?>" required>
             </div>
 

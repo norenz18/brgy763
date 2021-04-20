@@ -99,7 +99,7 @@
                                 </div>
 
                                 <div class="form-group col-sm-3">
-                                    <label for="">Last Name: <small>(Suffix)</small></label>
+                                    <label for="">Last Name: <small class="text-danger">(Include suffix if exist)</small></label>
                                     <input type="text" class="form-control" name="lastName" placeholder="Enter your Lastname" required>
                                 </div>
 
@@ -109,7 +109,7 @@
                                 </div>
 
                                 <div class="form-group col-sm-2">
-                                    <label for="birthdate">Birthdate: <small style="color: red;">Mm/Dd/Yy</small></label>
+                                    <label for="birthdate">Birthdate: <small class="text-danger">Mm/Dd/Yy</small></label>
                                     <input type="text" class="form-control" name="birthdate" id="birthdate" placeholder="Month / Day / Year" required>
                                 </div>
 
@@ -153,7 +153,7 @@
                                 </div>
 
                                 <div class="form-group col-sm-3">
-                                    <label for="">Address: <small style="color: red;">House No./Street Name</small></label>
+                                    <label for="">Address: <small class="text-danger">House No./Street Name</small></label>
                                     <input type="text" class="form-control" name="address" id="address" placeholder="House No. Street Name" required>
                                 </div>
 
