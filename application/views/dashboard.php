@@ -251,7 +251,7 @@
   <div class="container dataCount">
 
     <div class="count">
-      <h3><a href="">TOTAL<br>POPULATION<br></a><i class="fas fa-users"></i>
+      <h3><a href="<?php echo base_url() ?>Residents/export_csv">TOTAL<br>POPULATION<br></a><i class="fas fa-users"></i>
         <?php echo $this->db->count_all('tbl_name'); ?><br>
       </h3>
     </div>
@@ -275,7 +275,7 @@
     </div>
 
     <div class="count">
-      <h3><a href="">DIFFERENTLY <br> ABLED PERSON<br></a> &#58648;<i class="fas fa-wheelchair"></i>
+      <h3><a href="<?php echo base_url() ?>Residents/export_csvpwd">DIFFERENTLY <br> ABLED PERSON<br></a> &#58648;<i class="fas fa-wheelchair"></i>
         <?php $this->db->select('*');
         $this->db->from('tbl_name');
         $this->db->like('pwd', 'Yes');
@@ -284,7 +284,7 @@
     </div>
 
     <div class="count">
-      <h3><a href="">SENIOR<br>CITIZEN<br></a><i class="fas fa-user"></i>
+      <h3><a href="<?php echo base_url() ?>Residents/export_csvs">SENIOR<br>CITIZEN<br></a><i class="fas fa-user"></i>
         <?php $this->db->select('*');
         $this->db->from('tbl_name');
         $this->db->like('seniorCitizen', 'Senior Citizen');

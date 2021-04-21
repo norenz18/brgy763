@@ -83,15 +83,31 @@ class Crud_model extends CI_Model
         return $query->row();
     }
 
-
-
-
-    //     function readData($id){ #showing data 
-
-    //         $query = $this->db->query('SELECT * FROM tbl_name WHERE `id` =' .$id);
-    //         return $query->row();
-    //    }
-
-
-
+    //EXCEL EXPORT
+    function getUserDetails()
+    {
+        $response = array();
+        $this->db->select('firstName, mi, lastName, address, contact, gender, birthdate, age, seniorCitizen, voterStatus, civilStatus, pwd');
+        $q = $this->db->get('tbl_name');
+        $response = $q->result_array();
+        return $response;
+    }
+    function getUserSenior()
+    {
+        $response = array();
+        $this->db->select('firstName, mi, lastName, address, gender, age, seniorCitizen');
+        $this->db->like('seniorCitizen', 'Senior Citizen');
+        $q = $this->db->get('tbl_name');
+        $response = $q->result_array();
+        return $response;
+    }
+    function getUserPwd()
+    {
+        $response = array();
+        $this->db->select('firstName, mi, lastName, address, gender, age, seniorCitizen, pwd');
+        $this->db->like('pwd', 'Yes');
+        $q = $this->db->get('tbl_name');
+        $response = $q->result_array();
+        return $response;
+    }
 }
