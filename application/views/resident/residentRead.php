@@ -10,12 +10,12 @@
                 <li><a href="">RESIDENT INFORMATION</a></li>
                 <li>
                     <!-- Button trigger modal -->
-                    <button type="button" class="btn" data-toggle="modal" data-target="#staticBackdrop">
+                    <!-- <button type="button" class="btn" data-toggle="modal" data-target="#staticBackdrop">
                         <i id="log_out" class="fas fa-sign-out-alt"> Log out</i>
-                    </button>
+                    </button> -->
 
                     <!-- Modal -->
-                    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <!-- <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -35,7 +35,7 @@
                             </div>
                         </div>
                     </div>
-                </li>
+                </li> -->
 
             </ul>
         </div>

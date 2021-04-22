@@ -114,7 +114,7 @@
                                 </div>
 
                                 <div class="form-group col-sm-12">
-                                    <h6 class="text-danger">Fill out if you're creating business permit.</h6>
+                                    <h6 class="text-danger">Fill out if you are creating business permit.</h6>
                                 </div>
 
                                 <div class="form-group col-sm-6">

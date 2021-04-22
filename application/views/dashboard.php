@@ -189,9 +189,9 @@
     left: 0px;
     z-index: 10;
     width: 100%;
-    height: 100vh;
+    height: 184vh;
     position: absolute;
-    /* background-color: rgba(0,0,0,0.8); */
+    background-color: rgba(0, 0, 0, 0.8);
   }
 </style>
 
@@ -210,9 +210,9 @@
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="staticBackdropLabel">Log Out</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
-              </button>
+              </button> -->
             </div>
             <div class="modal-body">
               Are you sure you want to
@@ -242,7 +242,7 @@
       <!--<i class="fas fa-print"></i>-->
       <li><a href="<?php echo site_url('Certificate'); ?>"><i class="fas fa-scroll"></i> Certificates</a></li>
       <li><a href="<?php echo site_url('Officials'); ?>"><i class="fas fa-users-cog"></i> Officials</a></li>
-      <li><a href="Dashboard/database_backup"><i class="fas fa-download"></i> Backup Database</a></li>
+      <li><a href="Dashboard/database_backup" style="font-size: 15px;"><i class="fas fa-download"></i> Back-Up Database</a></li>
     </ul>
 
   </div>
@@ -251,46 +251,58 @@
   <div class="container dataCount">
 
     <div class="count">
-      <h3><a href="<?php echo base_url() ?>Residents/export_csv">TOTAL<br>POPULATION<br></a><i class="fas fa-users"></i>
-        <?php echo $this->db->count_all('tbl_name'); ?><br>
+      <h3><a href="<?php echo base_url() ?>Residents/export_csv">TOTAL<br>POPULATION<br></a><i class="fas fa-users"></i>&nbsp;
+        <span> <?php echo $this->db->count_all('tbl_name'); ?></span><br>
       </h3>
     </div>
 
     <div class="count">
-      <h3>ON-GOING <br> CASES<br><i class="fas fa-exclamation-circle"></i>
-        <?php $this->db->select('*');
-        $this->db->from('blotter');
-        $this->db->like('status', 'On-going');
-        echo $this->db->count_all_results(); ?>
+      <h3>PENDING <br> CASES<br><i class="fas fa-file-alt"></i>&nbsp;
+        <span><?php $this->db->select('*');
+              $this->db->from('blotter');
+              $this->db->like('status', 'Pending');
+              echo $this->db->count_all_results(); ?></span>
       </h3>
     </div>
 
     <div class="count">
-      <h3>REGISTERED <br> VOTERS<br><i class="fas fa-user-check"></i>
-        <?php $this->db->select('*');
-        $this->db->from('tbl_name');
-        $this->db->like('voterStatus', 'Yes');
-        echo $this->db->count_all_results(); ?>
+      <h3>ON-GOING <br> CASES<br><i class="fas fa-exclamation-circle"></i>&nbsp;
+        <span><?php $this->db->select('*');
+              $this->db->from('blotter');
+              $this->db->like('status', 'On-going');
+              echo $this->db->count_all_results(); ?></span>
       </h3>
     </div>
 
     <div class="count">
-      <h3><a href="<?php echo base_url() ?>Residents/export_csvpwd">DIFFERENTLY <br> ABLED PERSON<br></a> &#58648;<i class="fas fa-wheelchair"></i>
-        <?php $this->db->select('*');
-        $this->db->from('tbl_name');
-        $this->db->like('pwd', 'Yes');
-        echo $this->db->count_all_results(); ?>
+      <h3>REGISTERED <br> VOTERS<br><i class="fas fa-user-check"></i>&nbsp;
+        <span><?php $this->db->select('*');
+              $this->db->from('tbl_name');
+              $this->db->like('voterStatus', 'Yes');
+              echo $this->db->count_all_results(); ?></span>
       </h3>
     </div>
 
     <div class="count">
-      <h3><a href="<?php echo base_url() ?>Residents/export_csvs">SENIOR<br>CITIZEN<br></a><i class="fas fa-user"></i>
-        <?php $this->db->select('*');
-        $this->db->from('tbl_name');
-        $this->db->like('seniorCitizen', 'Senior Citizen');
-        echo $this->db->count_all_results(); ?>
+      <h3><a href="<?php echo base_url() ?>Residents/export_csvpwd">DIFFERENTLY <br> ABLED PERSON<br></a> &#58648;<i class="fas fa-wheelchair"></i>&nbsp;
+        <span> <?php $this->db->select('*');
+                $this->db->from('tbl_name');
+                $this->db->like('pwd', 'Yes');
+                echo $this->db->count_all_results(); ?></span>
       </h3>
     </div>
+
+    <div class="count">
+      <h3><a href="<?php echo base_url() ?>Residents/export_csvs">SENIOR<br>CITIZEN<br></a><i class="fas fa-user"></i>&nbsp;
+        <span> <?php $this->db->select('*');
+                $this->db->from('tbl_name');
+                $this->db->like('seniorCitizen', 'Senior Citizen');
+                echo $this->db->count_all_results(); ?></span>
+      </h3>
+    </div>
+
+
+
 
     <!-- CALENDAR -->
     <div class="container" id="container">

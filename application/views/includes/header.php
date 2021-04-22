@@ -392,17 +392,21 @@
       align-items: flex-start;
       position: relative;
       width: 100%;
+
     }
 
     .main-content #div-content #resProfile li span {
 
       /* font-weight: 700; */
+
       position: absolute;
       padding-left: 200px;
       font-size: 20px;
       color: blue;
       text-align: right;
+      font-size: 17px;
     }
+
 
     #incidentTab {
 
@@ -479,8 +483,6 @@
       align-items: flex-start;
       align-content: flex-start;
 
-
-
     }
 
     .dataCount .count {
@@ -492,34 +494,48 @@
       border-radius: 5px;
       background-color: rgba(255, 255, 255, 0.425);
       position: relative;
+      margin-top: 20px;
+
 
 
     }
 
     .dataCount .count:nth-child(2) {
 
-      border-color: #F7B217;
+      border-color: #123a4a;
+      margin-top: 20px;
 
     }
 
     .dataCount .count:nth-child(3) {
 
-      border-color: #30C730;
+      border-color: #123a4a;
+      margin-top: 20px;
 
     }
 
     .dataCount .count:nth-child(4) {
 
-      border-color: #CE93C9;
+      border-color: #123a4a;
+      margin-top: 20px;
 
     }
 
     .dataCount .count:nth-child(5) {
 
-      border-color: blue;
+      border-color: #123a4a;
       margin-top: 20px;
 
     }
+
+    .dataCount .count:nth-child(6) {
+
+      border-color: #123a4a;
+      margin-top: 20px;
+
+    }
+
+
 
     .dataCount .count h3 {
 
@@ -535,7 +551,14 @@
 
 
       /* -webkit-text-stroke: 1px darkgrey;
-       -webkit-text-fill-color: white; */
+      -webkit-text-fill-color: white; */
+    }
+
+    .dataCount .count h3 span {
+
+      color: #fb4f28;
+      font-weight: 900;
+
     }
 
     .dataCount .count h3 a {
