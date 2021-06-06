@@ -77,7 +77,6 @@
                     <option value="Pending">Pending</option>
                     <option value="On-going">On-going</option>
                     <option value="Resolved">Resolved Issue</option>
-                    <option value="File to Action">File to Action</option>
                 </select>
             </div><br><br>
 

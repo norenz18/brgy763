@@ -172,7 +172,7 @@
   #saveButton,
   #closeButton {
 
-    background-color: #92a1d1;
+    background-color: #30c730;
 
   }
 

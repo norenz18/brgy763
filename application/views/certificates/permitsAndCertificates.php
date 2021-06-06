@@ -100,12 +100,12 @@
 
                                 <div class="form-group col-sm-5">
                                     <label for="">PURPOSE</label>
-                                    <input type="text" class="form-control" name="purpose" id="purpose" placeholder="Ex. Educational assistance, Local employment etc." value="" required>
+                                    <input type="text" class="form-control" name="purpose" id="purpose" placeholder="Assistance, business, employment etc." value="" required>
                                 </div>
 
                                 <div class="form-group col-sm-3">
                                     <label for="">DATE</label>
-                                    <input type="text" class="form-control" name="date" id="date" placeholder="Month Day, Year" value="" required>
+                                    <input type="text" class="form-control" name="date" id="date" placeholder="Month, Day, Year" value="" required>
                                 </div>
 
                                 <div class="form-group col-sm-4">
@@ -130,7 +130,7 @@
                             </div>
                             <!--end class form col-->
                             <br>
-                            <button type="submit" class="btn btn-primary btn-sm" value="save"><i class="fas fa-save"></i> Save</button>
+                            <button type="submit" class="btn btn-success btn-sm" value="save"><i class="fas fa-save"></i> Save</button>
                             <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
                         </form>
 

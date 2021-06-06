@@ -120,10 +120,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 <?php endif; ?>
             </span>
 
-            <img id="bglogo" src="<?php echo site_url('img/brgy-logo800.png'); ?>">
+            <!-- <img id="bglogo" src="<?php echo site_url('img/brgy-logo800.png'); ?>"> -->
             <h1>Sign Up</h1>
             <h6 class="text-danger"><small><?php echo validation_errors(); ?></small></h6>
-            <div class="form-group col-sm-6">
+            <!-- <div class="form-group col-sm-6">
                 <label for="">Name</label>
                 <input type="text" class="form-control" name="name" placeholder="Name" required>
             </div>
@@ -131,7 +131,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
             <div class="form-group col-sm-6">
                 <label for="">Email</label>
                 <input type="email" class="form-control" name="email" placeholder="Email" required>
-            </div>
+            </div> -->
 
             <div class="form-group col-sm-6">
                 <label for="">Username</label>
@@ -152,11 +152,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
             <div class="form-group col-sm-6 d-flex justify-content-between">
                 <button type="submit" class="btn btn-md btn-dark">Submit</button>
-                <p style="font-size: 16px;"><b>Proceed to&nbsp;<a id="regText" href="<?php echo site_url('welcome'); ?> "><b>Log In!</b></a></b></p>
+                <!-- <p style="font-size: 16px;"><b>Proceed to&nbsp;<a id="regText" href="<?php echo site_url('welcome'); ?> "><b>Log In!</b></a></b></p> -->
 
             </div>
         </div>
 
-        <!-- <iframe src="https://www.youtube.com/embed/NfY8UhPgqII?autoplay=1&mute=1" class="mt-5" style="width: 1500px; height: 500px;" frameborder="5"></iframe> -->
+
 
     </div>

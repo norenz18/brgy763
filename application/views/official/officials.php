@@ -59,7 +59,7 @@
         &nbsp&nbsp;&nbsp;&nbsp;<button type="button" id="btn-add" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-plus"></i> BRGY. OFFICIAL</button>
 
         <div class="modal fade" id="exampleModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
+            <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title text-info" id="exampleModalLabel">BRGY OFFICIAL</h5>
@@ -79,17 +79,17 @@
 
                             <div class="form-row">
 
-                                <div class="form-group">
+                                <div class="form-group col-sm-8">
                                     <label for="">Upload Image</label> <br>
                                     <input type="file" name="userfile" id="profImage" size="20">
                                 </div>
 
-                                <div class="form-group col-sm-3">
-                                    <label for="">First Name</label>
-                                    <input type="text" class="form-control" name="firstname" placeholder="Enter your Name" required>
+                                <div class="form-group col-sm-6">
+                                    <label for="">Full Name</label>
+                                    <input type="text" class="form-control" name="fullname" placeholder="Enter your Name" required>
                                 </div>
 
-                                <div class="form-group col-sm-3">
+                                <!-- <div class="form-group col-sm-3">
                                     <label for="">Last Name <small>(Suffix)</small></label>
                                     <input type="text" class="form-control" name="lastname" placeholder="Enter your Lastname" required>
                                 </div>
@@ -97,15 +97,17 @@
                                 <div class="form-group col-sm-3">
                                     <label for="">Middle Name or Initial</label>
                                     <input type="text" class="form-control" name="middlename" placeholder="Enter Middle name or Initial">
-                                </div>
+                                </div> -->
 
-                                <div class="form-group col-sm-2">
+                                <div class="form-group col-sm-7">
                                     <label for="chairmanship">Chairmanship</label><br>
                                     <select class="form-control" id="chairmanship" name="chairmanship" required>
                                         <option value="" disabled selected>-- Select --</option>
                                         <option value="" disabled></option>
                                         <option value="Presiding Officer">Presiding Officer</option>
                                         <option value="Committee on Appropriations">Appropriations</option>
+                                        <option value="Committee on Risk Reduction">Risk Reduction</option>
+                                        <option value="Committee on Elderly People">Elderly People</option>
                                         <option value="Committee on Peace & Order">Peace & Order</option>
                                         <option value="Committee on Health, Social Services & Sanitation">Health, Social Services & Sanitation</option>
                                         <option value="Committee on Education, Cultural Affairs & Tourism">Education, Cultural Affairs & Tourism</option>
@@ -125,9 +127,9 @@
                                     <select class="form-control" id="role" name="role" required>
                                         <option value="" disabled selected>-- Select --</option>
                                         <option value="" disabled></option>
-                                        <option value="Punong Barangay">Punong Barangay</option>
+                                        <option value="Punong Barangay">Barangay Captain</option>
                                         <option value="Kagawad">Kagawad</option>
-                                        <option value="Sk Chairman">Sk Chairman</option>
+                                        <option value="Sk Chairman">Sanggunian Kabataan Chairperson</option>
                                         <option value="Secretary">Secretary</option>
                                         <option value="Treasurer">Treasurer</option>
                                     </select>
@@ -139,17 +141,17 @@
                                     <select class="form-control" id="rank" name="rank" required>
                                         <option value="" disabled selected>-- Select --</option>
                                         <option value="" disabled></option>
-                                        <option value="1">1 - Punong Barangay</option>
-                                        <option value="2">2 - Kagawad</option>
-                                        <option value="3">3 - Kagawad</option>
-                                        <option value="4">4 - Kagawad</option>
-                                        <option value="5">5 - Kagawad</option>
-                                        <option value="6">6 - Kagawad</option>
-                                        <option value="7">7 - Kagawad</option>
-                                        <option value="8">8 - Kagawad</option>
-                                        <option value="9">9 - Sk Chairman</option>
-                                        <option value="10">10 - Secretary</option>
-                                        <option value="11">11 - Treasurer</option>
+                                        <option value="1">1 </option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6 </option>
+                                        <option value="7">7</option>
+                                        <option value="8">8 </option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
                                     </select>
                                 </div>
 
@@ -188,7 +190,7 @@
                         <tr>
 
                             <td id="officialImage"><img id="officialImage" src="<?php echo site_url('img'); ?>/<?php echo $setrows->profImage; ?>"></td>
-                            <td class="text-center"><strong><?php echo $setrows->firstname; ?> <?php echo $setrows->middlename; ?> <?php echo $setrows->lastname; ?></strong></td>
+                            <td class="text-center"><strong><?php echo $setrows->fullname; ?></strong></td>
                             <td class="text-center"><?php echo $setrows->chairmanship; ?></td>
                             <!-- <td class="text-center"><?php echo $setrows->role; ?></td>   -->
                             <!-- <td class="text-center"><?php echo $setrows->rank; ?></td>   -->

@@ -73,7 +73,7 @@
                     <div class="modal-body">
                         <!--opening modal body-->
 
-                        <form method="post" action="<?php echo site_url('Residents/create') ?>" enctype="multipart/form-data">
+                        <form method="post" action="<?php echo site_url('Residents/create') ?>" enctype="multipart/form-data" onsubmit="return pressed()">
 
                             <div class="form-row">
 
@@ -120,7 +120,7 @@
 
                                 <div class="form-group col-sm-2">
                                     <label for="">Senior Citizen:</label>
-                                    <input type="text" class="form-control" name="seniorCitizen" onclick="pressed()" id="seniorCitizen" readonly required>
+                                    <input type="text" class="form-control" name="seniorCitizen" id="seniorCitizen" readonly required>
                                 </div>
 
                                 <div class="form-group col-sm-2">

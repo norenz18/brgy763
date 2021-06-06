@@ -88,8 +88,15 @@
   // SENIOR CITIZEN FUNCTIONALITY
   function pressed() {
     let aged = document.getElementById("age").value;
+    let senior = document.getElementById('seniorCitizen').value;
 
-    if (aged >= 60) {
+    if (aged <= 0 && senior == "") {
+
+      // alert('Invalid Age! You need to insert a real birthdate!');
+      swal("Your age is invalid!", "Make sure to insert a valid Birthdate!", "error");
+      return false;
+
+    } else if (aged >= 60) {
 
       return document.getElementById('seniorCitizen').value = 'Senior Citizen';
 
@@ -97,6 +104,32 @@
       document.getElementById('seniorCitizen').value = 'No';
     }
   };
+
+
+
+  function press() {
+    let aged = document.getElementById("age").value;
+    let senior = document.getElementById('seniorCitizen').value;
+
+    if (aged <= 0 && senior == "") {
+
+      // alert('Invalid Age! You need to insert a real birthdate!');
+      swal("Your age is invalid!", "Make sure to insert a valid Birthdate!", "error");
+      return false;
+
+    } else if (aged >= 60) {
+
+      return document.getElementById('seniorCitizen').value = 'Senior Citizen';
+
+    } else {
+      document.getElementById('seniorCitizen').value = 'No';
+    }
+  };
+
+
+
+
+
 
 
 
@@ -257,7 +290,7 @@
   load();
 </script>
 
-
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="<?php echo site_url('bootstrap/js/jquery.slim.min.js') ?>"> </script>
 <script src="<?php echo site_url('bootstrap/js/bootstrap.min.js') ?>"></script>
 <script src="<?php echo site_url('bootstrap/js/jquery.js') ?>"></script>

@@ -84,7 +84,7 @@
 
             <div class="form-group col-sm-2">
                 <label for="">Senior Citizen:</label>
-                <input type="text" class="form-control" name="seniorCitizen" id="seniorCitizen" onclick="pressed()" value="<?php echo $row->seniorCitizen; ?>" readonly required>
+                <input type="text" class="form-control" name="seniorCitizen" id="seniorCitizen" onclick="press()" value="<?php echo $row->seniorCitizen; ?>" readonly required>
             </div>
 
 

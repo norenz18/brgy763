@@ -104,10 +104,10 @@
 
                                 <div class="form-group col-sm-2">
                                     <label for="status">Status*</label><br>
-                                    <input type="text" class="form-control" id="status" name="status" placeholder="Pending" readonly>
-                                    <!-- <select class="form-control" id="status" name="status" readonly required>
+                                    <!-- <input type="text" class="form-control" id="status" name="status" placeholder="Pending" readonly> -->
+                                    <select class="form-control" id="status" name="status" readonly required>
                                         <option value="Pending">Pending</option>
-                                    </select> -->
+                                    </select>
                                 </div>
 
                                 <div class="form-group col-lg-10">

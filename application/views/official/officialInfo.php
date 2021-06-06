@@ -85,9 +85,9 @@
 
                 <img id="officialProfileImg" src="<?php echo site_url('img/logomanila2.png'); ?>" alt="">
 
-                <li><strong>First Name:</strong> <span><?php echo $setrows->firstname; ?></li>
-                <li><strong>Last Name:</strong> <span><?php echo $setrows->lastname; ?></li>
-                <li><strong>Middlename or Initial:</strong> <span><?php echo $setrows->middlename; ?></li>
+                <li><strong>First Name:</strong> <span><?php echo $setrows->fullname; ?></li>
+                <!-- <li><strong>Last Name:</strong> <span><?php echo $setrows->lastname; ?></li>
+                <li><strong>Middlename or Initial:</strong> <span><?php echo $setrows->middlename; ?></li> -->
                 <li><strong>Chairmanship:</strong> <span><?php echo $setrows->chairmanship; ?></li>
                 <li><strong>Position:</strong> <span><?php echo $setrows->role; ?></li>
                 <li><strong>Rank:</strong> <span><?php echo $setrows->rank; ?></li>

@@ -1,41 +1,39 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class User_model extends CI_Model {
+class User_model extends CI_Model
+{
 
-  public function register($enc_password){
+  public function register($enc_password)
+  {
 
     $data = array(
 
-      'name' => $this->input->post('name'),
-      'email' => $this->input->post('email'),
+      // 'name' => $this->input->post('name'),
+      // 'email' => $this->input->post('email'),
       'username' => $this->input->post('username'),
       'password' => $enc_password,
-  
+
     );
 
     return $this->db->insert('users', $data);
   }
-    
 
-  public function login($username, $password){
+
+  public function login($username, $password)
+  {
 
     $this->db->where('username', $username);
     $this->db->where('password', $password);
 
     $result = $this->db->get('users');
 
-    if($result->num_rows() == 1){
+    if ($result->num_rows() == 1) {
 
-        return $result->row(0)->id;
+      return $result->row(0)->id;
+    } else {
 
-    }else{
-
-        return false;
+      return false;
     }
-
   }
-
-   
-    
 }
