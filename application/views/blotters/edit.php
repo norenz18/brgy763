@@ -61,7 +61,7 @@
 
             <div class="form-group col-sm-2">
                 <label for="">Date of Filing*</label>
-                <input type="date" class="form-control" name="dateOfFiling" value="<?php echo $setrows->dateOfFiling; ?>" required>
+                <input type="date" class="form-control" name="dateOfFiling" id="dateOfFiling" value="<?php echo $setrows->dateOfFiling; ?>" required>
             </div>
 
             <div class="form-group col-sm-2">

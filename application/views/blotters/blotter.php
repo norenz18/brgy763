@@ -94,7 +94,7 @@
 
                                 <div class="form-group col-sm-2">
                                     <label for="">Date of Filing*</label>
-                                    <input type="date" class="form-control" name="dateOfFiling" required>
+                                    <input type="date" class="form-control" name="dateOfFiling" id="dateOfFiling" required>
                                 </div>
 
                                 <div class="form-group col-sm-2">

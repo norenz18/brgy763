@@ -90,7 +90,7 @@
                 <li><strong>Middlename or Initial:</strong> <span><?php echo $setrows->middlename; ?></li> -->
                 <li><strong>Chairmanship:</strong> <span><?php echo $setrows->chairmanship; ?></li>
                 <li><strong>Position:</strong> <span><?php echo $setrows->role; ?></li>
-                <li><strong>Rank:</strong> <span><?php echo $setrows->rank; ?></li>
+                <!-- <li><strong>Rank:</strong> <span><?php echo $setrows->rank; ?></li> -->
 
             </ul>
 

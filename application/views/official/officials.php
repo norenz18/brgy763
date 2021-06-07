@@ -89,6 +89,19 @@
                                     <input type="text" class="form-control" name="fullname" placeholder="Enter your Name" required>
                                 </div>
 
+                                <div class="form-group col-sm-5">
+                                    <label for="Position">Position</label><br>
+                                    <select class="form-control" id="role" name="role" required>
+                                        <option value="" disabled selected>-- Select --</option>
+                                        <option value="" disabled></option>
+                                        <option value="Barangay Captain">Barangay Captain</option>
+                                        <option value="Kagawad">Kagawad</option>
+                                        <option value="Sangguniang Kabataan Chairperson">Sanggunian Kabataan Chairperson</option>
+                                        <option value="Secretary">Secretary</option>
+                                        <option value="Treasurer">Treasurer</option>
+                                    </select>
+                                </div>
+
                                 <!-- <div class="form-group col-sm-3">
                                     <label for="">Last Name <small>(Suffix)</small></label>
                                     <input type="text" class="form-control" name="lastname" placeholder="Enter your Lastname" required>
@@ -122,21 +135,10 @@
                                     </select>
                                 </div>
 
-                                <div class="form-group col-sm-2">
-                                    <label for="Position">Position</label><br>
-                                    <select class="form-control" id="role" name="role" required>
-                                        <option value="" disabled selected>-- Select --</option>
-                                        <option value="" disabled></option>
-                                        <option value="Punong Barangay">Barangay Captain</option>
-                                        <option value="Kagawad">Kagawad</option>
-                                        <option value="Sk Chairman">Sanggunian Kabataan Chairperson</option>
-                                        <option value="Secretary">Secretary</option>
-                                        <option value="Treasurer">Treasurer</option>
-                                    </select>
-                                </div>
 
 
-                                <div class="form-group col-sm-2">
+
+                                <!-- <div class="form-group col-sm-2">
                                     <label for="rank">Rank</label><br>
                                     <select class="form-control" id="rank" name="rank" required>
                                         <option value="" disabled selected>-- Select --</option>
@@ -153,7 +155,7 @@
                                         <option value="10">10</option>
                                         <option value="11">11</option>
                                     </select>
-                                </div>
+                                </div> -->
 
 
                             </div>
@@ -191,8 +193,8 @@
 
                             <td id="officialImage"><img id="officialImage" src="<?php echo site_url('img'); ?>/<?php echo $setrows->profImage; ?>"></td>
                             <td class="text-center"><strong><?php echo $setrows->fullname; ?></strong></td>
-                            <td class="text-center"><?php echo $setrows->chairmanship; ?></td>
-                            <!-- <td class="text-center"><?php echo $setrows->role; ?></td>   -->
+                            <!-- <td class="text-center"><?php echo $setrows->chairmanship; ?></td> -->
+                            <td class="text-center"><?php echo $setrows->role; ?></td>
                             <!-- <td class="text-center"><?php echo $setrows->rank; ?></td>   -->
                             <td class="text-center">
                                 <a class="btn btn-success btn-sm" data-toggle="tooltip" title="View details" href="<?php echo site_url('Officials/BrgyOfficialData'); ?>/<?php echo $setrows->id; ?>"> <i class="fas fa-eye"></i></a>&nbsp;

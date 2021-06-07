@@ -49,7 +49,7 @@
                 <label for="">
                     <sub>You still need to upload photo if you're editing information.
                         Press <span class="text-danger">CANCEL </span> if no changes occurs and exit. <br></sub> <br><input type="file" name="userfile" style="cursor:pointer;" value="<?php echo site_url('img'); ?>/<?php echo $row->profImage; ?>" size="20" required></label>
-
+                <!-- <input type="file" name="userfile" id="profImage" value="<?php echo $row->profImage; ?>" size="20"> -->
             </div>
 
             <div class="form-group col-sm-3">

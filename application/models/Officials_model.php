@@ -20,8 +20,8 @@ class Officials_model extends CI_Model
             // 'lastname' => $this->input->post('lastname'),
             // 'middlename' => $this->input->post('middlename'),
             'chairmanship' => $this->input->post('chairmanship'),
-            'role' => $this->input->post('role'),
-            'rank' => $this->input->post('rank')
+            'role' => $this->input->post('role')
+            // 'rank' => $this->input->post('rank')
 
 
         );
@@ -31,7 +31,7 @@ class Officials_model extends CI_Model
     function getAllOfficialData()
     { #FETCHING ALL DATA
         // $this->db->order_by('date', 'DESC');
-        $query = $this->db->query('SELECT * FROM officials ORDER BY rank ASC');
+        $query = $this->db->query('SELECT * FROM officials ORDER BY role ASC');
         return $query->result();
     }
 
@@ -55,8 +55,8 @@ class Officials_model extends CI_Model
             // 'lastname' => $this->input->post('lastname'),
             // 'middlename' => $this->input->post('middlename'),
             'chairmanship' => $this->input->post('chairmanship'),
-            'role' => $this->input->post('role'),
-            'rank' => $this->input->post('rank')
+            'role' => $this->input->post('role')
+            // 'rank' => $this->input->post('rank')
 
         );
         $this->db->where('id', $id);

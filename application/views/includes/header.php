@@ -334,9 +334,10 @@
 
     .main-content #div-content .resPic img {
 
-      height: 250px;
-      width: 250px;
-      border: 1px solid lightgrey;
+      height: 300px;
+      width: 300px;
+      border-radius: 50%;
+      border: 3px solid #123A4A;
       margin-right: 50px;
 
     }
@@ -345,8 +346,8 @@
 
 
       margin-left: 50px;
-      border: 1px solid lightgrey;
-      padding: 30px;
+      border: 2px solid #123a4a;
+      padding: 50px 20px 50px;
       width: 100%;
       text-transform: capitalize;
 
@@ -401,10 +402,9 @@
 
       position: absolute;
       padding-left: 200px;
-      font-size: 20px;
       color: blue;
       text-align: right;
-      font-size: 17px;
+      font-size: 20px;
     }
 
 

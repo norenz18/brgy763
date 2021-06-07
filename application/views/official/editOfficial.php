@@ -53,12 +53,25 @@
                     <input type="file" name="userfile" style="cursor:pointer;" value="<?php echo site_url('img'); ?>/<?php echo $setrows->profImage; ?>" size="20" required></label>
             </div>
 
-            <div class="form-group col-sm-3">
-                <label for="">First Name</label>
-                <input type="text" class="form-control" name="firstname" value="<?php echo $setrows->firstname; ?>" required>
+            <div class="form-group col-sm-4">
+                <label for="">Full Name</label>
+                <input type="text" class="form-control" name="fullname" value="<?php echo $setrows->fullname; ?>" required>
             </div>
 
-            <div class="form-group col-sm-3">
+            <div class="form-group col-sm-4">
+                <label for="Position">Position</label><br>
+                <select class="form-control" id="role" name="role" value="<?php echo $setrows->role; ?>" required>
+                    <option><?php echo $setrows->role; ?></option>
+                    <option disabled>----------</option>
+                    <option value="Barangay Captain">Barangay Captain</option>
+                    <option value="Kagawad">Kagawad</option>
+                    <option value="Sangguniang Kabataan Chairperson">Sanggunian Kabataan Chairperson</option>
+                    <option value="Secretary">Secretary</option>
+                    <option value="Treasurer">Treasurer</option>
+                </select>
+            </div> <br><br>
+
+            <!-- <div class="form-group col-sm-3">
                 <label for="">Last Name <small>(Suffix)</small></label>
                 <input type="text" class="form-control" name="lastname" value="<?php echo $setrows->lastname; ?>" required>
             </div>
@@ -66,15 +79,17 @@
             <div class="form-group col-sm-3">
                 <label for="">Middle Name or Initial</label>
                 <input type="text" class="form-control" name="middlename" value="<?php echo $setrows->middlename; ?>">
-            </div>
+            </div> -->
 
-            <div class="form-group col-sm-3">
+            <div class="form-group col-sm-6">
                 <label for="chairmanship">Chairmanship</label><br>
                 <select class="form-control" id="chairmanship" name="chairmanship" value="<?php echo $setrows->chairmanship; ?>" required>
                     <option><?php echo $setrows->chairmanship; ?></option>
                     <option disabled>----------</option>
                     <option value="Presiding Officer">Presiding Officer</option>
                     <option value="Committee on Appropriations">Appropriations</option>
+                    <option value="Committee on Risk Reduction">Risk Reduction</option>
+                    <option value="Committee on Elderly People">Elderly People</option>
                     <option value="Committee on Peace & Order">Peace & Order</option>
                     <option value="Committee on Health, Social Services & Sanitation">Health, Social Services & Sanitation</option>
                     <option value="Committee on Education, Cultural Affairs & Tourism">Education, Cultural Affairs & Tourism</option>
@@ -89,20 +104,9 @@
                 </select>
             </div>
 
-            <div class="form-group col-sm-3">
-                <label for="Position">Position</label><br>
-                <select class="form-control" id="role" name="role" value="<?php echo $setrows->role; ?>" required>
-                    <option><?php echo $setrows->role; ?></option>
-                    <option disabled>----------</option>
-                    <option value="Punong Barangay">Punong Barangay</option>
-                    <option value="Kagawad">Kagawad</option>
-                    <option value="Sk Chairman">Sk Chairman</option>
-                    <option value="Secretary">Secretary</option>
-                    <option value="Treasurer">Treasurer</option>
-                </select>
-            </div>
 
-            <div class="form-group col-sm-2">
+
+            <!-- <div class="form-group col-sm-2">
                 <label for="rank">Rank</label><br>
                 <select class="form-control" id="rank" name="rank" value="<?php echo $setrows->rank; ?>" required>
                     <option><?php echo $setrows->rank; ?></option>
@@ -119,7 +123,7 @@
                     <option value="10">10 - Secretary</option>
                     <option value="11">11 - Treasurer</option>
                 </select>
-            </div>
+            </div> -->
 
 
 
