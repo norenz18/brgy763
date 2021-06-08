@@ -79,7 +79,7 @@
 
                                 <div class="form-group">
                                     <label for="">Upload Image</label> <br>
-                                    <input type="file" name="userfile" id="profImage" size="20">
+                                    <input type="file" name="userfile" id="profImage" accept="image/*" size="20">
                                     <!-- <video src="" id="video" width="300" height="300" autoplay></video>
                                     <button id="snap">Take Photo</button>
                                     <canvas id="canvas" width="300" height="300"></canvas> -->
@@ -119,11 +119,6 @@
                                 </div>
 
                                 <div class="form-group col-sm-2">
-                                    <label for="">Senior Citizen:</label>
-                                    <input type="text" class="form-control" name="seniorCitizen" id="seniorCitizen" readonly required>
-                                </div>
-
-                                <div class="form-group col-sm-2">
                                     <label for="civilStatus">Civil Status:</label><br>
                                     <select class="form-control" id="civilStatus" name="civilStatus" required>
                                         <option value="" disabled selected>-- Select --</option>
@@ -138,8 +133,8 @@
 
                                 <div class="form-group col-sm-2">
                                     <label for="">Contact:</label>
-                                    <input type="number" class="form-control" id="contact" name="contact" placeholder="Enter your number" required>
-
+                                    <input type="number" id="contact" name="contact" class="form-control" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==11) return false;" placeholder="Enter your number" required>
+                                    <!-- <input type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==4) return false;" /> -->
                                 </div>
 
                                 <div class="form-group col-sm-2">
@@ -150,6 +145,11 @@
                                         <option value="Yes">Yes</option>
                                         <option value="No">No</option>
                                     </select>
+                                </div>
+
+                                <div class="form-group col-sm-2" style="opacity: 0">
+                                    <label for="">Senior Citizen:</label>
+                                    <input type="text" class="form-control" name="seniorCitizen" id="seniorCitizen" readonly required>
                                 </div>
 
                                 <div class="form-group col-sm-3">
@@ -214,7 +214,7 @@
 
                             <td id="profileImgs"><img id="profileImgs" src="<?php echo site_url('img'); ?>/<?php echo $row->profImage; ?>"></td>
                             <td class="text-left" id="fml"><?php echo $row->firstName; ?> <?php echo $row->mi; ?> <?php echo $row->lastName; ?></td>
-                            <td class="text-left" id="adrs"><?php echo $row->address; ?> Brgy. 763 Zone 83 San Andres, Manila</td>
+                            <td class="text-left" id="adrs"><?php echo $row->address; ?> Brgy. 763 Zone 83, Manila</td>
                             <td class="text-center"><?php echo $row->age; ?></td>
                             <td class="text-center"><?php echo $row->seniorCitizen; ?></td>
                             <!-- <td class="text-center"><?php echo $row->gender; ?></td> -->

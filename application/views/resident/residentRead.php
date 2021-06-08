@@ -89,9 +89,9 @@
 
                 <li><strong>First Name:</strong> <span> <?php echo $row->firstName; ?></span></li>
                 <li><strong>Last Name:</strong> <span> <?php echo $row->lastName; ?></span></li>
-                <li><strong>Mi:</strong> <span> <?php echo $row->mi; ?></span></li>
-                <li><strong>Contact:</strong> <span> <?php echo $row->contact; ?></span></li>
-                <li><strong>Address:</strong> <span> <?php echo $row->address; ?> Brgy. 763 zone 83 San Andres, Manila</span></li>
+                <li><strong>M.I. :</strong> <span> <?php echo $row->mi; ?></span></li>
+                <li><strong>Contact:</strong> <span> (0)<?php echo $row->contact; ?></span></li>
+                <li><strong>Address:</strong> <span> <?php echo $row->address; ?> Brgy. 763 zone 83, Manila</span></li>
                 <li><strong>Age:</strong> <span> <?php echo $row->age; ?></span></li>
                 <li><strong>Senior Citizen:</strong> <span> <?php echo $row->seniorCitizen; ?></span></li>
                 <li><strong>Voter Status:</strong> <span> <?php echo $row->voterStatus; ?></span></li>

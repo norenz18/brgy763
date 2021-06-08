@@ -46,7 +46,7 @@
 
             <div class="form-group col-sm-2">
                 <label for="">Case No.*</label>
-                <input type="text" class="form-control" name="caseNo" value="<?php echo $setrows->caseNo; ?>" required>
+                <input type="text" class="form-control" name="id" value="<?php echo $setrows->id; ?>" required readonly>
             </div>
 
             <div class="form-group col-sm-3">
@@ -59,7 +59,7 @@
                 <input type="text" class="form-control" name="compResident" value="<?php echo $setrows->compResident; ?>">
             </div>
 
-            <div class="form-group col-sm-2">
+            <div class="form-group col-sm-3">
                 <label for="">Date of Filing*</label>
                 <input type="date" class="form-control" name="dateOfFiling" id="dateOfFiling" value="<?php echo $setrows->dateOfFiling; ?>" required>
             </div>

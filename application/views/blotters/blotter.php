@@ -57,7 +57,7 @@
         &nbsp&nbsp;&nbsp;&nbsp;<button type="button" id="btn-add" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-plus"></i> BLOTTER</button>
 
         <div class="modal fade" id="exampleModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
+            <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title text-info" id="exampleModalLabel">ADD BLOTTER</h5>
@@ -77,27 +77,27 @@
 
                             <div class="form-row">
 
-                                <div class="form-group col-sm-2">
+                                <!-- <div class="form-group col-sm-2">
                                     <label for="">Case No.*</label>
                                     <input type="text" class="form-control" name="caseNo" required>
-                                </div>
+                                </div> -->
 
-                                <div class="form-group col-sm-3">
+                                <div class="form-group col-sm-5">
                                     <label for="">Complainant*</label>
                                     <input type="text" class="form-control" name="complainant" required>
                                 </div>
 
-                                <div class="form-group col-sm-3">
+                                <div class="form-group col-sm-5">
                                     <label for="">Complained Resident*</label>
-                                    <input type="text" class="form-control" name="compResident">
+                                    <input type="text" class="form-control" name="compResident" required>
                                 </div>
 
-                                <div class="form-group col-sm-2">
+                                <div class="form-group col-sm-3">
                                     <label for="">Date of Filing*</label>
                                     <input type="date" class="form-control" name="dateOfFiling" id="dateOfFiling" required>
                                 </div>
 
-                                <div class="form-group col-sm-2">
+                                <div class="form-group col-sm-4">
                                     <label for="">Person-in-Charge*</label>
                                     <input type="text" class="form-control" name="pic" required>
                                 </div>
@@ -112,7 +112,7 @@
 
                                 <div class="form-group col-lg-10">
                                     <label for="status">Descriptions*</label><br>
-                                    <textarea class="form-control" id="textArea" resize="none" name="textArea" rows="10" cols="100" placeholder="Blotter Descriptions" required></textarea>
+                                    <textarea class="form-control" id="textArea" resize="none" name="textArea" rows="5" cols="100" placeholder="Blotter Descriptions" required></textarea>
                                 </div>
 
 
@@ -137,7 +137,7 @@
                         <th scope="col">Case No.</th><!-- data-field ="CaseNo." data-sortable="true"  -->
                         <th scope="col" data-field="Complainant" data-sortable="true">Complainant</th>
                         <th scope="col" data-field="ComplainedResident" data-sortable="true">Complained Resident</th>
-                        <th scope="col" data-field="DateofFiling" data-sortable="true">Date of Filing <small>(year/month/day)</small></th>
+                        <!-- <th scope="col" data-field="DateofFiling" data-sortable="true">Date of Filing <small>(year/month/day)</small></th> -->
                         <th scope="col" data-field="Person-in-Charge" data-sortable="true">Person-in-Charge</th>
                         <th scope="col" data-field="Status" data-sortable="true">Status</th>
                         <th scope="col" data-field="Action">Action</th>
@@ -147,10 +147,10 @@
                     <?php foreach ($result as $setrows) : ?>
                         <tr>
 
-                            <td class="text-center"><?php echo $setrows->caseNo; ?></td>
+                            <td class="text-center"><?php echo $setrows->id; ?></td>
                             <td class="text-center"><?php echo $setrows->complainant; ?></td>
                             <td class="text-center"><?php echo $setrows->compResident; ?></td>
-                            <td class="text-center"><?php echo $setrows->dateOfFiling; ?></td>
+                            <!-- <td class="text-center"><?php echo $setrows->dateOfFiling; ?></td> -->
                             <td class="text-center"><?php echo $setrows->pic; ?></td>
                             <td class="text-center"><?php echo $setrows->status; ?></td>
                             <td class="text-center"><a class="btn btn-info btn-sm" data-toggle="tooltip" title="Edit details" href="<?php echo site_url('Blotter/edit'); ?>/<?php echo $setrows->id; ?>"><i class="fas fa-edit"></i></a></td>

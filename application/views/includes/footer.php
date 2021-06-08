@@ -93,7 +93,7 @@
     if (aged <= 0 && senior == "") {
 
       // alert('Invalid Age! You need to insert a real birthdate!');
-      swal("Your age is invalid!", "Make sure to insert a valid Birthdate!", "error");
+      swal("Your age is invalid!", "Not Eligible", "error");
       return false;
 
     } else if (aged >= 60) {
