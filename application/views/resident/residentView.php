@@ -95,34 +95,35 @@
 
                                 <div class="form-group col-sm-3">
                                     <label for="">First Name:</label>
-                                    <input type="text" class="form-control" name="firstName" placeholder="Enter your Name" required>
+                                    <input type="text" class="form-control" name="firstName" placeholder="Enter your name" required>
                                 </div>
 
                                 <div class="form-group col-sm-3">
                                     <label for="">Last Name: <small class="text-danger">(Include suffix if exist)</small></label>
-                                    <input type="text" class="form-control" name="lastName" placeholder="Enter your Lastname" required>
+                                    <input type="text" class="form-control" name="lastName" placeholder="Enter your lastname" required>
                                 </div>
 
                                 <div class="form-group col-sm-1">
                                     <label for="">MI.</label>
-                                    <input type="text" class="form-control" name="mi" placeholder="Mi.">
+                                    <input type="text" class="form-control" name="mi" onkeypress="return (event.charCode > 64 && 
+event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)"  placeholder="Mi.">
                                 </div>
 
                                 <div class="form-group col-sm-2">
                                     <label for="birthdate">Birthdate: <small class="text-danger">Mm/Dd/Yy</small></label>
-                                    <input type="text" class="form-control" name="birthdate" id="birthdate" placeholder="Month / Day / Year" required>
+                                    <input type="text" class="form-control" name="birthdate" id="birthdate"  placeholder="Month / Day / Year" required>
                                 </div>
 
                                 <div class="form-group col-sm-1">
                                     <label for="">Age:</label>
-                                    <input type="number" class="form-control" name="age" id="age" readonly required>
+                                    <input type="number" class="form-control" name="age" id="age" onmouseover="press()" readonly required>
                                 </div>
 
                                 <div class="form-group col-sm-2">
                                     <label for="civilStatus">Civil Status:</label><br>
                                     <select class="form-control" id="civilStatus" name="civilStatus" required>
                                         <option value="" disabled selected>-- Select --</option>
-                                        <option value=""></option>
+                                        <option value="" disabled></option>
                                         <option value="Single">Single</option>
                                         <option value="Married">Married</option>
                                         <option value="Widowed">Widowed</option>
@@ -141,7 +142,7 @@
                                     <label for="">Person with Disability:</label>
                                     <select id="" class="form-control" id="pwd" name="pwd" required>
                                         <option value="" disabled selected>-- Select --</option>
-                                        <option value=""></option>
+										<option value="" disabled></option>
                                         <option value="Yes">Yes</option>
                                         <option value="No">No</option>
                                     </select>
@@ -161,7 +162,7 @@
                                     <label for="">Registered Voter?</label><br>
                                     <select id="" class="form-control" id="voterStatus" name="voterStatus" required>
                                         <option value="" disabled selected>-- Select --</option>
-                                        <option value=""></option>
+										<option value="" disabled></option>
                                         <option value="Yes">Yes</option>
                                         <option value="No">No</option>
                                     </select>
@@ -171,7 +172,7 @@
                                     <label for="">Gender:</label><br>
                                     <select id="" class="form-control" id="gender" name="gender" required>
                                         <option value="" disabled selected>-- Select --</option>
-                                        <option value=""></option>
+                                        <option value="" disabled></option>
                                         <option value="Male">Male</option>
                                         <option value="Female">Female</option>
                                     </select>

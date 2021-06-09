@@ -4,45 +4,6 @@
 
 
 <script>
-  // function myFunction() {
-  //   let input, filter, table, tr, td, i, txtValue;
-  //   input = document.querySelector("#search-bar");
-  //   filter = input.value.toUpperCase();
-  //   table = document.querySelector("#table-list");
-  //   tr = table.querySelectorAll("tr");
-  //   for (i = 0; i < tr.length; i++) {
-  //     td = tr[i].querySelectorAll("td")[1];
-  //     if (td) {
-  //       txtValue = td.textContent || td.innerText;
-  //       if (txtValue.toUpperCase().indexOf(filter) > -1) {
-  //         tr[i].style.display = "";
-  //       } else {
-  //         tr[i].style.display = "none";
-  //       }
-  //     }
-  //   }
-  // };
-
-  // function myFunc() {
-  //   let input, filter, table, tr, td, i, txtValue;
-  //   input = document.querySelector("#searchbar");
-  //   filter = input.value.toUpperCase();
-  //   table = document.querySelector("#tbl-post");
-  //   tr = table.querySelectorAll("tr");
-  //   for (i = 0; i < tr.length; i++) {
-  //     td = tr[i].querySelectorAll("td")[0];
-  //     if (td) {
-  //       txtValue = td.textContent || td.innerText;
-  //       if (txtValue.toUpperCase().indexOf(filter) > -1) {
-  //         tr[i].style.display = "";
-  //       } else {
-  //         tr[i].style.display = "none";
-  //       }
-  //     }
-  //   }
-  // };
-
-  // MASKING
 
   // DATEPICKER
   $(document).ready(function() {
@@ -60,31 +21,7 @@
     })
   });
 
-  // function pressed() {
-  //   var userinput = document.getElementById("birthdate").value;
-  //   var birthdate = new Date(userinput);
-  //   if (userinput == null || userinput == '') {
-  //     document.getElementById("message").innerHTML = "**Choose a date please!";
-  //     return false;
-  //   } else {
-
-  //     //calculate month difference from current date in time  
-  //     var month_diff = Date.now() - birthdate.getTime();
-
-  //     //convert the calculated difference in date format  
-  //     var age_dt = new Date(month_diff);
-
-  //     //extract year from date      
-  //     var year = age_dt.getUTCFullYear();
-
-  //     //now calculate the age of the user  
-  //     var edad = Math.abs(year - 1970);
-
-  //     //display the calculated age  
-  //     return document.getElementById("age").value = edad;
-  //   }
-  // };
-
+	
   // SENIOR CITIZEN FUNCTIONALITY
   function pressed() {
     let aged = document.getElementById("age").value;
@@ -92,7 +29,6 @@
 
     if (aged <= 0 && senior == "") {
 
-      // alert('Invalid Age! You need to insert a real birthdate!');
       swal("Your age is invalid!", "Not Eligible", "error");
       return false;
 
@@ -111,9 +47,8 @@
     let aged = document.getElementById("age").value;
     let senior = document.getElementById('seniorCitizen').value;
 
-    if (aged <= 0 && senior == "") {
+    if (aged <= 0 ) {
 
-      // alert('Invalid Age! You need to insert a real birthdate!');
       swal("Your age is invalid!", "Make sure to insert a valid Birthdate!", "error");
       return false;
 
@@ -145,32 +80,7 @@
   });
 
 
-
-
-
-
-
-  // DecoupledEditor
-  // .create( document.querySelector( '#editor' ) )
-  // .then( editor => {
-  //     const toolbarContainer = document.querySelector( '#toolbar-container' );
-
-  //     toolbarContainer.appendChild( editor.ui.view.toolbar.element );
-  // } )
-  // .catch( error => {
-  //     console.error( error );
-  // } );
-
-  // HIDE AND SHOW
-  // $(function() {    // Makes sure the code contained doesn't run until
-  //           //     all the DOM elements have loaded
-  // $('#category').change(function(){
-  //     $('.categories').hide();
-  //     $('#' + $(this).val()).show();
-  // });
-
-  // });
-
+	// CALENDAR
   let nav = 0;
   let clicked = null;
   let events = localStorage.getItem('events') ? JSON.parse(localStorage.getItem('events')) : [];
@@ -305,6 +215,34 @@
 
   initButtons();
   load();
+
+
+
+  // function pressed() {
+  //   var userinput = document.getElementById("birthdate").value;
+  //   var birthdate = new Date(userinput);
+  //   if (userinput == null || userinput == '') {
+  //     document.getElementById("message").innerHTML = "**Choose a date please!";
+  //     return false;
+  //   } else {
+
+  //     //calculate month difference from current date in time  
+  //     var month_diff = Date.now() - birthdate.getTime();
+
+  //     //convert the calculated difference in date format  
+  //     var age_dt = new Date(month_diff);
+
+  //     //extract year from date      
+  //     var year = age_dt.getUTCFullYear();
+
+  //     //now calculate the age of the user  
+  //     var edad = Math.abs(year - 1970);
+
+  //     //display the calculated age  
+  //     return document.getElementById("age").value = edad;
+  //   }
+  // };
+
 </script>
 
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -319,3 +257,4 @@
 </body>
 
 </html>
+

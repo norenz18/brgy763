@@ -39,7 +39,7 @@
 <div class="container" id="editContainer">
 
     <h6 class="text-danger">Note: Editing details can cause misleading information, make sure all the details are correct and valid.</h6>
-    <form method="post" action="<?php echo site_url('Residents/update') ?>/<?php echo $row->id; ?>" enctype="multipart/form-data">
+    <form method="post" action="<?php echo site_url('Residents/update') ?>/<?php echo $row->id; ?>" enctype="multipart/form-data" >
         <!--  enctype="multipart/form-data" -->
         <div class="form-row">
 
@@ -62,14 +62,14 @@
                 <input type="text" class="form-control" name="lastName" value="<?php echo $row->lastName; ?>" required>
             </div>
 
-            <div class="form-group col-sm-1">
+            <div class="form-group col-sm-2">
                 <label for="">M.I.</label>
                 <input type="text" class="form-control" name="mi" value="<?php echo $row->mi; ?>">
             </div>
 
-            <div class="form-group col-sm-2">
+            <div class="form-group col-sm-3">
                 <label for="">Contact</label>
-                <input type="number" class="form-control" id="contact" name="contact" value="<?php echo $row->contact; ?>" required>
+                <input type="number" class="form-control" id="contact" name="contact"  pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==11) return false;" value="<?php echo $row->contact; ?>" required>
             </div>
 
             <div class="form-group col-sm-2">
@@ -79,12 +79,12 @@
 
             <div class="form-group col-sm-1">
                 <label for="">Age</label>
-                <input type="number" class="form-control" name="age" id="age" value="<?php echo $row->age; ?>" readonly required>
+                <input type="number" class="form-control" name="age" id="age"  onmouseover="press()" value="<?php echo $row->age; ?>" required>
             </div>
 
             <div class="form-group col-sm-2">
                 <label for="">Senior Citizen:</label>
-                <input type="text" class="form-control" name="seniorCitizen" id="seniorCitizen" onclick="press()" value="<?php echo $row->seniorCitizen; ?>" readonly required>
+                <input type="text" class="form-control" style="cursor: pointer;" name="seniorCitizen" id="seniorCitizen" onclick="press()" value="<?php echo $row->seniorCitizen; ?>" readonly required>
             </div>
 
 
@@ -144,7 +144,7 @@
         </div>
         <!--end class form row-->
         <br>
-        <button type="submit" class="btn btn-primary btn-sm" value="save"><i class="fas fa-save"></i> Save</button>
+        <button type="submit" class="btn btn-primary btn-sm" value="save" onmouseover="press()"><i class="fas fa-save"></i> Save</button>
         <a href="<?php echo site_url('Residents/viewlist') ?>"><button type="button" class="btn btn-danger btn-sm">Cancel</button></a>
     </form>
 </div>
