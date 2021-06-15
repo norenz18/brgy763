@@ -69,7 +69,7 @@
                     </div>
 
                     <h5><small class="modal-title text-danger" id="exampleModalLabel">&nbsp&nbsp;&nbsp;Note: Make sure all the details are correct.</small></h5>
-                    <h5><small class="modal-title text-danger" id="exampleModalLabel">&nbsp&nbsp;&nbsp;It will determine the senior citizenship status if the age is 60 yrs old and up based on his/her birthdate.</small></h5>
+                    <h5><small class="modal-title text-danger" id="exampleModalLabel">&nbsp&nbsp;&nbsp;It will determine the <b>Senior's status</b> if the age is 60 yrs old and above based on his/her birthdate.</small></h5>
 
                     <div class="modal-body">
                         <!--opening modal body-->
@@ -87,7 +87,7 @@
 
                                 <div class="form-group col-md-12">
                                     <label for="">First Name:</label>
-                                    <input type="text" class="form-control" name="firstName" placeholder="Enter your name" required>
+                                    <input type="text" class="form-control" name="firstName" placeholder="Enter your firstname" required>
                                 </div>
 
                                 <div class="form-group col-md-12">
