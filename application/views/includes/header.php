@@ -478,6 +478,10 @@
       color: black;
       resize: none;
       padding: 5px;
+      line-height: 35px;
+
+      text-transform: initial;
+      font-weight: normal;
 
 
     }

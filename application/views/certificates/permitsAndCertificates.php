@@ -105,7 +105,7 @@
 
                                 <div class="form-group col-sm-3">
                                     <label for="">DATE</label>
-                                    <input type="text" class="form-control" name="date" id="date" placeholder="Month, Day, Year" value="" required>
+                                    <input type="date" class="form-control" name="dateOfcert" id="dateOfcert" placeholder="" value="" required>
                                 </div>
 
                                 <div class="form-group col-sm-4">

@@ -137,7 +137,7 @@
                         <th scope="col">Case No.</th><!-- data-field ="CaseNo." data-sortable="true"  -->
                         <th scope="col" data-field="Complainant" data-sortable="true">Complainant</th>
                         <th scope="col" data-field="ComplainedResident" data-sortable="true">Complained Resident</th>
-                        <!-- <th scope="col" data-field="DateofFiling" data-sortable="true">Date of Filing <small>(year/month/day)</small></th> -->
+                        <th scope="col" data-field="DateofFiling" data-sortable="true">Date of Filing <small>(year/month/day)</small></th>
                         <th scope="col" data-field="Person-in-Charge" data-sortable="true">Person-in-Charge</th>
                         <th scope="col" data-field="Status" data-sortable="true">Status</th>
                         <th scope="col" data-field="Action">Action</th>
@@ -150,10 +150,10 @@
                             <td class="text-center"><?php echo $setrows->id; ?></td>
                             <td class="text-center"><?php echo $setrows->complainant; ?></td>
                             <td class="text-center"><?php echo $setrows->compResident; ?></td>
-                            <!-- <td class="text-center"><?php echo $setrows->dateOfFiling; ?></td> -->
+                            <td class="text-center"><?php echo $setrows->dateOfFiling; ?></td>
                             <td class="text-center"><?php echo $setrows->pic; ?></td>
                             <td class="text-center"><?php echo $setrows->status; ?></td>
-                            <td class="text-center"><a class="btn btn-info btn-sm" data-toggle="tooltip" title="Edit details" href="<?php echo site_url('Blotter/edit'); ?>/<?php echo $setrows->id; ?>"><i class="fas fa-edit"></i></a></td>
+                            <td class="text-center"><a class="btn btn-success btn-sm" data-toggle="tooltip" title="Edit details" href="<?php echo site_url('Blotter/edit'); ?>/<?php echo $setrows->id; ?>"><i class="fas fa-eye"></i></a></td>
 
                         </tr>
                     <?php endforeach; ?>

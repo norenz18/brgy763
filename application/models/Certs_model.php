@@ -17,7 +17,7 @@ class Certs_model extends CI_Model
             'fullName' => $this->input->post('fullName'),
             'address' => $this->input->post('address'),
             'purpose' => $this->input->post('purpose'),
-            'date' => $this->input->post('date'),
+            'dateOfcert' => $this->input->post('dateOfcert'),
             'punongBrgy' => $this->input->post('punongBrgy'),
             'businessName' => $this->input->post('businessName'),
             'businessType' => $this->input->post('businessType')
@@ -51,7 +51,7 @@ class Certs_model extends CI_Model
             'fullName' => $this->input->post('fullName'),
             'address' => $this->input->post('address'),
             'purpose' => $this->input->post('purpose'),
-            'date' => $this->input->post('date'),
+            'dateOfcert' => $this->input->post('dateOfcert'),
             'punongBrgy' => $this->input->post('punongBrgy'),
             'businessName' => $this->input->post('businessName'),
             'businessType' => $this->input->post('businessType')

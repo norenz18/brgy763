@@ -25,6 +25,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
 */
 $config['base_url'] = 'http://localhost/bms-763/';
 
+// $protocol = is_https() ? "https://" : "http://";
+// $host = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : "";
+// if (stristr($host, "localhost") !== FALSE || (stristr($host, '192.168.') !== FALSE) || (stristr($host, '127.0.0') !== FALSE)) {
+//     $config['base_url'] = $protocol . $host . "/bms-763/";
+// }
+
 /*
 |--------------------------------------------------------------------------
 | Index File

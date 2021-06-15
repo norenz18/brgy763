@@ -81,7 +81,7 @@
 
                                 <div class="form-group col-sm-8">
                                     <label for="">Upload Image</label> <br>
-                                    <input type="file" name="userfile" id="profImage" size="20">
+                                    <input type="file" name="userfile" id="profImage" accept="image/*" size="20">
                                 </div>
 
                                 <div class="form-group col-sm-6">
@@ -101,16 +101,6 @@
                                         <option value="Treasurer">Treasurer</option>
                                     </select>
                                 </div>
-
-                                <!-- <div class="form-group col-sm-3">
-                                    <label for="">Last Name <small>(Suffix)</small></label>
-                                    <input type="text" class="form-control" name="lastname" placeholder="Enter your Lastname" required>
-                                </div>
-
-                                <div class="form-group col-sm-3">
-                                    <label for="">Middle Name or Initial</label>
-                                    <input type="text" class="form-control" name="middlename" placeholder="Enter Middle name or Initial">
-                                </div> -->
 
                                 <div class="form-group col-sm-7">
                                     <label for="chairmanship">Chairmanship</label><br>
@@ -135,29 +125,6 @@
                                     </select>
                                 </div>
 
-
-
-
-                                <!-- <div class="form-group col-sm-2">
-                                    <label for="rank">Rank</label><br>
-                                    <select class="form-control" id="rank" name="rank" required>
-                                        <option value="" disabled selected>-- Select --</option>
-                                        <option value="" disabled></option>
-                                        <option value="1">1 </option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6 </option>
-                                        <option value="7">7</option>
-                                        <option value="8">8 </option>
-                                        <option value="9">9</option>
-                                        <option value="10">10</option>
-                                        <option value="11">11</option>
-                                    </select>
-                                </div> -->
-
-
                             </div>
 
                             <button type="submit" class="btn btn-success btn-sm"><i class="fas fa-save"></i> Save</button>
@@ -180,7 +147,7 @@
                     <tr>
                         <th scope="col-sm-3" class="col-sm-3 text-center">Image</th> <!-- data-field ="firstname" data-sortable="true" -->
                         <th scope="col-sm-3" class="col-sm-3 text-center">Full Name <small>(First Name, M.Name/Initial, Last Name)</small></th> <!-- data-field ="firstname" data-sortable="true" -->
-                        <th scope="col-sm-3" class="col-sm-3 text-center">Chairmanship</th> <!-- data-field ="role" data-sortable="true" -->
+                        <th scope="col-sm-3" class="col-sm-3 text-center">Role</th> <!-- data-field ="role" data-sortable="true" -->
                         <!-- <th scope="col-sm-3" class="col-sm-3 text-center" >Position</th> data-field ="role" data-sortable="true" -->
                         <!--   <th scope="col-sm-3" class="col-sm-3 text-center" >Rank</th> data-field ="rank" data-sortable="true" -->
                         <th scope="col-sm-1">Action</th>

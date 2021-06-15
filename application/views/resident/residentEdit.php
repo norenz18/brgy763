@@ -39,7 +39,7 @@
 <div class="container" id="editContainer">
 
     <h6 class="text-danger">Note: Editing details can cause misleading information, make sure all the details are correct and valid.</h6>
-    <form method="post" action="<?php echo site_url('Residents/update') ?>/<?php echo $row->id; ?>" enctype="multipart/form-data" >
+    <form method="post" action="<?php echo site_url('Residents/update') ?>/<?php echo $row->id; ?>" enctype="multipart/form-data">
         <!--  enctype="multipart/form-data" -->
         <div class="form-row">
 
@@ -48,7 +48,7 @@
                 <img class="profileImg" id="profileImg" src="<?php echo site_url('img'); ?>/<?php echo $row->profImage; ?>"> &nbsp;
                 <label for="">
                     <sub>You still need to upload photo if you're editing information.
-                        Press <span class="text-danger">CANCEL </span> if no changes occurs and exit. <br></sub> <br><input type="file" name="userfile" style="cursor:pointer;" value="<?php echo site_url('img'); ?>/<?php echo $row->profImage; ?>" size="20" required></label>
+                        Press <span class="text-danger">CANCEL </span> if no changes occurs and exit. <br></sub> <br><input type="file" name="userfile" style="cursor:pointer;" value="<?php echo site_url('img'); ?>/<?php echo $row->profImage; ?>" accept="image/*" size="20" required></label>
                 <!-- <input type="file" name="userfile" id="profImage" value="<?php echo $row->profImage; ?>" size="20"> -->
             </div>
 
@@ -69,7 +69,7 @@
 
             <div class="form-group col-sm-3">
                 <label for="">Contact</label>
-                <input type="number" class="form-control" id="contact" name="contact"  pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==11) return false;" value="<?php echo $row->contact; ?>" required>
+                <input type="number" class="form-control" id="contact" name="contact" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==11) return false;" value="<?php echo $row->contact; ?>" required>
             </div>
 
             <div class="form-group col-sm-2">
@@ -79,7 +79,7 @@
 
             <div class="form-group col-sm-1">
                 <label for="">Age</label>
-                <input type="number" class="form-control" name="age" id="age"  onmouseover="press()" value="<?php echo $row->age; ?>" required>
+                <input type="number" class="form-control" name="age" id="age" onmouseover="press()" value="<?php echo $row->age; ?>" required>
             </div>
 
             <div class="form-group col-sm-2">

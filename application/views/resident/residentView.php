@@ -58,7 +58,7 @@
 
         <div class="modal fade" id="exampleModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <!-- tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" -->
-            <div class="modal-dialog modal-xl">
+            <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title text-info" id="exampleModalLabel">ADD RESIDENT</h5>
@@ -69,57 +69,48 @@
                     </div>
 
                     <h5><small class="modal-title text-danger" id="exampleModalLabel">&nbsp&nbsp;&nbsp;Note: Make sure all the details are correct.</small></h5>
+                    <h5><small class="modal-title text-danger" id="exampleModalLabel">&nbsp&nbsp;&nbsp;It will determine the senior citizenship status if the age is 60 yrs old and up based on his/her birthdate.</small></h5>
 
                     <div class="modal-body">
                         <!--opening modal body-->
 
                         <form method="post" action="<?php echo site_url('Residents/create') ?>" enctype="multipart/form-data" onsubmit="return pressed()">
 
-                            <div class="form-row">
+                            <div class="form-group">
 
-                                <div class="form-group">
+                                <div class="form-group col-md-12">
                                     <label for="">Upload Image</label> <br>
                                     <input type="file" name="userfile" id="profImage" accept="image/*" size="20">
-                                    <!-- <video src="" id="video" width="300" height="300" autoplay></video>
-                                    <button id="snap">Take Photo</button>
-                                    <canvas id="canvas" width="300" height="300"></canvas> -->
 
-                                    <!-- <div id="my_camera"></div>
-                                    <br/>
-                                    <input type=button value="Take Snapshot" onClick="take_snapshot()">
-                                    <input type="hidden" name="image"  class="image-tag">
-
-                                    <div id="profImage">Your captured image will appear here...</div> -->
 
                                 </div>
 
-                                <div class="form-group col-sm-3">
+                                <div class="form-group col-md-12">
                                     <label for="">First Name:</label>
                                     <input type="text" class="form-control" name="firstName" placeholder="Enter your name" required>
                                 </div>
 
-                                <div class="form-group col-sm-3">
+                                <div class="form-group col-md-12">
                                     <label for="">Last Name: <small class="text-danger">(Include suffix if exist)</small></label>
                                     <input type="text" class="form-control" name="lastName" placeholder="Enter your lastname" required>
                                 </div>
 
-                                <div class="form-group col-sm-1">
-                                    <label for="">MI.</label>
-                                    <input type="text" class="form-control" name="mi" onkeypress="return (event.charCode > 64 && 
-event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)"  placeholder="Mi.">
+                                <div class="form-group col-md-12">
+                                    <label for="">M.I.</label>
+                                    <input type="text" class="form-control" name="mi" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)" maxlength="2" placeholder="Mi.">
+                                </div>
+
+                                <div class="form-group col-md-12">
+                                    <label for="birthdate">Birthdate: <small class="text-danger">Choose a <b>MONTH</b> first, then choose a <b>YEAR</b> and lastly select a <b>DAY</b>.</small></label>
+                                    <input type="text" class="form-control" name="birthdate" id="birthdate" placeholder="Month / Day / Year" required>
                                 </div>
 
                                 <div class="form-group col-sm-2">
-                                    <label for="birthdate">Birthdate: <small class="text-danger">Mm/Dd/Yy</small></label>
-                                    <input type="text" class="form-control" name="birthdate" id="birthdate"  placeholder="Month / Day / Year" required>
-                                </div>
-
-                                <div class="form-group col-sm-1">
                                     <label for="">Age:</label>
                                     <input type="number" class="form-control" name="age" id="age" onmouseover="press()" readonly required>
                                 </div>
 
-                                <div class="form-group col-sm-2">
+                                <div class="form-group col-md-12">
                                     <label for="civilStatus">Civil Status:</label><br>
                                     <select class="form-control" id="civilStatus" name="civilStatus" required>
                                         <option value="" disabled selected>-- Select --</option>
@@ -132,43 +123,38 @@ event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)"  placehol
                                     </select>
                                 </div>
 
-                                <div class="form-group col-sm-2">
+                                <div class="form-group col-md-12">
                                     <label for="">Contact:</label>
                                     <input type="number" id="contact" name="contact" class="form-control" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==11) return false;" placeholder="Enter your number" required>
                                     <!-- <input type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==4) return false;" /> -->
                                 </div>
 
-                                <div class="form-group col-sm-2">
+                                <div class="form-group col-md-12">
                                     <label for="">Person with Disability:</label>
                                     <select id="" class="form-control" id="pwd" name="pwd" required>
                                         <option value="" disabled selected>-- Select --</option>
-										<option value="" disabled></option>
+                                        <option value="" disabled></option>
                                         <option value="Yes">Yes</option>
                                         <option value="No">No</option>
                                     </select>
                                 </div>
 
-                                <div class="form-group col-sm-2" style="opacity: 0">
-                                    <label for="">Senior Citizen:</label>
-                                    <input type="text" class="form-control" name="seniorCitizen" id="seniorCitizen" readonly required>
-                                </div>
-
-                                <div class="form-group col-sm-3">
+                                <div class="form-group col-md-12">
                                     <label for="">Address: <small class="text-danger">House No./Street Name</small></label>
                                     <input type="text" class="form-control" name="address" id="address" placeholder="House No. Street Name" required>
                                 </div>
 
-                                <div class="form-group col-sm-2">
+                                <div class="form-group col-md-12">
                                     <label for="">Registered Voter?</label><br>
                                     <select id="" class="form-control" id="voterStatus" name="voterStatus" required>
                                         <option value="" disabled selected>-- Select --</option>
-										<option value="" disabled></option>
+                                        <option value="" disabled></option>
                                         <option value="Yes">Yes</option>
                                         <option value="No">No</option>
                                     </select>
                                 </div>
 
-                                <div class="form-group col-sm-2">
+                                <div class="form-group col-md-12">
                                     <label for="">Gender:</label><br>
                                     <select id="" class="form-control" id="gender" name="gender" required>
                                         <option value="" disabled selected>-- Select --</option>
@@ -178,8 +164,13 @@ event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)"  placehol
                                     </select>
                                 </div>
 
+                                <div class="form-group col-md-12" style="opacity: 0">
+                                    <label for="">Senior Citizen:</label>
+                                    <input type="text" class="form-control" name="seniorCitizen" id="seniorCitizen" readonly required>
+                                </div>
 
-                            </div><br><br><br>
+
+                            </div><br>
                             <button type="submit" class="btn btn-success btn-sm"><i class="fas fa-save"></i> Save</button>
                             <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
 

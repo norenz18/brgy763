@@ -51,38 +51,38 @@
 
             <div class="form-group col-sm-3">
                 <label for="">Complainant*</label>
-                <input type="text" class="form-control" name="complainant" value="<?php echo $setrows->complainant; ?>" required>
+                <input type="text" class="form-control" name="complainant" value="<?php echo $setrows->complainant; ?>" required readonly>
             </div>
 
             <div class="form-group col-sm-3">
                 <label for="">Complained Resident*</label>
-                <input type="text" class="form-control" name="compResident" value="<?php echo $setrows->compResident; ?>">
+                <input type="text" class="form-control" name="compResident" value="<?php echo $setrows->compResident; ?> " required readonly>
             </div>
 
             <div class="form-group col-sm-3">
                 <label for="">Date of Filing*</label>
-                <input type="date" class="form-control" name="dateOfFiling" id="dateOfFiling" value="<?php echo $setrows->dateOfFiling; ?>" required>
+                <input type="date" class="form-control" name="dateOfFiling" id="dateOfFiling" value="<?php echo $setrows->dateOfFiling; ?>" required readonly>
             </div>
 
             <div class="form-group col-sm-2">
                 <label for="">Person-in-Charge*</label>
-                <input type="text" class="form-control" name="pic" value="<?php echo $setrows->pic; ?>" required>
+                <input type="text" class="form-control" name="pic" value="<?php echo $setrows->pic; ?>" required readonly>
             </div>
 
             <div class="form-group col-sm-2">
                 <label for="status">Status*</label><br>
                 <select class="form-control" id="status" name="status" value="<?php echo $setrows->status; ?>" required>
                     <option><?php echo $setrows->status; ?></option>
-                    <option value=""></option>
+                    <option value="" disabled></option>
                     <option value="Pending">Pending</option>
                     <option value="On-going">On-going</option>
                     <option value="Resolved">Resolved Issue</option>
                 </select>
             </div><br><br>
 
-            <div class="form-group col-lg-10">
+            <div class="form-group col-lg-12">
                 <label for="status">Descriptions*</label><br>
-                <textarea class="form-control" id="textArea" resize="none" name="textArea" rows="10" cols="100" placeholder="Blotter Descriptions" required><?php echo $setrows->textArea; ?></textarea>
+                <textarea class="form-control" id="textArea" resize="none" name="textArea" rows="10" cols="200" placeholder="Blotter Descriptions" required readonly><?php echo $setrows->textArea; ?></textarea>
             </div>
 
 
