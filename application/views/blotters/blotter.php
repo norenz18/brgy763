@@ -75,50 +75,51 @@
                         <form method="post" action="<?php echo site_url('Blotter/createBlotters') ?>" enctype="multipart/form-data">
 
 
-                            <div class="form-row">
+                            <div class="form-group">
 
-                                <!-- <div class="form-group col-sm-2">
-                                    <label for="">Case No.*</label>
-                                    <input type="text" class="form-control" name="caseNo" required>
-                                </div> -->
-
-                                <div class="form-group col-sm-5">
+                                <div class="form-group col-sm-12">
                                     <label for="">Complainant*</label>
                                     <input type="text" class="form-control" name="complainant" required>
                                 </div>
 
-                                <div class="form-group col-sm-5">
+                                <div class="form-group col-sm-12">
                                     <label for="">Complained Resident*</label>
                                     <input type="text" class="form-control" name="compResident" required>
                                 </div>
 
-                                <div class="form-group col-sm-3">
-                                    <label for="">Date of Filing*</label>
-                                    <input type="date" class="form-control" name="dateOfFiling" id="dateOfFiling" required>
-                                </div>
-
-                                <div class="form-group col-sm-4">
+                                <div class="form-group col-sm-12">
                                     <label for="">Person-in-Charge*</label>
                                     <input type="text" class="form-control" name="pic" required>
                                 </div>
 
-                                <div class="form-group col-sm-2">
+                                <div class="form-group col-sm-4">
+                                    <label for="">Date of Filing*</label>
+                                    <input type="date" class="form-control" name="dateOfFiling" id="dateOfFiling" required>
+                                </div>
+
+                                <div class="form-group col-sm-3">
+
                                     <label for="status">Status*</label><br>
                                     <!-- <input type="text" class="form-control" id="status" name="status" placeholder="Pending" readonly> -->
                                     <select class="form-control" id="status" name="status" readonly required>
                                         <option value="Pending">Pending</option>
                                     </select>
+
                                 </div>
 
-                                <div class="form-group col-lg-10">
+                                <div class="form-group col-lg-12">
                                     <label for="status">Descriptions*</label><br>
                                     <textarea class="form-control" id="textArea" resize="none" name="textArea" rows="5" cols="100" placeholder="Blotter Descriptions" required></textarea>
                                 </div>
 
+                            </div>
+
+                            <div class="form-group col-lg-6">
+                                <button type="submit" class="btn btn-success btn-sm"><i class="fas fa-save"></i> Save</button>
+                                <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
+
 
                             </div>
-                            <button type="submit" class="btn btn-success btn-sm"><i class="fas fa-save"></i> Save</button>
-                            <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
 
                         </form>
                     </div>

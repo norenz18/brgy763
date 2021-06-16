@@ -58,7 +58,7 @@
 
         <div class="modal fade" id="exampleModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <!-- tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" -->
-            <div class="modal-dialog modal-lg">
+            <div class="modal-dialog modal-md">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title text-info" id="exampleModalLabel">CREATE CERTIFICATE</h5>
@@ -75,10 +75,10 @@
 
                         <form method="post" action="<?php echo site_url('Certificate/createCert'); ?>" enctype="multipart/form-data">
 
-                            <div class="form-row">
+                            <div class="form-group">
 
-                                <div class="form-group col-sm-3">
-                                    <label for="category">Category</label><br>
+                                <div class="form-group col-lg-12">
+                                    <label for="category">CATEGORY</label><br>
                                     <select class="form-control" name="category" id="category" required>
                                         <option value="" disabled selected>-- Select --</option>
                                         <option disabled></option>
@@ -88,41 +88,41 @@
                                     </select>
                                 </div>
 
-                                <div class="form-group col-sm-4">
+                                <div class="form-group col-lg-12">
                                     <label for="">FULL NAME</label>
                                     <input type="text" class="form-control" name="fullName" id="fullName" placeholder="Enter your fullname..." value="" required>
                                 </div>
 
-                                <div class="form-group col-sm-4">
+                                <div class="form-group col-lg-12">
                                     <label for="">ADDRESS <small class="text-danger">( House # & Street name ) </small></label>
                                     <input type="text" class="form-control" name="address" id="address" placeholder="enter your address" value="" required>
                                 </div>
 
-                                <div class="form-group col-sm-5">
+                                <div class="form-group col-lg-12">
                                     <label for="">PURPOSE</label>
                                     <input type="text" class="form-control" name="purpose" id="purpose" placeholder="Assistance, business, employment etc." value="" required>
                                 </div>
 
-                                <div class="form-group col-sm-3">
+                                <div class="form-group col-lg-12">
                                     <label for="">DATE</label>
                                     <input type="date" class="form-control" name="dateOfcert" id="dateOfcert" placeholder="" value="" required>
                                 </div>
 
-                                <div class="form-group col-sm-4">
+                                <div class="form-group col-lg-12">
                                     <label for="">PUNONG BARANGAY</label>
                                     <input type="text" class="form-control" name="punongBrgy" id="punongBrgy" placeholder="Enter Brgy. Capt. name" value="" required> <br>
                                 </div>
 
-                                <div class="form-group col-sm-12">
+                                <div class="form-group col-lg-12">
                                     <h6 class="text-danger">Fill out if you are creating business permit.</h6>
                                 </div>
 
-                                <div class="form-group col-sm-6">
+                                <div class="form-group col-lg-12">
                                     <label for="">NAME OF BUSINESS</label>
                                     <input type="text" class="form-control" name="businessName" id="businessName" placeholder="enter your business name..." value="">
                                 </div>
 
-                                <div class="form-group col-sm-6">
+                                <div class="form-group col-lg-12">
                                     <label for="">KIND OF BUSINESS</label>
                                     <input type="text" class="form-control" name="businessType" id="businessType" placeholder="Ex. 'Retail store', 'Convenience Store' etc... " value="">
                                 </div>
