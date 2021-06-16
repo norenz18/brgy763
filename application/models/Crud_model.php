@@ -16,6 +16,7 @@ class Crud_model extends CI_Model
         $data = array(
 
             'profImage' => $profImage,
+            'id_number' => $this->input->post('id_number'),
             'lastName' => $this->input->post('lastName'),
             'firstName' => $this->input->post('firstName'),
             'mi' => $this->input->post('mi'),
@@ -53,6 +54,7 @@ class Crud_model extends CI_Model
         $data = array(
 
             'profImage' => $profImage,
+            'id_number' => $this->input->post('id_number'),
             'lastName' => $this->input->post('lastName'),
             'firstName' => $this->input->post('firstName'),
             'mi' => $this->input->post('mi'),
@@ -87,7 +89,16 @@ class Crud_model extends CI_Model
     function getUserDetails()
     {
         $response = array();
-        $this->db->select('firstName, mi, lastName, address, contact, gender, birthdate, age, seniorCitizen, voterStatus, civilStatus, pwd');
+        $this->db->select('id_number, firstName, mi, lastName, address, contact, gender, birthdate, age, seniorCitizen, voterStatus, civilStatus, pwd');
+        $q = $this->db->get('tbl_name');
+        $response = $q->result_array();
+        return $response;
+    }
+    function getUserVoter()
+    {
+        $response = array();
+        $this->db->select('firstName, mi, lastName, address, contact, gender, birthdate, age, voterStatus');
+        $this->db->like('voterStatus', 'Yes');
         $q = $this->db->get('tbl_name');
         $response = $q->result_array();
         return $response;
@@ -95,7 +106,7 @@ class Crud_model extends CI_Model
     function getUserSenior()
     {
         $response = array();
-        $this->db->select('firstName, mi, lastName, address, gender, age, seniorCitizen');
+        $this->db->select('id_number, firstName, mi, lastName, contact, address, gender, age, seniorCitizen');
         $this->db->like('seniorCitizen', 'Senior Citizen');
         $q = $this->db->get('tbl_name');
         $response = $q->result_array();
@@ -104,8 +115,17 @@ class Crud_model extends CI_Model
     function getUserPwd()
     {
         $response = array();
-        $this->db->select('firstName, mi, lastName, address, gender, age, seniorCitizen, pwd');
+        $this->db->select('id_number, firstName, mi, lastName, contact, address, gender, age, pwd');
         $this->db->like('pwd', 'Yes');
+        $q = $this->db->get('tbl_name');
+        $response = $q->result_array();
+        return $response;
+    }
+    function getUserSolo()
+    {
+        $response = array();
+        $this->db->select('id_number, firstName, mi, lastName, contact, address, gender, age, civilStatus');
+        $this->db->like('civilStatus', 'Solo Parent');
         $q = $this->db->get('tbl_name');
         $response = $q->result_array();
         return $response;

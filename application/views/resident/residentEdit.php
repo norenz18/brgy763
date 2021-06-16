@@ -52,6 +52,11 @@
                 <!-- <input type="file" name="userfile" id="profImage" value="<?php echo $row->profImage; ?>" size="20"> -->
             </div>
 
+            <div class="form-group col-md-12">
+                <label for="">ID Number: <small class="text-danger">Fill out he/she is <b>Solo parent, PWD and Senior Citizen</b> </small></label>
+                <input type="text" class="form-control" name="id_number" placeholder="Enter ID number" value="<?php echo $row->id_number; ?>">
+            </div>
+
             <div class="form-group col-sm-3">
                 <label for="">First Name</label>
                 <input type="text" class="form-control" name="firstName" value="<?php echo $row->firstName; ?>" required>

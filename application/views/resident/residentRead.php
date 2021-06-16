@@ -60,6 +60,7 @@
                 <img id="resProfileImg" src="<?php echo site_url('img/logomanila2.png'); ?>" alt="">
 
 
+                <li><strong>ID Number:</strong> <span> <?php echo $row->id_number; ?></span></li>
                 <li><strong>First Name:</strong> <span> <?php echo $row->firstName; ?></span></li>
                 <li><strong>Last Name:</strong> <span> <?php echo $row->lastName; ?></span></li>
                 <li><strong>M.I. :</strong> <span> <?php echo $row->mi; ?></span></li>

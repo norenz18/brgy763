@@ -275,7 +275,7 @@
     </div>
 
     <div class="count">
-      <h3>REGISTERED <br> VOTERS<br><i class="fas fa-user-check"></i>&nbsp;
+      <h3><a href="<?php echo base_url() ?>Residents/export_csvrv">REGISTERED <br> VOTERS<br></a><i class="fas fa-user-check"></i>&nbsp;
         <span><?php $this->db->select('*');
               $this->db->from('tbl_name');
               $this->db->like('voterStatus', 'Yes');
@@ -284,7 +284,7 @@
     </div>
 
     <div class="count">
-      <h3><a href="<?php echo base_url() ?>Residents/export_csvpwd">DIFFERENTLY <br> ABLED PERSON<br></a> &#58648;<i class="fas fa-wheelchair"></i>&nbsp;
+      <h3><a href="<?php echo base_url() ?>Residents/export_csvpwd">DIFFERENTLY <br> ABLED PERSON<br></a><i class="fas fa-wheelchair"></i>&nbsp;
         <span> <?php $this->db->select('*');
                 $this->db->from('tbl_name');
                 $this->db->like('pwd', 'Yes');
@@ -297,6 +297,15 @@
         <span> <?php $this->db->select('*');
                 $this->db->from('tbl_name');
                 $this->db->like('seniorCitizen', 'Senior Citizen');
+                echo $this->db->count_all_results(); ?></span>
+      </h3>
+    </div>
+
+    <div class="count">
+      <h3><a href="<?php echo base_url() ?>Residents/export_csvsp">SOLO<br>PARENT<br></a><i class="fas fa-user"></i>&nbsp;
+        <span> <?php $this->db->select('*');
+                $this->db->from('tbl_name');
+                $this->db->like('civilStatus', 'Solo Parent');
                 echo $this->db->count_all_results(); ?></span>
       </h3>
     </div>

@@ -15,6 +15,8 @@ class Residents extends CI_Controller
         $data['result'] = $this->Crud_model->getUserDetails();
         $data['result'] = $this->Crud_model->getUserSenior();
         $data['result'] = $this->Crud_model->getUserPwd();
+        $data['result'] = $this->Crud_model->getUserSolo();
+        $data['result'] = $this->Crud_model->getUserVoter();
         $this->load->view('Residents/viewlist', $data);
     }
 
@@ -137,7 +139,7 @@ class Residents extends CI_Controller
         $result = $this->Crud_model->getUserDetails();
         // file creation 
         $file = fopen('php://output', 'w');
-        $header = array("First Name", "Mi", "Last Name", "Address", "Contact Number", "Gender", "Birthdate", "Age", "Senior Citizen", "Voter Status", "Civil Status", "Differently Abled Person");
+        $header = array("First Name", "Mi", "Last Name", "Address", "Contact Number", "Gender", "Birthdate", "Age", "Senior Citizenship", "Voter Status", "Civil Status", "Differently Abled Person");
         fputcsv($file, $header);
         foreach ($result as $key => $line) {
             fputcsv($file, $line);
@@ -158,7 +160,7 @@ class Residents extends CI_Controller
         $result = $this->Crud_model->getUserSenior();
         // file creation 
         $file = fopen('php://output', 'w');
-        $header = array("First Name", "Mi", "Last Name", "Address", "Gender", "Age", "Senior Citizen");
+        $header = array("ID Number", "First Name", "Mi", "Last Name", "Contact", "Address", "Gender", "Age", "Senior Citizenship");
         fputcsv($file, $header);
         foreach ($result as $key => $line) {
             fputcsv($file, $line);
@@ -179,7 +181,47 @@ class Residents extends CI_Controller
         $result = $this->Crud_model->getUserPwd();
         // file creation 
         $file = fopen('php://output', 'w');
-        $header = array("First Name", "Mi", "Last Name", "Address", "Gender", "Age", "Senior Citizen", "Differently Abled Person");
+        $header = array("ID Number", "First Name", "Mi", "Last Name", "Contact", "Address", "Gender", "Age", "Differently Abled Person");
+        fputcsv($file, $header);
+        foreach ($result as $key => $line) {
+            fputcsv($file, $line);
+        }
+        fclose($file);
+        exit;
+    }
+    // EXCEL EXPORT SOLO PARENT
+    public function export_csvsp()
+    {
+        // file name 
+        $filename = 'DiffentlyAbledPersons_' . date('Ymd') . '.csv';
+        header("Content-Description: File Transfer");
+        header("Content-Disposition: attachment; filename=$filename");
+        header("Content-Type: application/csv; ");
+        // get data 
+        $result = $this->Crud_model->getUserSolo();
+        // file creation 
+        $file = fopen('php://output', 'w');
+        $header = array("ID Number", "First Name", "Mi", "Last Name", "Contact", "Address", "Gender", "Age", "Civil Status");
+        fputcsv($file, $header);
+        foreach ($result as $key => $line) {
+            fputcsv($file, $line);
+        }
+        fclose($file);
+        exit;
+    }
+    // EXCEL EXPORT VOTER
+    public function export_csvrv()
+    {
+        // file name 
+        $filename = 'DiffentlyAbledPersons_' . date('Ymd') . '.csv';
+        header("Content-Description: File Transfer");
+        header("Content-Disposition: attachment; filename=$filename");
+        header("Content-Type: application/csv; ");
+        // get data 
+        $result = $this->Crud_model->getUserVoter();
+        // file creation 
+        $file = fopen('php://output', 'w');
+        $header = array("First Name", "Mi", "Last Name", "Address", "Contact", "Gender", "Birthdate", "Age", "Voter Status");
         fputcsv($file, $header);
         foreach ($result as $key => $line) {
             fputcsv($file, $line);

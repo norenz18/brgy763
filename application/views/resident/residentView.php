@@ -81,8 +81,11 @@
                                 <div class="form-group col-md-12">
                                     <label for="">Upload Image</label> <br>
                                     <input type="file" name="userfile" id="profImage" accept="image/*" size="20">
+                                </div>
 
-
+                                <div class="form-group col-md-12">
+                                    <label for="">ID Number: <small class="text-danger">Fill out he/she is a<b>Solo parent, PWD or Senior Citizen</b> </small></label>
+                                    <input type="text" class="form-control" name="id_number" placeholder="Enter ID number">
                                 </div>
 
                                 <div class="form-group col-md-12">
